@@ -25,10 +25,10 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu
 
         private void btnSanPham_Click(object sender, EventArgs e)
         {
-            frm_SanPham frmSp = new frm_SanPham();
-            frmSp.TopLevel = false;
-            pnlControls.Controls.Add(frmSp);
-            frmSp.Show();
+            //frm_SanPham frmSp = new frm_SanPham();
+            //frmSp.TopLevel = false;
+            //pnlControls.Controls.Add(frmSp);
+            //frmSp.Show();
         }
 
         private void btn_DangXuat_Click(object sender, EventArgs e)
