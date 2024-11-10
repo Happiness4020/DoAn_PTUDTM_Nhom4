@@ -1,17 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QL_CuaHangDoDienTu" Class="dbQLCuaHangDienTuDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
   <Connection Mode="AppSettings" ConnectionString="Data Source=TANDAT12DHTH07\SQLEXPRESS;Initial Catalog=QL_CuaHangDoDienTu;Integrated Security=True" SettingsObjectName="DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.Properties.Settings" SettingsPropertyName="QL_CuaHangDoDienTuConnectionString1" Provider="System.Data.SqlClient" />
-  <Table Name="dbo.ChiTietDonHang" Member="ChiTietDonHangs">
-    <Type Name="ChiTietDonHang">
-      <Column Name="MaDonHang" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="MaCTSanPham" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="SoLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="ThanhTien" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="KichThuoc" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
-      <Column Name="TrangThaiCTDH" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="ChiTietSanPham_ChiTietDonHang" Member="ChiTietSanPham" ThisKey="MaCTSanPham" OtherKey="ID" Type="ChiTietSanPham" IsForeignKey="true" />
-      <Association Name="DonHang_ChiTietDonHang" Member="DonHang" ThisKey="MaDonHang" OtherKey="MaDonHang" Type="DonHang" IsForeignKey="true" />
-    </Type>
-  </Table>
   <Table Name="dbo.ChiTietPhieuNhap" Member="ChiTietPhieuNhaps">
     <Type Name="ChiTietPhieuNhap">
       <Column Name="MaPhieuNhap" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -82,6 +70,7 @@
       <Column Name="TrangThaiTK" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="TaiKhoan_GioHang" Member="GioHangs" ThisKey="TenDN" OtherKey="TenDN" Type="GioHang" />
       <Association Name="TaiKhoan_DonHang" Member="DonHangs" ThisKey="TenDN" OtherKey="TenDN" Type="DonHang" />
+      <Association Name="TaiKhoan_DiaChi" Member="DiaChis" ThisKey="TenDN" OtherKey="TenDN" Type="DiaChi" />
     </Type>
   </Table>
   <Table Name="dbo.GioHang" Member="GioHangs">
@@ -101,9 +90,9 @@
       <Column Name="Soluong" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="MoTa" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
       <Column Name="MauSac" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
-      <Association Name="ChiTietSanPham_ChiTietDonHang" Member="ChiTietDonHangs" ThisKey="ID" OtherKey="MaCTSanPham" Type="ChiTietDonHang" />
       <Association Name="ChiTietSanPham_ChiTietPhieuNhap" Member="ChiTietPhieuNhaps" ThisKey="ID" OtherKey="MaCTSanPham" Type="ChiTietPhieuNhap" />
       <Association Name="ChiTietSanPham_GioHang" Member="GioHangs" ThisKey="ID" OtherKey="MaCTSanPham" Type="GioHang" />
+      <Association Name="ChiTietSanPham_ChiTietDonHang" Member="ChiTietDonHangs" ThisKey="ID" OtherKey="MaCTSanPham" Type="ChiTietDonHang" />
       <Association Name="SanPham_ChiTietSanPham" Member="SanPham" ThisKey="MaSanPham" OtherKey="MaSanPham" Type="SanPham" IsForeignKey="true" />
     </Type>
   </Table>
@@ -128,13 +117,12 @@
       <Column Name="Email" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
       <Column Name="HoTen" Type="System.String" DbType="NVarChar(60)" CanBeNull="true" />
       <Column Name="SoDienThoai" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
-      <Column Name="MaDiaChi" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ChiTietDiaChi" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
       <Column Name="TongGiaTri" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="HinhThucThanhToan" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
       <Column Name="TrangThaiDonHang" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
       <Association Name="DonHang_ChiTietDonHang" Member="ChiTietDonHangs" ThisKey="MaDonHang" OtherKey="MaDonHang" Type="ChiTietDonHang" />
       <Association Name="TaiKhoan_DonHang" Member="TaiKhoan" ThisKey="TenDN" OtherKey="TenDN" Type="TaiKhoan" IsForeignKey="true" />
-      <Association Name="DiaChi_DonHang" Member="DiaChi" ThisKey="MaDiaChi" OtherKey="MaDiaChi" Type="DiaChi" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.DiaChi" Member="DiaChis">
@@ -142,7 +130,18 @@
       <Column Name="MaDiaChi" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="TenDN" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
       <Column Name="DiaChi" Member="DiaChi1" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Association Name="DiaChi_DonHang" Member="DonHangs" ThisKey="MaDiaChi" OtherKey="MaDiaChi" Type="DonHang" />
+      <Association Name="TaiKhoan_DiaChi" Member="TaiKhoan" ThisKey="TenDN" OtherKey="TenDN" Type="TaiKhoan" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ChiTietDonHang" Member="ChiTietDonHangs">
+    <Type Name="ChiTietDonHang">
+      <Column Name="MaDonHang" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MaCTSanPham" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SoLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ThanhTien" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TrangThaiCTDH" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="DonHang_ChiTietDonHang" Member="DonHang" ThisKey="MaDonHang" OtherKey="MaDonHang" Type="DonHang" IsForeignKey="true" />
+      <Association Name="ChiTietSanPham_ChiTietDonHang" Member="ChiTietSanPham" ThisKey="MaCTSanPham" OtherKey="ID" Type="ChiTietSanPham" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>

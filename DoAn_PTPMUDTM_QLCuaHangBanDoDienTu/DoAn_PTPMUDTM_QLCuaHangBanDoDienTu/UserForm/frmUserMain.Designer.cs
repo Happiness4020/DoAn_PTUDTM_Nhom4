@@ -261,6 +261,7 @@
             this.IsMdiContainer = true;
             this.Name = "frmUserMain";
             this.Text = "frmUserMain";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmUserMain_FormClosing);
             this.Load += new System.EventHandler(this.frmUserMain_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

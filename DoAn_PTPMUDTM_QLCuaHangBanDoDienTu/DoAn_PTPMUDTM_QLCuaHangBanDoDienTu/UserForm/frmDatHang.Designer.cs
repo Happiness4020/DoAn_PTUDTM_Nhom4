@@ -148,10 +148,10 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
             this.rdoDiaChiHT.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdoDiaChiHT.Location = new System.Drawing.Point(80, 227);
             this.rdoDiaChiHT.Name = "rdoDiaChiHT";
-            this.rdoDiaChiHT.Size = new System.Drawing.Size(151, 26);
+            this.rdoDiaChiHT.Size = new System.Drawing.Size(165, 26);
             this.rdoDiaChiHT.TabIndex = 55;
             this.rdoDiaChiHT.TabStop = true;
-            this.rdoDiaChiHT.Text = "Địa chỉ hiện có";
+            this.rdoDiaChiHT.Text = "Địa chỉ mặc định";
             this.rdoDiaChiHT.UseVisualStyleBackColor = true;
             this.rdoDiaChiHT.CheckedChanged += new System.EventHandler(this.rdoDiaChiHT_CheckedChanged);
             // 
@@ -161,9 +161,9 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
             this.rdoDiaChiMoi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdoDiaChiMoi.Location = new System.Drawing.Point(80, 327);
             this.rdoDiaChiMoi.Name = "rdoDiaChiMoi";
-            this.rdoDiaChiMoi.Size = new System.Drawing.Size(125, 26);
+            this.rdoDiaChiMoi.Size = new System.Drawing.Size(130, 26);
             this.rdoDiaChiMoi.TabIndex = 52;
-            this.rdoDiaChiMoi.Text = "Địa chỉ mới";
+            this.rdoDiaChiMoi.Text = "Địa chỉ khác";
             this.rdoDiaChiMoi.UseVisualStyleBackColor = true;
             this.rdoDiaChiMoi.CheckedChanged += new System.EventHandler(this.rdoDiaChiMoi_CheckedChanged);
             // 

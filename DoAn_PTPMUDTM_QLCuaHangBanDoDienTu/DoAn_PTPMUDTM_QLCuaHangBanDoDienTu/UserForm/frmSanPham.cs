@@ -9,7 +9,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
     public partial class frmSanPham : Form
     {
         int pageNumber = 1; // Số trang hiện tại (ví dụ là trang 1)
-        int pageSize = 8; //Số sản phẩm trong trang
+        int pageSize = 12; //Số sản phẩm trong trang
         dbQLCuaHangDienTuDataContext db = new dbQLCuaHangDienTuDataContext();
         int pageNumberMax = 1;
         public frmSanPham()
@@ -21,10 +21,6 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
             LayLoaiSanPham();
         }      
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
         public void LaySanPham()
         {
             // Tính số lượng sản phẩm cần bỏ qua

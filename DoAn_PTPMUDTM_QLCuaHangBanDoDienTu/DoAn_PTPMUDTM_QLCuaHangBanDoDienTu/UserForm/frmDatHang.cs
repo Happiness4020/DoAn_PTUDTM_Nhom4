@@ -71,20 +71,22 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
                 dh.SoDienThoai = txtSoDienThoai.Text;
                 dh.TrangThaiDonHang = "Chờ xác nhận";
                 if (rdoDiaChiHT.Checked)
-                    dh.MaDiaChi = (int)cboDiaChi.SelectedValue;
+                {
+                    if (string.IsNullOrWhiteSpace(cboDiaChi.Text))
+                    {
+                        MessageBox.Show("Chưa có địa chỉ mặc định\nVui lòng nhập địa chỉ khác");
+                        return;
+                    }
+                    dh.ChiTietDiaChi = cboDiaChi.Text;
+                }
                 else
                 {
                     if (txtDiaChiMoi.Text.Length <= 0)
                     {
-                        MessageBox.Show("Vui lòng nhập địa chỉ mới");
+                        MessageBox.Show("Vui lòng nhập địa chỉ khác");
                     }
-                    DiaChi newdc = new DiaChi();
-                    newdc.TenDN = tk.TenDN;
-                    newdc.DiaChi1 = txtDiaChiMoi.Text;
-                    db.DiaChis.InsertOnSubmit(newdc);
+                    dh.ChiTietDiaChi = txtDiaChiMoi.Text;
                     db.SubmitChanges();
-                    newdc = db.DiaChis.Where(t => t.TenDN == tk.TenDN).OrderByDescending(t => t.MaDiaChi).FirstOrDefault();
-                    dh.MaDiaChi = newdc.MaDiaChi;
                 }
                 if (rdoTienMat.Checked)
                     dh.HinhThucThanhToan = rdoTienMat.Text;

@@ -73,7 +73,8 @@ CREATE TABLE DiaChi
     MaDiaChi INT IDENTITY(1,1),
     TenDN VARCHAR(20),
 	DiaChi NVARCHAR(255),
-	CONSTRAINT PK_DiaChi  PRIMARY KEY (MaDiaChi)
+	CONSTRAINT PK_DiaChi  PRIMARY KEY (MaDiaChi),
+	CONSTRAINT FK_DCTENDN FOREIGN KEY (TenDN) REFERENCES TaiKhoan(TenDN)
 )
 GO
 -- Bảng danh sách đơn hàng
@@ -85,13 +86,12 @@ CREATE TABLE DonHang
 	Email nvarchar(100),
 	HoTen nvarchar(60),
 	SoDienThoai varchar(11),
-	MaDiaChi INT,
+	ChiTietDiaChi  NVARCHAR(255),
 	TongGiaTri float,
 	HinhThucThanhToan NVARCHAR(255),
 	TrangThaiDonHang NVARCHAR(20),
 	CONSTRAINT PK_DonHang  PRIMARY KEY (MaDonHang),
 	CONSTRAINT FK_TENDN FOREIGN KEY (TenDN) REFERENCES TaiKhoan(TenDN),
-	CONSTRAINT FK_MADIACHI FOREIGN KEY (MaDiaChi) REFERENCES DiaChi(MaDiaChi)
 )
 GO
 
@@ -102,7 +102,6 @@ CREATE TABLE ChiTietDonHang (
     MaCTSanPham INT,
     SoLuong INT,
 	ThanhTien float,
-	KichThuoc varchar(10),
 	TrangThaiCTDH int,
     CONSTRAINT PK_ChiTietDonHang PRIMARY KEY (MaDonHang, MaCTSanPham),
 	CONSTRAINT FK_ChiTietDonHang FOREIGN KEY (MaDonHang) REFERENCES DonHang(MaDonHang),

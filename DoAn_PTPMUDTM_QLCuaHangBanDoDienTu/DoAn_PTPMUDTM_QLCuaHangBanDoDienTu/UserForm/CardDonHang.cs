@@ -27,7 +27,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
             lblSoDienThoai.Text = dh.SoDienThoai;
             lblTrangThai.Text = dh.TrangThaiDonHang;
             lblTongTien.Text = dh.TongGiaTri.ToString();
-            lblDiaChi.Text = db.DiaChis.Where(t => t.MaDiaChi == dh.MaDiaChi).FirstOrDefault().DiaChi1;
+            lblDiaChi.Text = dh.ChiTietDiaChi;
         }
         private void Delete()
         {

@@ -111,5 +111,6 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
             txtTimKiem.ForeColor = Color.Black;
             txtTimKiem.Font = new Font(txtTimKiem.Font, FontStyle.Regular);
         }
+
     }
 }
