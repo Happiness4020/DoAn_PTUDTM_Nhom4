@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.35229.62
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoAn_PTPMUDTM_QLCuaHangBanDoDienTu", "DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.csproj", "{B62FC4E5-DF92-4966-8C78-9C7636E519AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoAn_QLDoDienTu_Web", "DoAn_QLDoDienTu_Web\DoAn_QLDoDienTu_Web.csproj", "{54AB3FD3-B23D-4CC9-A95C-D2113116F524}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,8 +17,15 @@ Global
 		{B62FC4E5-DF92-4966-8C78-9C7636E519AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B62FC4E5-DF92-4966-8C78-9C7636E519AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B62FC4E5-DF92-4966-8C78-9C7636E519AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54AB3FD3-B23D-4CC9-A95C-D2113116F524}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54AB3FD3-B23D-4CC9-A95C-D2113116F524}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54AB3FD3-B23D-4CC9-A95C-D2113116F524}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54AB3FD3-B23D-4CC9-A95C-D2113116F524}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7F0CDB1D-4461-4D5F-9A20-8BFB00D02084}
 	EndGlobalSection
 EndGlobal
