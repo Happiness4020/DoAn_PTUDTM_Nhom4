@@ -30,12 +30,12 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lblSoLuong = new System.Windows.Forms.Label();
             this.lblTuyChon = new System.Windows.Forms.Label();
             this.lblThanhTien = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlImgHinhAnh = new System.Windows.Forms.Panel();
             this.lblDonGia = new System.Windows.Forms.Label();
             this.lblTenSanPham = new System.Windows.Forms.Label();
-            this.lblSoLuong = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,13 +45,23 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
             this.panel2.Controls.Add(this.lblSoLuong);
             this.panel2.Controls.Add(this.lblTuyChon);
             this.panel2.Controls.Add(this.lblThanhTien);
-            this.panel2.Controls.Add(this.panel1);
+            this.panel2.Controls.Add(this.pnlImgHinhAnh);
             this.panel2.Controls.Add(this.lblDonGia);
             this.panel2.Controls.Add(this.lblTenSanPham);
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1145, 112);
             this.panel2.TabIndex = 8;
+            // 
+            // lblSoLuong
+            // 
+            this.lblSoLuong.AutoSize = true;
+            this.lblSoLuong.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSoLuong.Location = new System.Drawing.Point(789, 49);
+            this.lblSoLuong.Name = "lblSoLuong";
+            this.lblSoLuong.Size = new System.Drawing.Size(82, 22);
+            this.lblSoLuong.TabIndex = 15;
+            this.lblSoLuong.Text = "Số lượng";
             // 
             // lblTuyChon
             // 
@@ -72,13 +82,13 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
             this.lblThanhTien.TabIndex = 11;
             this.lblThanhTien.Text = "Thành tiền";
             // 
-            // panel1
+            // pnlImgHinhAnh
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel1.Location = new System.Drawing.Point(35, 14);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(73, 76);
-            this.panel1.TabIndex = 9;
+            this.pnlImgHinhAnh.BackColor = System.Drawing.Color.White;
+            this.pnlImgHinhAnh.Location = new System.Drawing.Point(35, 14);
+            this.pnlImgHinhAnh.Name = "pnlImgHinhAnh";
+            this.pnlImgHinhAnh.Size = new System.Drawing.Size(73, 76);
+            this.pnlImgHinhAnh.TabIndex = 9;
             // 
             // lblDonGia
             // 
@@ -99,16 +109,6 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
             this.lblTenSanPham.TabIndex = 7;
             this.lblTenSanPham.Text = "Tên sản phẩm";
             // 
-            // lblSoLuong
-            // 
-            this.lblSoLuong.AutoSize = true;
-            this.lblSoLuong.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSoLuong.Location = new System.Drawing.Point(789, 49);
-            this.lblSoLuong.Name = "lblSoLuong";
-            this.lblSoLuong.Size = new System.Drawing.Size(82, 22);
-            this.lblSoLuong.TabIndex = 15;
-            this.lblSoLuong.Text = "Số lượng";
-            // 
             // CardChiTietDonHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -127,7 +127,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblTuyChon;
         private System.Windows.Forms.Label lblThanhTien;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlImgHinhAnh;
         private System.Windows.Forms.Label lblDonGia;
         private System.Windows.Forms.Label lblTenSanPham;
         private System.Windows.Forms.Label lblSoLuong;

@@ -102,6 +102,8 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
 
         private void frmUserMain_FormClosing(object sender, FormClosingEventArgs e)
         {
+            Properties.Settings.Default.tenDN = "";
+            Properties.Settings.Default.Save();
             Application.Exit();
         }
 
@@ -112,5 +114,23 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
             txtTimKiem.Font = new Font(txtTimKiem.Font, FontStyle.Regular);
         }
 
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDangXuat_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Bạn có muốn đăng xuất không?", "Xác nhận đăng xuất", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Properties.Settings.Default.tenDN = "";
+                Properties.Settings.Default.Save();
+                frm_DangNhap frm = new frm_DangNhap();
+                frm.Show(); 
+                this.Dispose();
+            }
+            
+        }
     }
 }

@@ -75,6 +75,7 @@
             this.btnDangXuat.TabIndex = 7;
             this.btnDangXuat.Text = "ĐĂNG XUẤT";
             this.btnDangXuat.UseVisualStyleBackColor = false;
+            this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click);
             // 
             // btnTroGiup
             // 
@@ -230,13 +231,14 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(50)))));
-            this.label1.Location = new System.Drawing.Point(56, 18);
+            this.label1.Location = new System.Drawing.Point(40, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(207, 45);
+            this.label1.Size = new System.Drawing.Size(224, 49);
             this.label1.TabIndex = 0;
             this.label1.Text = "SmartTech";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // pnlMain
             // 

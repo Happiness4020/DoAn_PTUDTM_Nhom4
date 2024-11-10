@@ -35,7 +35,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
             this.btnSua = new System.Windows.Forms.Button();
             this.lblThanhTien = new System.Windows.Forms.Label();
             this.nbrSoLuong = new System.Windows.Forms.NumericUpDown();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlImgSanPham = new System.Windows.Forms.Panel();
             this.lblDonGia = new System.Windows.Forms.Label();
             this.lblTenSanPham = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
@@ -52,7 +52,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
             this.panel2.Controls.Add(this.btnSua);
             this.panel2.Controls.Add(this.lblThanhTien);
             this.panel2.Controls.Add(this.nbrSoLuong);
-            this.panel2.Controls.Add(this.panel1);
+            this.panel2.Controls.Add(this.pnlImgSanPham);
             this.panel2.Controls.Add(this.lblDonGia);
             this.panel2.Controls.Add(this.lblTenSanPham);
             this.panel2.Location = new System.Drawing.Point(3, 3);
@@ -109,13 +109,13 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
             this.nbrSoLuong.Size = new System.Drawing.Size(69, 30);
             this.nbrSoLuong.TabIndex = 10;
             // 
-            // panel1
+            // pnlImgSanPham
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel1.Location = new System.Drawing.Point(17, 18);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(73, 76);
-            this.panel1.TabIndex = 9;
+            this.pnlImgSanPham.BackColor = System.Drawing.Color.White;
+            this.pnlImgSanPham.Location = new System.Drawing.Point(17, 18);
+            this.pnlImgSanPham.Name = "pnlImgSanPham";
+            this.pnlImgSanPham.Size = new System.Drawing.Size(73, 76);
+            this.pnlImgSanPham.TabIndex = 9;
             // 
             // lblDonGia
             // 
@@ -157,7 +157,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Label lblThanhTien;
         private System.Windows.Forms.NumericUpDown nbrSoLuong;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlImgSanPham;
         private System.Windows.Forms.Label lblDonGia;
         private System.Windows.Forms.Label lblTenSanPham;
         private System.Windows.Forms.Label lblTuyChon;
