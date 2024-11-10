@@ -50,6 +50,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Data.dbml</DependentUpon>
     </Compile>
+    <Compile Include="frm_ChiTietSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ChiTietSanPham.Designer.cs">
+      <DependentUpon>frm_ChiTietSanPham.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_DangKy.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +74,18 @@
     <Compile Include="frm_AdminDashboard.Designer.cs">
       <DependentUpon>frm_AdminDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_LoaiSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_LoaiSanPham.Designer.cs">
+      <DependentUpon>frm_LoaiSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_SanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_SanPham.Designer.cs">
+      <DependentUpon>frm_SanPham.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_UserDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +94,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frm_ChiTietSanPham.resx">
+      <DependentUpon>frm_ChiTietSanPham.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_DangKy.resx">
       <DependentUpon>frm_DangKy.cs</DependentUpon>
     </EmbeddedResource>
@@ -84,6 +105,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_AdminDashboard.resx">
       <DependentUpon>frm_AdminDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_LoaiSanPham.resx">
+      <DependentUpon>frm_LoaiSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_SanPham.resx">
+      <DependentUpon>frm_SanPham.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_UserDashboard.resx">
       <DependentUpon>frm_UserDashboard.cs</DependentUpon>
