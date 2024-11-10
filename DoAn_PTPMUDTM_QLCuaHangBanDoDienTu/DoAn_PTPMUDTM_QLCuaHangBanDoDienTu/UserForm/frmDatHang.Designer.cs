@@ -29,27 +29,24 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.ctMNThanhToan = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.rdoTienMat = new System.Windows.Forms.RadioButton();
+            this.rdoNganHang = new System.Windows.Forms.RadioButton();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.lblTongTien = new System.Windows.Forms.Label();
             this.rdoDiaChiHT = new System.Windows.Forms.RadioButton();
-            this.ctMNDiaChi = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.rdoNganHang = new System.Windows.Forms.RadioButton();
-            this.rdoTienMat = new System.Windows.Forms.RadioButton();
             this.rdoDiaChiMoi = new System.Windows.Forms.RadioButton();
-            this.button1 = new System.Windows.Forms.Button();
             this.txtDiaChiMoi = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.cboDiaChi = new System.Windows.Forms.ComboBox();
             this.txtSoDienThoai = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.txtHoTen = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -66,11 +63,71 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
             this.panel1.Size = new System.Drawing.Size(620, 690);
             this.panel1.TabIndex = 39;
             // 
-            // ctMNThanhToan
+            // panel2
             // 
-            this.ctMNThanhToan.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.ctMNThanhToan.Name = "ctMNThanhToan";
-            this.ctMNThanhToan.Size = new System.Drawing.Size(61, 4);
+            this.panel2.Controls.Add(this.rdoTienMat);
+            this.panel2.Controls.Add(this.rdoNganHang);
+            this.panel2.Location = new System.Drawing.Point(76, 443);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(170, 68);
+            this.panel2.TabIndex = 52;
+            // 
+            // rdoTienMat
+            // 
+            this.rdoTienMat.AutoSize = true;
+            this.rdoTienMat.Checked = true;
+            this.rdoTienMat.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdoTienMat.Location = new System.Drawing.Point(3, 4);
+            this.rdoTienMat.Name = "rdoTienMat";
+            this.rdoTienMat.Size = new System.Drawing.Size(99, 26);
+            this.rdoTienMat.TabIndex = 53;
+            this.rdoTienMat.TabStop = true;
+            this.rdoTienMat.Text = "Tiền mặt";
+            this.rdoTienMat.UseVisualStyleBackColor = true;
+            // 
+            // rdoNganHang
+            // 
+            this.rdoNganHang.AutoSize = true;
+            this.rdoNganHang.Enabled = false;
+            this.rdoNganHang.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdoNganHang.Location = new System.Drawing.Point(3, 31);
+            this.rdoNganHang.Name = "rdoNganHang";
+            this.rdoNganHang.Size = new System.Drawing.Size(176, 26);
+            this.rdoNganHang.TabIndex = 54;
+            this.rdoNganHang.Text = "Liên kết ngân hàng";
+            this.rdoNganHang.UseVisualStyleBackColor = true;
+            // 
+            // panel3
+            // 
+            this.panel3.BackgroundImage = global::DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.Properties.Resources.thoat;
+            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel3.Location = new System.Drawing.Point(538, 30);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(59, 37);
+            this.panel3.TabIndex = 45;
+            this.panel3.Click += new System.EventHandler(this.panel3_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(50)))));
+            this.label1.Location = new System.Drawing.Point(164, 29);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(276, 37);
+            this.label1.TabIndex = 44;
+            this.label1.Text = "TẠO ĐƠN HÀNG";
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(246, 617);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(140, 35);
+            this.button1.TabIndex = 51;
+            this.button1.Text = "Đặt hàng";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // lblTongTien
             // 
@@ -88,7 +145,6 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
             // 
             this.rdoDiaChiHT.AutoSize = true;
             this.rdoDiaChiHT.Checked = true;
-            this.rdoDiaChiHT.ContextMenuStrip = this.ctMNDiaChi;
             this.rdoDiaChiHT.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdoDiaChiHT.Location = new System.Drawing.Point(80, 227);
             this.rdoDiaChiHT.Name = "rdoDiaChiHT";
@@ -99,41 +155,9 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
             this.rdoDiaChiHT.UseVisualStyleBackColor = true;
             this.rdoDiaChiHT.CheckedChanged += new System.EventHandler(this.rdoDiaChiHT_CheckedChanged);
             // 
-            // ctMNDiaChi
-            // 
-            this.ctMNDiaChi.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.ctMNDiaChi.Name = "ctMNDiaChi";
-            this.ctMNDiaChi.Size = new System.Drawing.Size(61, 4);
-            // 
-            // rdoNganHang
-            // 
-            this.rdoNganHang.AutoSize = true;
-            this.rdoNganHang.Enabled = false;
-            this.rdoNganHang.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdoNganHang.Location = new System.Drawing.Point(3, 31);
-            this.rdoNganHang.Name = "rdoNganHang";
-            this.rdoNganHang.Size = new System.Drawing.Size(176, 26);
-            this.rdoNganHang.TabIndex = 54;
-            this.rdoNganHang.Text = "Liên kết ngân hàng";
-            this.rdoNganHang.UseVisualStyleBackColor = true;
-            // 
-            // rdoTienMat
-            // 
-            this.rdoTienMat.AutoSize = true;
-            this.rdoTienMat.Checked = true;
-            this.rdoTienMat.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdoTienMat.Location = new System.Drawing.Point(3, 4);
-            this.rdoTienMat.Name = "rdoTienMat";
-            this.rdoTienMat.Size = new System.Drawing.Size(99, 26);
-            this.rdoTienMat.TabIndex = 53;
-            this.rdoTienMat.TabStop = true;
-            this.rdoTienMat.Text = "Tiền mặt";
-            this.rdoTienMat.UseVisualStyleBackColor = true;
-            // 
             // rdoDiaChiMoi
             // 
             this.rdoDiaChiMoi.AutoSize = true;
-            this.rdoDiaChiMoi.ContextMenuStrip = this.ctMNDiaChi;
             this.rdoDiaChiMoi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdoDiaChiMoi.Location = new System.Drawing.Point(80, 327);
             this.rdoDiaChiMoi.Name = "rdoDiaChiMoi";
@@ -142,17 +166,6 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
             this.rdoDiaChiMoi.Text = "Địa chỉ mới";
             this.rdoDiaChiMoi.UseVisualStyleBackColor = true;
             this.rdoDiaChiMoi.CheckedChanged += new System.EventHandler(this.rdoDiaChiMoi_CheckedChanged);
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(246, 617);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(140, 35);
-            this.button1.TabIndex = 51;
-            this.button1.Text = "Đặt hàng";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // txtDiaChiMoi
             // 
@@ -211,17 +224,6 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
             this.label3.TabIndex = 46;
             this.label3.Text = "Số điện thoại:";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(50)))));
-            this.label1.Location = new System.Drawing.Point(164, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(286, 38);
-            this.label1.TabIndex = 44;
-            this.label1.Text = "TẠO ĐƠN HÀNG";
-            // 
             // txtHoTen
             // 
             this.txtHoTen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -240,25 +242,6 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
             this.label2.Size = new System.Drawing.Size(68, 22);
             this.label2.TabIndex = 43;
             this.label2.Text = "Họ tên:";
-            // 
-            // panel3
-            // 
-            this.panel3.BackgroundImage = global::DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.Properties.Resources.thoat;
-            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel3.Location = new System.Drawing.Point(538, 30);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(59, 37);
-            this.panel3.TabIndex = 45;
-            this.panel3.Click += new System.EventHandler(this.panel3_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.rdoTienMat);
-            this.panel2.Controls.Add(this.rdoNganHang);
-            this.panel2.Location = new System.Drawing.Point(76, 443);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(170, 68);
-            this.panel2.TabIndex = 52;
             // 
             // frmDatHang
             // 
@@ -293,10 +276,8 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ContextMenuStrip ctMNThanhToan;
         private System.Windows.Forms.Label lblTongTien;
         private System.Windows.Forms.RadioButton rdoDiaChiHT;
-        private System.Windows.Forms.ContextMenuStrip ctMNDiaChi;
         private System.Windows.Forms.RadioButton rdoNganHang;
         private System.Windows.Forms.RadioButton rdoTienMat;
         private System.Windows.Forms.RadioButton rdoDiaChiMoi;

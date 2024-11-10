@@ -29,7 +29,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlImgSanPham = new System.Windows.Forms.Panel();
             this.lblGia = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.nbrSoLuong = new System.Windows.Forms.NumericUpDown();
@@ -43,19 +43,19 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
             this.label4 = new System.Windows.Forms.Label();
             this.lblTonKho = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.nbrSoLuong)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // pnlImgSanPham
             // 
-            this.panel1.BackColor = System.Drawing.Color.Silver;
-            this.panel1.Location = new System.Drawing.Point(41, 120);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(267, 347);
-            this.panel1.TabIndex = 0;
+            this.pnlImgSanPham.BackColor = System.Drawing.Color.White;
+            this.pnlImgSanPham.Location = new System.Drawing.Point(41, 120);
+            this.pnlImgSanPham.Name = "pnlImgSanPham";
+            this.pnlImgSanPham.Size = new System.Drawing.Size(267, 347);
+            this.pnlImgSanPham.TabIndex = 0;
             // 
             // lblGia
             // 
@@ -79,6 +79,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
             this.button1.TabIndex = 2;
             this.button1.Text = "Mua ngay";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // nbrSoLuong
             // 
@@ -203,16 +204,6 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
             this.panel2.Size = new System.Drawing.Size(1179, 63);
             this.panel2.TabIndex = 13;
             // 
-            // panel3
-            // 
-            this.panel3.BackgroundImage = global::DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.Properties.Resources.thoat;
-            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel3.Location = new System.Drawing.Point(1107, 10);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(59, 37);
-            this.panel3.TabIndex = 14;
-            this.panel3.Click += new System.EventHandler(this.panel3_Click);
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -223,6 +214,16 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
             this.label5.Size = new System.Drawing.Size(293, 32);
             this.label5.TabIndex = 14;
             this.label5.Text = "CHI TIẾT SẢN PHẨM";
+            // 
+            // panel3
+            // 
+            this.panel3.BackgroundImage = global::DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.Properties.Resources.thoat;
+            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel3.Location = new System.Drawing.Point(1107, 10);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(59, 37);
+            this.panel3.TabIndex = 14;
+            this.panel3.Click += new System.EventHandler(this.panel3_Click);
             // 
             // frmChiTietSanPham
             // 
@@ -243,7 +244,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
             this.Controls.Add(this.nbrSoLuong);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.lblGia);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlImgSanPham);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmChiTietSanPham";
             this.Text = "frmChiTietSanPham";
@@ -257,7 +258,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlImgSanPham;
         private System.Windows.Forms.Label lblGia;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.NumericUpDown nbrSoLuong;

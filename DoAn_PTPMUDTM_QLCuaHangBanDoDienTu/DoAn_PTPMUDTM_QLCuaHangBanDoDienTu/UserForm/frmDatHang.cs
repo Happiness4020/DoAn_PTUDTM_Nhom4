@@ -13,6 +13,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
     public partial class frmDatHang : Form
     {
         private frmGioHang frm;
+        GioHang gh1sp = null;
         public void reloadForm(frmGioHang frm)
         {
             this.frm = frm;
@@ -32,6 +33,18 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
             cboDiaChi.DataSource = lstdc;
             cboDiaChi.DisplayMember = "DiaChi1";
             cboDiaChi.ValueMember = "MaDiaChi";
+        }
+        public void setData(GioHang gh)
+        {
+            this.tk = db.TaiKhoans.Where(t => t.TenDN == gh.TenDN).FirstOrDefault();
+            loadComboBox();
+            txtHoTen.Text = tk.HoTen;
+            txtSoDienThoai.Text = tk.SoDienThoai;
+            this.gh1sp = gh;
+            ChiTietSanPham ct = db.ChiTietSanPhams.Where(c => c.ID == gh1sp.MaCTSanPham).FirstOrDefault();
+            lblTongTien.Text = gh1sp.SoLuong * ct.Gia + " VNĐ";
+            tongTien = (float)(gh1sp.SoLuong * ct.Gia);
+            txtDiaChiMoi.Enabled = false;
         }
         public void setData(string tenDN)
         {
@@ -55,7 +68,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
                 dh.HoTen = txtHoTen.Text;
                 DateTime thoiGianDat = DateTime.Now;
                 dh.NgayDat = thoiGianDat;
-                dh.SoDienThoai =txtSoDienThoai.Text;
+                dh.SoDienThoai = txtSoDienThoai.Text;
                 dh.TrangThaiDonHang = "Chờ xác nhận";
                 if (rdoDiaChiHT.Checked)
                     dh.MaDiaChi = (int)cboDiaChi.SelectedValue;
@@ -70,7 +83,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
                     newdc.DiaChi1 = txtDiaChiMoi.Text;
                     db.DiaChis.InsertOnSubmit(newdc);
                     db.SubmitChanges();
-                    newdc = db.DiaChis.Where(t => t.TenDN == tk.TenDN).OrderBy(t => t.MaDiaChi).FirstOrDefault();
+                    newdc = db.DiaChis.Where(t => t.TenDN == tk.TenDN).OrderByDescending(t => t.MaDiaChi).FirstOrDefault();
                     dh.MaDiaChi = newdc.MaDiaChi;
                 }
                 if (rdoTienMat.Checked)
@@ -82,18 +95,35 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
                 db.DonHangs.InsertOnSubmit(dh);
                 db.SubmitChanges();
                 dh = db.DonHangs.Where(t => t.TenDN == tk.TenDN && t.NgayDat == thoiGianDat).FirstOrDefault();
-                //Gán thông tin giỏ hàng vào chi tiết đơn hàng của đơn hàng vừa tạo và xóa giỏ hàng
-                foreach (GioHang g in lstgh)
+                if (gh1sp != null)
                 {
                     ChiTietDonHang ctdh = new ChiTietDonHang();
-                    ctdh.MaCTSanPham = g.MaCTSanPham;
-                    ctdh.SoLuong = g.SoLuong;
-                    ChiTietSanPham ctsp = db.ChiTietSanPhams.Where(s => s.ID == g.MaCTSanPham).FirstOrDefault();
-                    ctdh.ThanhTien = ctsp.Gia * g.SoLuong;
+                    ctdh.MaCTSanPham = gh1sp.MaCTSanPham;
+                    ctdh.SoLuong = gh1sp.SoLuong;
+                    ChiTietSanPham ctsp = db.ChiTietSanPhams.Where(s => s.ID == gh1sp.MaCTSanPham).FirstOrDefault();
+                    ctdh.ThanhTien = ctsp.Gia * gh1sp.SoLuong;
                     ctdh.MaDonHang = dh.MaDonHang;
                     db.ChiTietDonHangs.InsertOnSubmit(ctdh);
-                    db.GioHangs.DeleteOnSubmit(g);
                     db.SubmitChanges();
+                    MessageBox.Show("Tạo đơn hàng thành công");
+                    this.Dispose();
+                    return;
+                }
+                else
+                {
+                    //Gán thông tin giỏ hàng vào chi tiết đơn hàng của đơn hàng vừa tạo và xóa giỏ hàng
+                    foreach (GioHang g in lstgh)
+                    {
+                        ChiTietDonHang ctdh = new ChiTietDonHang();
+                        ctdh.MaCTSanPham = g.MaCTSanPham;
+                        ctdh.SoLuong = g.SoLuong;
+                        ChiTietSanPham ctsp = db.ChiTietSanPhams.Where(s => s.ID == g.MaCTSanPham).FirstOrDefault();
+                        ctdh.ThanhTien = ctsp.Gia * g.SoLuong;
+                        ctdh.MaDonHang = dh.MaDonHang;
+                        db.ChiTietDonHangs.InsertOnSubmit(ctdh);
+                        db.GioHangs.DeleteOnSubmit(g);
+                        db.SubmitChanges();
+                    }
                 }
                 MessageBox.Show("Tạo đơn hàng thành công");
                 frm.loadGioHang();
@@ -128,9 +158,5 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
             cboDiaChi.Enabled = false;
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            InsertDonHang();
-        }
     }
 }

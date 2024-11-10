@@ -44,7 +44,7 @@
             // 
             // pnlImgSanPham
             // 
-            this.pnlImgSanPham.BackColor = System.Drawing.Color.Silver;
+            this.pnlImgSanPham.BackColor = System.Drawing.Color.White;
             this.pnlImgSanPham.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pnlImgSanPham.Location = new System.Drawing.Point(20, 13);
             this.pnlImgSanPham.Name = "pnlImgSanPham";

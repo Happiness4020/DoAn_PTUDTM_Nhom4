@@ -14,6 +14,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
     {
         dbQLCuaHangDienTuDataContext db = new dbQLCuaHangDienTuDataContext();
         string TenDN;
+        int soLuongDiaChi=3;
         public frmDiaChi()
         {
             InitializeComponent();
@@ -32,6 +33,17 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
         }
         private void ThemGioHang()
         {
+            if (string.IsNullOrWhiteSpace(txtDiaChi.Text))
+            {
+                MessageBox.Show("Địa chỉ không được để trống", "Lỗi nhập liệu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            int sl = db.DiaChis.Where(t => t.TenDN == TenDN).Count();
+            if (sl + 1> soLuongDiaChi)
+            {
+                MessageBox.Show("Đã đạt số lượng địa chỉ tối đa (" + soLuongDiaChi + " địa chỉ)\nVui lòng xóa hoặc cập nhật lại địa chỉ hiện có", "Lỗi khi thêm", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             try
             {
                 DiaChi add = new DiaChi();
@@ -51,5 +63,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
         {
             ThemGioHang();
         }
+
+
     }
 }

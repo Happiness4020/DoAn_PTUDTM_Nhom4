@@ -31,6 +31,12 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
         }
         private void Delete()
         {
+            DialogResult result = MessageBox.Show("Bạn có muốn hủy đơn hàng không?", "Xác nhận hủy đơn hàng", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.No)
+            {
+                return;
+            }
             if (!dh.TrangThaiDonHang.Equals("Chờ xác nhận"))
             {
                 MessageBox.Show("Hủy đơn hàng không thành công\nĐơn hàng chỉ có thể hủy ở trạng thái \"Chờ xác nhận\"");
@@ -62,6 +68,13 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
         private void btnXoa_Click(object sender, EventArgs e)
         {
             Delete();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmChiTietDonHang frm = new frmChiTietDonHang();
+            frm.setData(dh);
+            frm.Show();
         }
     }
 }

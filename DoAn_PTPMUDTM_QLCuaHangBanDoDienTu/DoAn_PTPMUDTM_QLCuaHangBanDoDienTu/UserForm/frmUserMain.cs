@@ -12,15 +12,22 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
 {
     public partial class frmUserMain : Form
     {
+        string TenDN="nguyentandat";
+        public void setData(string tendn)
+        {
+            this.TenDN = tendn;
+            lblTenDN.Text = tendn;
+            Properties.Settings.Default.tenDN = TenDN;
+            Properties.Settings.Default.Save();
+        }
         public frmUserMain()
         {
             InitializeComponent();
-            this.WindowState = FormWindowState.Maximized;  // Tối đa hóa form
+            this.WindowState = FormWindowState.Maximized; 
             frmSanPham frm = new frmSanPham();
+            Properties.Settings.Default.tenDN = TenDN;
             ClickButtonLoadForm(frm);
         }
-
-        
         private void ClickButtonLoadForm(Form frm)
         {
             pnlMain.Controls.Clear();
@@ -37,14 +44,14 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
         private void btnTaiKhoan_Click(object sender, EventArgs e)
         {
             frmTaiKhoan frm = new frmTaiKhoan();
-            frm.setData("nguyentandat");
+            frm.setData(this.TenDN);
             ClickButtonLoadForm(frm);
         }
 
         private void btnDonHang_Click(object sender, EventArgs e)
         {
             frmDonHang frm = new frmDonHang();
-            frm.setData("nguyentandat");
+            frm.setData(this.TenDN);
             ClickButtonLoadForm(frm);
         }
 
@@ -57,7 +64,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
         private void btnGioHang_Click(object sender, EventArgs e)
         {
             frmGioHang frm = new frmGioHang();
-            frm.setData("nguyentandat");
+            frm.setData(this.TenDN);
             ClickButtonLoadForm(frm);
         }
 
@@ -82,15 +89,27 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
         private void panel4_Click(object sender, EventArgs e)
         {
             frmGioHang frm = new frmGioHang();
-            frm.setData("nguyentandat");
+            frm.setData(this.TenDN);
             ClickButtonLoadForm(frm);
         }
 
         private void btnDiaChi_Click(object sender, EventArgs e)
         {
             frmDiaChi frm = new frmDiaChi();
-            frm.setData("nguyentandat");
+            frm.setData(this.TenDN);
             ClickButtonLoadForm(frm);
+        }
+
+        private void frmUserMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void txtTimKiem_Click(object sender, EventArgs e)
+        {
+            txtTimKiem.Text = "";
+            txtTimKiem.ForeColor = Color.Black;
+            txtTimKiem.Font = new Font(txtTimKiem.Font, FontStyle.Regular);
         }
     }
 }

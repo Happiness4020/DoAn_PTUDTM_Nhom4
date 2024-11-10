@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,7 +30,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
                 pnlChiTietDonHang.Controls.Add(card);
             }    
         }
-
+       
         private void panel3_Click(object sender, EventArgs e)
         {
             this.Dispose();

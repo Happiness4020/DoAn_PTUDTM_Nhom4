@@ -18,5 +18,8 @@
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Data Source=TANDAT12DHTH07\SQLEXPRESS;Initial Catalog=QL_CuaHangDoDienTu;Integrated Security=True</Value>
     </Setting>
+    <Setting Name="tenDN" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>

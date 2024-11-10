@@ -116,12 +116,6 @@
     <Compile Include="UserForm\CardDonHang.Designer.cs">
       <DependentUpon>CardDonHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserForm\CardDonHang2.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserForm\CardDonHang2.Designer.cs">
-      <DependentUpon>CardDonHang2.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserForm\CardGioHang.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -230,9 +224,6 @@
     <EmbeddedResource Include="UserForm\CardDonHang.resx">
       <DependentUpon>CardDonHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserForm\CardDonHang2.resx">
-      <DependentUpon>CardDonHang2.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UserForm\CardGioHang.resx">
       <DependentUpon>CardGioHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -322,6 +313,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Images\icon\them.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\icon\hienpass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\icon\reset.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

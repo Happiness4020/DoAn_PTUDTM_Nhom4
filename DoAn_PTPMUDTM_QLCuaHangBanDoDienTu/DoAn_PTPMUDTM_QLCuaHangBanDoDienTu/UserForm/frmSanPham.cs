@@ -9,8 +9,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
     public partial class frmSanPham : Form
     {
         int pageNumber = 1; // Số trang hiện tại (ví dụ là trang 1)
-        int pageSize = 8;
-
+        int pageSize = 8; //Số sản phẩm trong trang
         dbQLCuaHangDienTuDataContext db = new dbQLCuaHangDienTuDataContext();
         int pageNumberMax = 1;
         public frmSanPham()
@@ -20,7 +19,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
             LaySanPham();
             this.Dock = DockStyle.Fill;
             LayLoaiSanPham();
-        }
+        }      
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -106,7 +105,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
             {
                 CardSanPham card = new CardSanPham();
                 card.setData(s);
-                flowPanel.Controls.Add(card);
+                pnlSanPhan.Controls.Add(card);
             }
 
 
@@ -131,7 +130,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
 
         private void btnTruoc_Click(object sender, EventArgs e)
         {
-            if (pageNumber > 2)
+            if (pageNumber > 1)
             {
                 this.pageNumber--;
                 LocSanPham();
@@ -156,6 +155,9 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
 
         }
 
-
+        private void cboLoaiSP_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            LocSanPham();
+        }
     }
 }

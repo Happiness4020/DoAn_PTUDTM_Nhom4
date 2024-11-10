@@ -37,7 +37,7 @@
             this.btnTaiKhoan = new System.Windows.Forms.Button();
             this.btnSanPham = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblTenDN = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.btnTimKiem = new System.Windows.Forms.Button();
@@ -158,8 +158,8 @@
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel2.Controls.Add(this.label2);
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.lblTenDN);
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.txtTimKiem);
             this.panel2.Controls.Add(this.btnTimKiem);
@@ -169,19 +169,19 @@
             this.panel2.Size = new System.Drawing.Size(1419, 88);
             this.panel2.TabIndex = 1;
             // 
-            // label2
+            // lblTenDN
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lblTenDN.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(50)))));
-            this.label2.Location = new System.Drawing.Point(1268, 34);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(132, 23);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Tên đăng nhập";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.lblTenDN.AutoSize = true;
+            this.lblTenDN.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenDN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(50)))));
+            this.lblTenDN.Location = new System.Drawing.Point(1270, 34);
+            this.lblTenDN.Name = "lblTenDN";
+            this.lblTenDN.Size = new System.Drawing.Size(132, 23);
+            this.lblTenDN.TabIndex = 5;
+            this.lblTenDN.Text = "Tên đăng nhập";
+            this.lblTenDN.Click += new System.EventHandler(this.label2_Click);
             // 
             // panel4
             // 
@@ -189,33 +189,40 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.BackgroundImage = global::DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.Properties.Resources.iconCart;
             this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel4.Location = new System.Drawing.Point(1198, 29);
+            this.panel4.Location = new System.Drawing.Point(1200, 29);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(34, 35);
+            this.panel4.Size = new System.Drawing.Size(34, 37);
             this.panel4.TabIndex = 4;
             this.panel4.Click += new System.EventHandler(this.panel4_Click);
             // 
             // txtTimKiem
             // 
-            this.txtTimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txtTimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimKiem.Location = new System.Drawing.Point(516, 28);
+            this.txtTimKiem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimKiem.ForeColor = System.Drawing.Color.DimGray;
+            this.txtTimKiem.Location = new System.Drawing.Point(826, 29);
+            this.txtTimKiem.MaximumSize = new System.Drawing.Size(438, 30);
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(438, 30);
             this.txtTimKiem.TabIndex = 3;
+            this.txtTimKiem.Text = "Tên sản phẩm...";
+            this.txtTimKiem.Click += new System.EventHandler(this.txtTimKiem_Click);
             // 
             // btnTimKiem
             // 
-            this.btnTimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnTimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnTimKiem.BackColor = System.Drawing.Color.White;
             this.btnTimKiem.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTimKiem.ForeColor = System.Drawing.Color.White;
             this.btnTimKiem.Image = global::DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.Properties.Resources.Search;
-            this.btnTimKiem.Location = new System.Drawing.Point(985, 24);
+            this.btnTimKiem.Location = new System.Drawing.Point(1295, 23);
+            this.btnTimKiem.MaximumSize = new System.Drawing.Size(70, 44);
             this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(70, 42);
+            this.btnTimKiem.Size = new System.Drawing.Size(70, 44);
             this.btnTimKiem.TabIndex = 2;
             this.btnTimKiem.UseVisualStyleBackColor = false;
             this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
@@ -277,7 +284,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnDangXuat;
         private System.Windows.Forms.Button btnTroGiup;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblTenDN;
         private System.Windows.Forms.Panel panel4;
     }
 }

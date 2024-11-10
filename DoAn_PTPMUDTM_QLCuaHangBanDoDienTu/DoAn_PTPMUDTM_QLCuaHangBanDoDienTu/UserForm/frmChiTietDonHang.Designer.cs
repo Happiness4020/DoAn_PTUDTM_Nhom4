@@ -30,8 +30,6 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pnlChiTietDonHang = new System.Windows.Forms.FlowLayoutPanel();
-            this.label5 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -39,6 +37,8 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
             this.label2 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.pnlChiTietDonHang = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -57,26 +57,6 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
             this.panel1.Size = new System.Drawing.Size(1347, 804);
             this.panel1.TabIndex = 0;
             // 
-            // pnlChiTietDonHang
-            // 
-            this.pnlChiTietDonHang.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.pnlChiTietDonHang.Location = new System.Drawing.Point(78, 157);
-            this.pnlChiTietDonHang.Name = "pnlChiTietDonHang";
-            this.pnlChiTietDonHang.Size = new System.Drawing.Size(1169, 587);
-            this.pnlChiTietDonHang.TabIndex = 0;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(541, 17);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(297, 32);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "CHI TIẾT ĐƠN HÀNG";
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(50)))));
@@ -85,7 +65,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label7);
-            this.panel2.Location = new System.Drawing.Point(78, 79);
+            this.panel2.Location = new System.Drawing.Point(78, 100);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1169, 56);
             this.panel2.TabIndex = 15;
@@ -154,6 +134,26 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
             this.panel3.Size = new System.Drawing.Size(59, 37);
             this.panel3.TabIndex = 14;
             this.panel3.Click += new System.EventHandler(this.panel3_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(541, 17);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(297, 32);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "CHI TIẾT ĐƠN HÀNG";
+            // 
+            // pnlChiTietDonHang
+            // 
+            this.pnlChiTietDonHang.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.pnlChiTietDonHang.Location = new System.Drawing.Point(78, 160);
+            this.pnlChiTietDonHang.Name = "pnlChiTietDonHang";
+            this.pnlChiTietDonHang.Size = new System.Drawing.Size(1169, 587);
+            this.pnlChiTietDonHang.TabIndex = 0;
             // 
             // frmChiTietDonHang
             // 

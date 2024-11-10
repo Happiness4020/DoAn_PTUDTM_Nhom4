@@ -44,6 +44,8 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
             // 
             // panel2
             // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.lblTuyChon);
             this.panel2.Controls.Add(this.btnXoa);
@@ -55,7 +57,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
             this.panel2.Controls.Add(this.lblTenSanPham);
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1145, 112);
+            this.panel2.Size = new System.Drawing.Size(1153, 112);
             this.panel2.TabIndex = 7;
             // 
             // lblTuyChon
@@ -140,7 +142,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel2);
             this.Name = "CardGioHang";
-            this.Size = new System.Drawing.Size(1151, 118);
+            this.Size = new System.Drawing.Size(1159, 118);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nbrSoLuong)).EndInit();

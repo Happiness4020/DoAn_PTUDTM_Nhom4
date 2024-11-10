@@ -52,9 +52,10 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.pnlGioHang);
-            this.panel1.Location = new System.Drawing.Point(4, 2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1331, 847);
+            this.panel1.Size = new System.Drawing.Size(1428, 954);
             this.panel1.TabIndex = 0;
             // 
             // panel3
@@ -66,9 +67,9 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.label1);
-            this.panel3.Location = new System.Drawing.Point(86, 41);
+            this.panel3.Location = new System.Drawing.Point(168, 100);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1169, 56);
+            this.panel3.Size = new System.Drawing.Size(1158, 56);
             this.panel3.TabIndex = 2;
             // 
             // label6
@@ -139,12 +140,13 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
             // 
             // panel2
             // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.panel2.Controls.Add(this.btnDatHang);
             this.panel2.Controls.Add(this.lblTongTien);
             this.panel2.Controls.Add(this.label7);
-            this.panel2.Location = new System.Drawing.Point(3, 763);
+            this.panel2.Location = new System.Drawing.Point(3, 867);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1328, 84);
+            this.panel2.Size = new System.Drawing.Size(1422, 84);
             this.panel2.TabIndex = 1;
             // 
             // btnDatHang
@@ -152,7 +154,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
             this.btnDatHang.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnDatHang.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDatHang.ForeColor = System.Drawing.Color.White;
-            this.btnDatHang.Location = new System.Drawing.Point(1069, 20);
+            this.btnDatHang.Location = new System.Drawing.Point(1141, 8);
             this.btnDatHang.Name = "btnDatHang";
             this.btnDatHang.Size = new System.Drawing.Size(183, 40);
             this.btnDatHang.TabIndex = 7;
@@ -165,7 +167,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
             this.lblTongTien.AutoSize = true;
             this.lblTongTien.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTongTien.ForeColor = System.Drawing.Color.Red;
-            this.lblTongTien.Location = new System.Drawing.Point(866, 34);
+            this.lblTongTien.Location = new System.Drawing.Point(943, 22);
             this.lblTongTien.Name = "lblTongTien";
             this.lblTongTien.Size = new System.Drawing.Size(60, 26);
             this.lblTongTien.TabIndex = 6;
@@ -176,7 +178,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(730, 34);
+            this.label7.Location = new System.Drawing.Point(807, 22);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(117, 26);
             this.label7.TabIndex = 5;
@@ -185,7 +187,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
             // pnlGioHang
             // 
             this.pnlGioHang.AutoScroll = true;
-            this.pnlGioHang.Location = new System.Drawing.Point(86, 103);
+            this.pnlGioHang.Location = new System.Drawing.Point(163, 163);
             this.pnlGioHang.Name = "pnlGioHang";
             this.pnlGioHang.Size = new System.Drawing.Size(1169, 654);
             this.pnlGioHang.TabIndex = 0;
@@ -195,7 +197,8 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1337, 853);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1428, 954);
             this.Controls.Add(this.panel1);
             this.Name = "frmGioHang";
             this.Text = "frmGioHang";

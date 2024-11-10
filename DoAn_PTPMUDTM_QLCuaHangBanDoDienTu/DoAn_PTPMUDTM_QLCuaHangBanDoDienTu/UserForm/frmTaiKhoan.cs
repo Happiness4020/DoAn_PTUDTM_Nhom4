@@ -6,6 +6,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -55,7 +56,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
         private string CapNhatHinhAnh(string filePath, string tenDN)
         {
             string imageDirectory = Path.Combine(Application.StartupPath, "Images\\imgUser");
-            Directory.CreateDirectory(imageDirectory); 
+            Directory.CreateDirectory(imageDirectory);
 
             string fileExtension = Path.GetExtension(filePath);
             string fileName = tenDN + fileExtension;
@@ -81,7 +82,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
 
                 // Xóa tệp hình ảnh
                 File.Delete(newImagePath);
-               
+
             }
             File.Copy(filePath, newImagePath);
             return fileName;
@@ -110,14 +111,13 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
             }
         }
 
-
         public void setData(string tenDn)
         {
             this.tk = db.TaiKhoans.Where(t => t.TenDN == tenDn).FirstOrDefault();
             txtHoTen.Text = tk.HoTen;
             txtSoDienThoai.Text = tk.SoDienThoai;
             txtEmail.Text = tk.Email;
-            if(tk.GioiTinh.Equals("Nam"))
+            if (tk.GioiTinh.Equals("Nam"))
             {
                 rdoNam.Checked = true;
             }
@@ -127,8 +127,9 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
             }
             dateNgaySinh.Value = tk.NgaySinh;
             LayHinhAnh(tk.AnhBiaUser);
-           
+
         }
+
         private void UpdateTaiKhoan()
         {
             try
@@ -141,7 +142,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
                 else
                     tk.GioiTinh = "Nữ";
                 tk.NgaySinh = dateNgaySinh.Value;
-                
+
                 if (selectedImagePath != null)
                 {
                     tk.AnhBiaUser = CapNhatHinhAnh(selectedImagePath, tk.TenDN);
@@ -156,9 +157,61 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
             }
         }
 
+        public bool ValidateInputs()
+        {
+            string errorMessage = "";
+
+            if (string.IsNullOrWhiteSpace(txtHoTen.Text))
+            {
+                errorMessage += "Họ tên không được để trống.\n";
+            }
+
+            if (string.IsNullOrWhiteSpace(txtSoDienThoai.Text))
+            {
+                errorMessage += "Số điện thoại không được để trống.\n";
+            }
+            else
+            {
+                Regex phoneRegex = new Regex(@"^\d{10}$");
+                if (!phoneRegex.IsMatch(txtSoDienThoai.Text))
+                {
+                    errorMessage += "Số điện thoại sai định dạng (phải gồm 10 chữ số).\n";
+                }
+            }
+
+            if (string.IsNullOrWhiteSpace(txtEmail.Text))
+            {
+                errorMessage += "Email không được để trống.\n";
+            }
+            else
+            {
+                Regex emailRegex = new Regex(@"^[^@\s]+@[^@\s]+\.[^@\s]+$");
+                if (!emailRegex.IsMatch(txtEmail.Text))
+                {
+                    errorMessage += "Email sai định dạng.\n";
+                }
+            }
+
+            if (dateNgaySinh.Value.Date >= DateTime.Now.Date)
+            {
+                errorMessage += "Ngày sinh phải nhỏ hơn ngày hiện tại.\n";
+            }
+
+            if (!string.IsNullOrEmpty(errorMessage))
+            {
+                MessageBox.Show(errorMessage, "Lỗi nhập liệu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            return true;
+        }
+
         private void btnCapNhatTT_Click(object sender, EventArgs e)
         {
-            UpdateTaiKhoan();
+            if (ValidateInputs())
+            {
+                UpdateTaiKhoan();
+            }
         }
 
         private void btnCapNhatMK_Click(object sender, EventArgs e)

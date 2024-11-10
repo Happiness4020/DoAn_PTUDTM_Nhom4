@@ -30,10 +30,10 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pnlDiaChi = new System.Windows.Forms.FlowLayoutPanel();
-            this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.txtDiaChi = new System.Windows.Forms.TextBox();
+            this.pnlDiaChi = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,22 +52,6 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
             this.panel1.Size = new System.Drawing.Size(1410, 693);
             this.panel1.TabIndex = 0;
             // 
-            // pnlDiaChi
-            // 
-            this.pnlDiaChi.AutoScroll = true;
-            this.pnlDiaChi.Location = new System.Drawing.Point(176, 144);
-            this.pnlDiaChi.Name = "pnlDiaChi";
-            this.pnlDiaChi.Size = new System.Drawing.Size(1125, 429);
-            this.pnlDiaChi.TabIndex = 0;
-            // 
-            // txtDiaChi
-            // 
-            this.txtDiaChi.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDiaChi.Location = new System.Drawing.Point(559, 622);
-            this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(389, 34);
-            this.txtDiaChi.TabIndex = 1;
-            // 
             // label1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -76,7 +60,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
             this.label1.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(552, 63);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(333, 38);
+            this.label1.Size = new System.Drawing.Size(321, 37);
             this.label1.TabIndex = 3;
             this.label1.Text = "CẬP NHẬT ĐỊA CHỈ";
             // 
@@ -93,6 +77,22 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // txtDiaChi
+            // 
+            this.txtDiaChi.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDiaChi.Location = new System.Drawing.Point(559, 622);
+            this.txtDiaChi.Name = "txtDiaChi";
+            this.txtDiaChi.Size = new System.Drawing.Size(389, 34);
+            this.txtDiaChi.TabIndex = 1;
+            // 
+            // pnlDiaChi
+            // 
+            this.pnlDiaChi.AutoScroll = true;
+            this.pnlDiaChi.Location = new System.Drawing.Point(176, 144);
+            this.pnlDiaChi.Name = "pnlDiaChi";
+            this.pnlDiaChi.Size = new System.Drawing.Size(1125, 429);
+            this.pnlDiaChi.TabIndex = 0;
             // 
             // frmDiaChi
             // 

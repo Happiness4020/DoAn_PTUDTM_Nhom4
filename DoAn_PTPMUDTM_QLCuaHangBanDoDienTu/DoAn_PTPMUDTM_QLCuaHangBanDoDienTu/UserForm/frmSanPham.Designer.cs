@@ -31,12 +31,12 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.cboLoaiSP = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.pnlSanPhan = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnDau = new System.Windows.Forms.Button();
             this.btnTruoc = new System.Windows.Forms.Button();
             this.btnSau = new System.Windows.Forms.Button();
             this.btnCuoi = new System.Windows.Forms.Button();
+            this.pnlSanPhan = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -61,6 +61,7 @@
             this.cboLoaiSP.Name = "cboLoaiSP";
             this.cboLoaiSP.Size = new System.Drawing.Size(202, 30);
             this.cboLoaiSP.TabIndex = 8;
+            this.cboLoaiSP.SelectedIndexChanged += new System.EventHandler(this.cboLoaiSP_SelectedIndexChanged_1);
             // 
             // label1
             // 
@@ -71,16 +72,6 @@
             this.label1.Size = new System.Drawing.Size(130, 22);
             this.label1.TabIndex = 10;
             this.label1.Text = "Loại sản phẩm:";
-            // 
-            // pnlSanPhan
-            // 
-            this.pnlSanPhan.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlSanPhan.Location = new System.Drawing.Point(51, 82);
-            this.pnlSanPhan.Name = "pnlSanPhan";
-            this.pnlSanPhan.Size = new System.Drawing.Size(1232, 701);
-            this.pnlSanPhan.TabIndex = 14;
             // 
             // flowLayoutPanel1
             // 
@@ -140,14 +131,26 @@
             this.btnCuoi.UseVisualStyleBackColor = true;
             this.btnCuoi.Click += new System.EventHandler(this.btnCuoi_Click);
             // 
+            // pnlSanPhan
+            // 
+            this.pnlSanPhan.AllowDrop = true;
+            this.pnlSanPhan.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlSanPhan.AutoScroll = true;
+            this.pnlSanPhan.Location = new System.Drawing.Point(51, 82);
+            this.pnlSanPhan.Name = "pnlSanPhan";
+            this.pnlSanPhan.Size = new System.Drawing.Size(1283, 661);
+            this.pnlSanPhan.TabIndex = 16;
+            // 
             // frmSanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1337, 853);
-            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.pnlSanPhan);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel1);
             this.Name = "frmSanPham";
             this.Text = "frmSanPham";
@@ -164,11 +167,11 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ComboBox cboLoaiSP;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel pnlSanPhan;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button btnDau;
         private System.Windows.Forms.Button btnTruoc;
         private System.Windows.Forms.Button btnSau;
         private System.Windows.Forms.Button btnCuoi;
+        private System.Windows.Forms.FlowLayoutPanel pnlSanPhan;
     }
 }

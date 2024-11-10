@@ -44,5 +44,17 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.Properties {
                 return ((string)(this["QL_CuaHangDoDienTuConnectionString1"]));
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string tenDN {
+            get {
+                return ((string)(this["tenDN"]));
+            }
+            set {
+                this["tenDN"] = value;
+            }
+        }
     }
 }
