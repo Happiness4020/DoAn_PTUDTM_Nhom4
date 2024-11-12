@@ -46,7 +46,7 @@ CREATE TABLE ChiTietSanPham
 	Gia float not null DEFAULT 0,
 	Soluong int not null DEFAULT 0,
 	MoTa NVARCHAR(255) DEFAULT N'Chưa có mô tả',
-	Mausac nvarchar(50) not null DEFAULT N'Chưa có màu',
+	MauSac nvarchar(50) not null DEFAULT N'Chưa có màu',
 	CONSTRAINT PK_ID  PRIMARY KEY (ID),
 	CONSTRAINT FK_MASP FOREIGN KEY (MaSanPham) REFERENCES SanPham(MaSanPham)
 )
@@ -67,7 +67,16 @@ CREATE TABLE TaiKhoan (
 	TrangThaiTK int,
 )
 GO
-
+--Bảng địa chỉ
+CREATE TABLE DiaChi 
+(
+    MaDiaChi INT IDENTITY(1,1),
+    TenDN VARCHAR(20),
+	DiaChi NVARCHAR(255),
+	CONSTRAINT PK_DiaChi  PRIMARY KEY (MaDiaChi),
+	CONSTRAINT FK_DCTENDN FOREIGN KEY (TenDN) REFERENCES TaiKhoan(TenDN)
+)
+GO
 -- Bảng danh sách đơn hàng
 CREATE TABLE DonHang 
 (
@@ -77,14 +86,15 @@ CREATE TABLE DonHang
 	Email nvarchar(100),
 	HoTen nvarchar(60),
 	SoDienThoai varchar(11),
-	DiaChi NVARCHAR(255),
+	ChiTietDiaChi  NVARCHAR(255),
 	TongGiaTri float,
 	HinhThucThanhToan NVARCHAR(255),
 	TrangThaiDonHang NVARCHAR(20),
 	CONSTRAINT PK_DonHang  PRIMARY KEY (MaDonHang),
-	CONSTRAINT FK_TENDN FOREIGN KEY (TenDN) REFERENCES TaiKhoan(TenDN)
+	CONSTRAINT FK_TENDN FOREIGN KEY (TenDN) REFERENCES TaiKhoan(TenDN),
 )
 GO
+
 
 -- Bảng chi tiết đơn hàng
 CREATE TABLE ChiTietDonHang (
@@ -92,7 +102,6 @@ CREATE TABLE ChiTietDonHang (
     MaCTSanPham INT,
     SoLuong INT,
 	ThanhTien float,
-	KichThuoc varchar(10),
 	TrangThaiCTDH int,
     CONSTRAINT PK_ChiTietDonHang PRIMARY KEY (MaDonHang, MaCTSanPham),
 	CONSTRAINT FK_ChiTietDonHang FOREIGN KEY (MaDonHang) REFERENCES DonHang(MaDonHang),
@@ -133,13 +142,7 @@ CREATE TABLE GioHang
 (
 	TenDN varchar(20),
 	MaCTSanPham INT,
-	TenSanPham NVARCHAR(50),
-	Anh nvarchar(255),
-	Gia float,
 	SoLuong int,
-	KichThuoc VARCHAR(20),
-	ThanhTien float,
-	TrangThaiGH int,
 	constraint PK_GioHang primary key(TenDN,MaCTSanPham),
 	constraint FK_GioHang_TenDN foreign key (TenDN) references TaiKhoan(TenDN),
 	constraint FK_GioHang_MaSanPham foreign key (MaCTSanPham) references ChiTietSanPham(ID)
@@ -206,8 +209,7 @@ VALUES
     (N'Loa Bluetooth JBL Flip 5', 6, 6, N'jblflip5.jpg', 0)
 GO
 
-
-INSERT INTO ChiTietSanPham (MaSanPham, Gia, Soluong, MoTa, Mausac)
+INSERT INTO ChiTietSanPham (MaSanPham, Gia, Soluong, MoTa, MauSac)
 VALUES
     (1, 21000000, 25, N'Tivi Samsung OLED 4K Ultra - Phiên bản Đen', N'Đen'),
     (1, 22000000, 30, N'Tivi Samsung OLED 4K Ultra - Phiên bản Bạc', N'Bạc'),

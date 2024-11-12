@@ -1,22 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\BACKUP\\DoAn\\DoAn_PTUDTM_QLShopBanDoDienTu_Nhom4\\DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\",
+  "WorkspaceRootPath": "C:\\DuLieuHocTap\\PTPM_UDTM\\DoAnPTPM\\DoAn_PTUDTM_QLShopBanDoDienTu_Nhom4\\DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B62FC4E5-DF92-4966-8C78-9C7636E519AF}|DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.csproj|d:\\backup\\doan\\doan_ptudtm_qlshopbandodientu_nhom4\\doan_ptpmudtm_qlcuahangbandodientu\\doan_ptpmudtm_qlcuahangbandodientu\\frm_dangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{B62FC4E5-DF92-4966-8C78-9C7636E519AF}|DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.csproj|solutionrelative:doan_ptpmudtm_qlcuahangbandodientu\\frm_dangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{B62FC4E5-DF92-4966-8C78-9C7636E519AF}|DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.csproj|c:\\dulieuhoctap\\ptpm_udtm\\doanptpm\\doan_ptudtm_qlshopbandodientu_nhom4\\doan_ptpmudtm_qlcuahangbandodientu\\doan_ptpmudtm_qlcuahangbandodientu\\dbqlcuahangdientu.dbml||{B465B5AD-8799-4507-B90A-EE29ACF36AF9}|",
+      "RelativeMoniker": "D:0:0:{B62FC4E5-DF92-4966-8C78-9C7636E519AF}|DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.csproj|solutionrelative:doan_ptpmudtm_qlcuahangbandodientu\\dbqlcuahangdientu.dbml||{B465B5AD-8799-4507-B90A-EE29ACF36AF9}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B62FC4E5-DF92-4966-8C78-9C7636E519AF}|DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.csproj|d:\\backup\\doan\\doan_ptudtm_qlshopbandodientu_nhom4\\doan_ptpmudtm_qlcuahangbandodientu\\doan_ptpmudtm_qlcuahangbandodientu\\frm_userdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{B62FC4E5-DF92-4966-8C78-9C7636E519AF}|DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.csproj|solutionrelative:doan_ptpmudtm_qlcuahangbandodientu\\frm_userdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{B62FC4E5-DF92-4966-8C78-9C7636E519AF}|DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.csproj|C:\\DuLieuHocTap\\PTPM_UDTM\\DoAnPTPM\\DoAn_PTUDTM_QLShopBanDoDienTu_Nhom4\\DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\doan_ptpmudtm_qlcuahangbandodientu\\userform\\frmusermain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B62FC4E5-DF92-4966-8C78-9C7636E519AF}|DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.csproj|solutionrelative:doan_ptpmudtm_qlcuahangbandodientu\\userform\\frmusermain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B62FC4E5-DF92-4966-8C78-9C7636E519AF}|DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.csproj|d:\\backup\\doan\\doan_ptudtm_qlshopbandodientu_nhom4\\doan_ptpmudtm_qlcuahangbandodientu\\doan_ptpmudtm_qlcuahangbandodientu\\frm_dangky.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{B62FC4E5-DF92-4966-8C78-9C7636E519AF}|DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.csproj|solutionrelative:doan_ptpmudtm_qlcuahangbandodientu\\frm_dangky.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{B62FC4E5-DF92-4966-8C78-9C7636E519AF}|DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.csproj|C:\\DuLieuHocTap\\PTPM_UDTM\\DoAnPTPM\\DoAn_PTUDTM_QLShopBanDoDienTu_Nhom4\\DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\doan_ptpmudtm_qlcuahangbandodientu\\userform\\cardsanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B62FC4E5-DF92-4966-8C78-9C7636E519AF}|DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.csproj|solutionrelative:doan_ptpmudtm_qlcuahangbandodientu\\userform\\cardsanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B62FC4E5-DF92-4966-8C78-9C7636E519AF}|DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.csproj|d:\\backup\\doan\\doan_ptudtm_qlshopbandodientu_nhom4\\doan_ptpmudtm_qlcuahangbandodientu\\doan_ptpmudtm_qlcuahangbandodientu\\frm_admindashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{B62FC4E5-DF92-4966-8C78-9C7636E519AF}|DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.csproj|solutionrelative:doan_ptpmudtm_qlcuahangbandodientu\\frm_admindashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{B62FC4E5-DF92-4966-8C78-9C7636E519AF}|DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.csproj|C:\\DuLieuHocTap\\PTPM_UDTM\\DoAnPTPM\\DoAn_PTUDTM_QLShopBanDoDienTu_Nhom4\\DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\doan_ptpmudtm_qlcuahangbandodientu\\userform\\frmdonhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B62FC4E5-DF92-4966-8C78-9C7636E519AF}|DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.csproj|solutionrelative:doan_ptpmudtm_qlcuahangbandodientu\\userform\\frmdonhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B62FC4E5-DF92-4966-8C78-9C7636E519AF}|DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.csproj|C:\\DuLieuHocTap\\PTPM_UDTM\\DoAnPTPM\\DoAn_PTUDTM_QLShopBanDoDienTu_Nhom4\\DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\doan_ptpmudtm_qlcuahangbandodientu\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B62FC4E5-DF92-4966-8C78-9C7636E519AF}|DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.csproj|solutionrelative:doan_ptpmudtm_qlcuahangbandodientu\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,63 +30,64 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "frm_DangNhap.cs [Design]",
-              "DocumentMoniker": "D:\\BACKUP\\DoAn\\DoAn_PTUDTM_QLShopBanDoDienTu_Nhom4\\DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\frm_DangNhap.cs",
-              "RelativeDocumentMoniker": "DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\frm_DangNhap.cs",
-              "ToolTip": "D:\\BACKUP\\DoAn\\DoAn_PTUDTM_QLShopBanDoDienTu_Nhom4\\DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\frm_DangNhap.cs [Design]",
-              "RelativeToolTip": "DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\frm_DangNhap.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T03:34:07.637Z",
-              "EditorCaption": " [Design]"
+              "Title": "dbQLCuaHangDienTu.dbml",
+              "DocumentMoniker": "C:\\DuLieuHocTap\\PTPM_UDTM\\DoAnPTPM\\DoAn_PTUDTM_QLShopBanDoDienTu_Nhom4\\DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\dbQLCuaHangDienTu.dbml",
+              "RelativeDocumentMoniker": "DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\dbQLCuaHangDienTu.dbml",
+              "ToolTip": "C:\\DuLieuHocTap\\PTPM_UDTM\\DoAnPTPM\\DoAn_PTUDTM_QLShopBanDoDienTu_Nhom4\\DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\dbQLCuaHangDienTu.dbml",
+              "RelativeToolTip": "DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\dbQLCuaHangDienTu.dbml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001722|",
+              "WhenOpened": "2024-11-08T06:37:41.404Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "frm_UserDashboard.cs [Design]",
-              "DocumentMoniker": "D:\\BACKUP\\DoAn\\DoAn_PTUDTM_QLShopBanDoDienTu_Nhom4\\DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\frm_UserDashboard.cs",
-              "RelativeDocumentMoniker": "DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\frm_UserDashboard.cs",
-              "ToolTip": "D:\\BACKUP\\DoAn\\DoAn_PTUDTM_QLShopBanDoDienTu_Nhom4\\DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\frm_UserDashboard.cs [Design]",
-              "RelativeToolTip": "DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\frm_UserDashboard.cs [Design]",
+              "Title": "frmUserMain.cs [Design]",
+              "DocumentMoniker": "C:\\DuLieuHocTap\\PTPM_UDTM\\DoAnPTPM\\DoAn_PTUDTM_QLShopBanDoDienTu_Nhom4\\DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\UserForm\\frmUserMain.cs",
+              "RelativeDocumentMoniker": "DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\UserForm\\frmUserMain.cs",
+              "ToolTip": "C:\\DuLieuHocTap\\PTPM_UDTM\\DoAnPTPM\\DoAn_PTUDTM_QLShopBanDoDienTu_Nhom4\\DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\UserForm\\frmUserMain.cs [Design]",
+              "RelativeToolTip": "DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\UserForm\\frmUserMain.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T03:34:06.835Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-11-08T02:50:24.623Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "frm_DangKy.cs [Design]",
-              "DocumentMoniker": "D:\\BACKUP\\DoAn\\DoAn_PTUDTM_QLShopBanDoDienTu_Nhom4\\DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\frm_DangKy.cs",
-              "RelativeDocumentMoniker": "DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\frm_DangKy.cs",
-              "ToolTip": "D:\\BACKUP\\DoAn\\DoAn_PTUDTM_QLShopBanDoDienTu_Nhom4\\DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\frm_DangKy.cs [Design]",
-              "RelativeToolTip": "DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\frm_DangKy.cs [Design]",
+              "Title": "CardSanPham.cs [Design]",
+              "DocumentMoniker": "C:\\DuLieuHocTap\\PTPM_UDTM\\DoAnPTPM\\DoAn_PTUDTM_QLShopBanDoDienTu_Nhom4\\DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\UserForm\\CardSanPham.cs",
+              "RelativeDocumentMoniker": "DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\UserForm\\CardSanPham.cs",
+              "ToolTip": "C:\\DuLieuHocTap\\PTPM_UDTM\\DoAnPTPM\\DoAn_PTUDTM_QLShopBanDoDienTu_Nhom4\\DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\UserForm\\CardSanPham.cs [Design]",
+              "RelativeToolTip": "DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\UserForm\\CardSanPham.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T03:34:05.859Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-11-08T03:38:48.601Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "frm_AdminDashboard.cs [Design]",
-              "DocumentMoniker": "D:\\BACKUP\\DoAn\\DoAn_PTUDTM_QLShopBanDoDienTu_Nhom4\\DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\frm_AdminDashboard.cs",
-              "RelativeDocumentMoniker": "DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\frm_AdminDashboard.cs",
-              "ToolTip": "D:\\BACKUP\\DoAn\\DoAn_PTUDTM_QLShopBanDoDienTu_Nhom4\\DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\frm_AdminDashboard.cs [Design]",
-              "RelativeToolTip": "DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\frm_AdminDashboard.cs [Design]",
+              "Title": "frmDonHang.cs [Design]",
+              "DocumentMoniker": "C:\\DuLieuHocTap\\PTPM_UDTM\\DoAnPTPM\\DoAn_PTUDTM_QLShopBanDoDienTu_Nhom4\\DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\UserForm\\frmDonHang.cs",
+              "RelativeDocumentMoniker": "DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\UserForm\\frmDonHang.cs",
+              "ToolTip": "C:\\DuLieuHocTap\\PTPM_UDTM\\DoAnPTPM\\DoAn_PTUDTM_QLShopBanDoDienTu_Nhom4\\DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\UserForm\\frmDonHang.cs [Design]",
+              "RelativeToolTip": "DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\UserForm\\frmDonHang.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T03:34:04.553Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-11-08T04:02:27.159Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\DuLieuHocTap\\PTPM_UDTM\\DoAnPTPM\\DoAn_PTUDTM_QLShopBanDoDienTu_Nhom4\\DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\Program.cs",
+              "RelativeDocumentMoniker": "DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\Program.cs",
+              "ToolTip": "C:\\DuLieuHocTap\\PTPM_UDTM\\DoAnPTPM\\DoAn_PTUDTM_QLShopBanDoDienTu_Nhom4\\DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\Program.cs",
+              "RelativeToolTip": "DoAn_PTPMUDTM_QLCuaHangBanDoDienTu\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-08T03:21:48.437Z"
             }
           ]
         }

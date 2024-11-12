@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm;
 
 namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu
 {
@@ -17,8 +18,8 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new frm_Dashboard());
-            //Application.Run(new frm_DangNhap());
-            Application.Run(new frm_AdminDashboard());
+            Application.Run(new frm_DangNhap());
+            //Application.Run(new frmUserMain());
         }
     }
 }
