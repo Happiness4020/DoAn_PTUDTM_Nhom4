@@ -65,8 +65,8 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu
                 else
                 {
                     LoaiSanPham loaisp = new LoaiSanPham();
-                    loaisp.MaLoai = TaoMaLoai();
                     loaisp.TenLoai = txtTenLoai.Text;
+                    loaisp.TrangThaiLoaiSP = cbxTrangThai.SelectedIndex;
 
                     // Thêm đối tượng nhưng đối tượng chỉ được thêm tạm thời vào DataDataContext và chưa được cập nhật vào database
                     db.LoaiSanPhams.InsertOnSubmit(loaisp);
@@ -97,6 +97,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu
             }
         }
 
+        int maloai = -1;
         private void btnXoa_Click(object sender, EventArgs e)
         {
             try
@@ -105,7 +106,6 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu
 
                 if (result == DialogResult.Yes)
                 {
-                    string maloai = txtMaLoai.Text;
                     LoaiSanPham loaisp = db.LoaiSanPhams.Where(t => t.MaLoai == maloai).FirstOrDefault();
 
                     if (loaisp != null)
@@ -132,8 +132,9 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu
 
         private void Reset()
         {
-            txtMaLoai.Clear();
+            maloai = -1;
             txtTenLoai.Clear();
+            cbxTrangThai.SelectedIndex = 0;
             txtTenLoai.Focus();
         }
 
@@ -141,18 +142,18 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu
         {
             try
             {
-                if (string.IsNullOrEmpty(txtMaLoai.Text))
+                if (maloai == -1)
                 {
                     MessageBox.Show("Vui lòng chọn mã loại sản phẩm cần cập nhật!!!");
                 }
                 else
                 {
-                    string maloai = txtMaLoai.Text;
                     LoaiSanPham loaisp = db.LoaiSanPhams.Where(t => t.MaLoai == maloai).FirstOrDefault();
 
                     if (loaisp != null)
                     {
                         loaisp.TenLoai = txtTenLoai.Text;
+                        loaisp.TrangThaiLoaiSP = cbxTrangThai.SelectedIndex;
 
                         Load_DataGridView();
                         MessageBox.Show("Cập nhật thành công! Nhấn lưu để lưu loại sản phẩm.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -172,8 +173,9 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu
         private void dgvLoaiSanPham_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewRow currentRow = dgvLoaiSanPham.CurrentRow;
-            txtMaLoai.Text = currentRow.Cells[0].Value.ToString();
+            maloai = (int)currentRow.Cells[0].Value;
             txtTenLoai.Text = currentRow.Cells[1].Value.ToString();
+            cbxTrangThai.SelectedIndex =(int)currentRow.Cells[2].Value;
         }
     }
 }

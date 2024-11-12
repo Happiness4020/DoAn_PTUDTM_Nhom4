@@ -17,7 +17,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new frm_Dashboard());
+            //Application.Run(new frm_AdminDashboard());
             Application.Run(new frm_DangNhap());
             //Application.Run(new frmUserMain());
         }

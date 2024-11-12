@@ -69,6 +69,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu
             this.txtTenDangNhap.Name = "txtTenDangNhap";
             this.txtTenDangNhap.Size = new System.Drawing.Size(231, 26);
             this.txtTenDangNhap.TabIndex = 1;
+            this.txtTenDangNhap.Text = "Admin";
             // 
             // txtMatKhau
             // 
@@ -79,6 +80,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu
             this.txtMatKhau.PasswordChar = '●';
             this.txtMatKhau.Size = new System.Drawing.Size(231, 26);
             this.txtMatKhau.TabIndex = 3;
+            this.txtMatKhau.Text = "admin123";
             // 
             // btnDangNhap
             // 

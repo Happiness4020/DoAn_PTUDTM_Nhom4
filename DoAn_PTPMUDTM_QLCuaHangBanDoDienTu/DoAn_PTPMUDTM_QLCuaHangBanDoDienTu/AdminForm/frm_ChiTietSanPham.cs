@@ -13,8 +13,8 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu
     public partial class frm_ChiTietSanPham : Form
     {
         DataDataContext db = new DataDataContext();
-        public string masp;
-        public frm_ChiTietSanPham(string masanpham)
+        public int masp;
+        public frm_ChiTietSanPham(int masanpham)
         {
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
@@ -57,7 +57,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu
                 {
                     // Kiểm tra xem màu sắc đã tồn tại chưa
                     var mauDaTonTai = db.ChiTietSanPhams
-                        .FirstOrDefault(t => t.MaSanPham == txtMaSanPham.Text && t.Mausac.ToLower() == cbxMauSac.SelectedItem.ToString().ToLower());
+                        .FirstOrDefault(t => t.MauSac.ToLower() == cbxMauSac.SelectedItem.ToString().ToLower());
 
                     if (mauDaTonTai != null)
                     {
@@ -66,11 +66,11 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu
                     }
                     ChiTietSanPham ctsp = new ChiTietSanPham();
 
-                    ctsp.ID = TaoID();
-                    ctsp.MaSanPham = txtMaSanPham.Text;
+                    ctsp.MaSanPham = int.Parse(txtMaSanPham.Text);
                     ctsp.Gia = float.Parse(txtGia.Text);
                     ctsp.Soluong = int.Parse(numSoLuong.Value.ToString());
-                    ctsp.Mausac = cbxMauSac.SelectedItem.ToString();
+                    ctsp.MoTa = 
+                    ctsp.MauSac = cbxMauSac.SelectedItem.ToString();
 
                     // Thêm đối tượng nhưng đối tượng chỉ được thêm tạm thời vào DataDataContext và chưa được cập nhật vào database
                     db.ChiTietSanPhams.InsertOnSubmit(ctsp);
@@ -131,7 +131,8 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu
                 txtMaSanPham.Text = currentRow.Cells[0].Value.ToString();
                 txtGia.Text = currentRow.Cells[1].Value.ToString();
                 numSoLuong.Value = decimal.Parse(currentRow.Cells[2].Value.ToString());
-                cbxMauSac.SelectedItem = currentRow.Cells[3].Value.ToString();
+                rtxtMoTa.Text = currentRow.Cells[3].Value.ToString();
+                cbxMauSac.SelectedItem = currentRow.Cells[4].Value.ToString();
             }
             catch (Exception ex)
             {
@@ -147,7 +148,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu
 
                 if (result == DialogResult.Yes)
                 {
-                    string masanpham = txtMaSanPham.Text;
+                    int masanpham = int.Parse(txtMaSanPham.Text);
                     ChiTietSanPham ctsp = db.ChiTietSanPhams.Where(t => t.MaSanPham == masanpham).FirstOrDefault();
 
                     if (ctsp != null)
@@ -176,6 +177,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu
         {
             txtGia.Clear();
             numSoLuong.Value = 0;
+            rtxtMoTa.Clear();
             cbxMauSac.SelectedIndex = 0;
             txtGia.Focus();
         }
@@ -190,14 +192,15 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu
                 }
                 else
                 {
-                    string masanpham = txtMaSanPham.Text;
+                    int masanpham = int.Parse(txtMaSanPham.Text);
                     ChiTietSanPham ctsp = db.ChiTietSanPhams.Where(t => t.MaSanPham == masanpham).FirstOrDefault();
 
                     if (ctsp != null)
                     {
                         ctsp.Gia = float.Parse(txtGia.Text);
                         ctsp.Soluong = int.Parse(numSoLuong.Value.ToString());
-                        ctsp.Mausac = cbxMauSac.SelectedItem.ToString();
+                        ctsp.MoTa = rtxtMoTa.Text;
+                        ctsp.MauSac = cbxMauSac.SelectedItem.ToString();
 
                         Load_DataGridView();
                         MessageBox.Show("Cập nhật thành công! Nhấn lưu để lưu chi tiết sản phẩm.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);

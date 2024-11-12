@@ -39,14 +39,17 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu
             this.cbxMauSac = new System.Windows.Forms.ComboBox();
             this.btnThem = new System.Windows.Forms.Button();
             this.dgvChiTietSP = new System.Windows.Forms.DataGridView();
-            this.MaSanPham = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Gia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MauSac = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
             this.lblTenSanPham = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.rtxtMoTa = new System.Windows.Forms.RichTextBox();
+            this.MaSanPham = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Gia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MoTa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MauSac = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.numSoLuong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChiTietSP)).BeginInit();
             this.SuspendLayout();
@@ -85,7 +88,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(59, 204);
+            this.label4.Location = new System.Drawing.Point(59, 295);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(69, 20);
             this.label4.TabIndex = 3;
@@ -130,7 +133,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu
             "Xanh lá",
             "Xanh dương",
             "Đỏ"});
-            this.cbxMauSac.Location = new System.Drawing.Point(170, 201);
+            this.cbxMauSac.Location = new System.Drawing.Point(170, 292);
             this.cbxMauSac.Name = "cbxMauSac";
             this.cbxMauSac.Size = new System.Drawing.Size(238, 28);
             this.cbxMauSac.TabIndex = 7;
@@ -141,7 +144,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu
             this.btnThem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.ForeColor = System.Drawing.Color.White;
-            this.btnThem.Location = new System.Drawing.Point(47, 235);
+            this.btnThem.Location = new System.Drawing.Point(42, 326);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(75, 41);
             this.btnThem.TabIndex = 8;
@@ -156,12 +159,84 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu
             this.MaSanPham,
             this.Gia,
             this.SoLuong,
+            this.MoTa,
             this.MauSac});
-            this.dgvChiTietSP.Location = new System.Drawing.Point(12, 282);
+            this.dgvChiTietSP.Location = new System.Drawing.Point(12, 385);
             this.dgvChiTietSP.Name = "dgvChiTietSP";
             this.dgvChiTietSP.Size = new System.Drawing.Size(444, 222);
             this.dgvChiTietSP.TabIndex = 9;
             this.dgvChiTietSP.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvChiTietSP_CellClick);
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnXoa.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoa.ForeColor = System.Drawing.Color.White;
+            this.btnXoa.Location = new System.Drawing.Point(142, 326);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(75, 41);
+            this.btnXoa.TabIndex = 10;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.UseVisualStyleBackColor = false;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
+            // btnSua
+            // 
+            this.btnSua.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnSua.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSua.ForeColor = System.Drawing.Color.White;
+            this.btnSua.Location = new System.Drawing.Point(242, 326);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(75, 41);
+            this.btnSua.TabIndex = 11;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.UseVisualStyleBackColor = false;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
+            // 
+            // btnLuu
+            // 
+            this.btnLuu.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnLuu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLuu.ForeColor = System.Drawing.Color.White;
+            this.btnLuu.Location = new System.Drawing.Point(342, 326);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(75, 41);
+            this.btnLuu.TabIndex = 12;
+            this.btnLuu.Text = "Lưu";
+            this.btnLuu.UseVisualStyleBackColor = false;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
+            // 
+            // lblTenSanPham
+            // 
+            this.lblTenSanPham.AutoSize = true;
+            this.lblTenSanPham.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenSanPham.Location = new System.Drawing.Point(8, 9);
+            this.lblTenSanPham.Name = "lblTenSanPham";
+            this.lblTenSanPham.Size = new System.Drawing.Size(132, 24);
+            this.lblTenSanPham.TabIndex = 13;
+            this.lblTenSanPham.Text = "Tên sản phẩm";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(56, 198);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(49, 20);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "Mô tả";
+            // 
+            // rtxtMoTa
+            // 
+            this.rtxtMoTa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.rtxtMoTa.Location = new System.Drawing.Point(170, 198);
+            this.rtxtMoTa.Name = "rtxtMoTa";
+            this.rtxtMoTa.Size = new System.Drawing.Size(238, 72);
+            this.rtxtMoTa.TabIndex = 15;
+            this.rtxtMoTa.Text = "";
             // 
             // MaSanPham
             // 
@@ -184,6 +259,13 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu
             this.SoLuong.Name = "SoLuong";
             this.SoLuong.ReadOnly = true;
             // 
+            // MoTa
+            // 
+            this.MoTa.DataPropertyName = "MoTa";
+            this.MoTa.HeaderText = "Mô tả";
+            this.MoTa.Name = "MoTa";
+            this.MoTa.ReadOnly = true;
+            // 
             // MauSac
             // 
             this.MauSac.DataPropertyName = "MauSac";
@@ -191,64 +273,14 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu
             this.MauSac.Name = "MauSac";
             this.MauSac.ReadOnly = true;
             // 
-            // btnXoa
-            // 
-            this.btnXoa.BackColor = System.Drawing.Color.SeaGreen;
-            this.btnXoa.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa.ForeColor = System.Drawing.Color.White;
-            this.btnXoa.Location = new System.Drawing.Point(147, 235);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(75, 41);
-            this.btnXoa.TabIndex = 10;
-            this.btnXoa.Text = "Xóa";
-            this.btnXoa.UseVisualStyleBackColor = false;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
-            // 
-            // btnSua
-            // 
-            this.btnSua.BackColor = System.Drawing.Color.SeaGreen;
-            this.btnSua.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSua.ForeColor = System.Drawing.Color.White;
-            this.btnSua.Location = new System.Drawing.Point(247, 235);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(75, 41);
-            this.btnSua.TabIndex = 11;
-            this.btnSua.Text = "Sửa";
-            this.btnSua.UseVisualStyleBackColor = false;
-            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
-            // 
-            // btnLuu
-            // 
-            this.btnLuu.BackColor = System.Drawing.Color.SeaGreen;
-            this.btnLuu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLuu.ForeColor = System.Drawing.Color.White;
-            this.btnLuu.Location = new System.Drawing.Point(347, 235);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(75, 41);
-            this.btnLuu.TabIndex = 12;
-            this.btnLuu.Text = "Lưu";
-            this.btnLuu.UseVisualStyleBackColor = false;
-            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
-            // 
-            // lblTenSanPham
-            // 
-            this.lblTenSanPham.AutoSize = true;
-            this.lblTenSanPham.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenSanPham.Location = new System.Drawing.Point(8, 9);
-            this.lblTenSanPham.Name = "lblTenSanPham";
-            this.lblTenSanPham.Size = new System.Drawing.Size(132, 24);
-            this.lblTenSanPham.TabIndex = 13;
-            this.lblTenSanPham.Text = "Tên sản phẩm";
-            // 
             // frm_ChiTietSanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Wheat;
-            this.ClientSize = new System.Drawing.Size(468, 517);
+            this.ClientSize = new System.Drawing.Size(468, 619);
+            this.Controls.Add(this.rtxtMoTa);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.lblTenSanPham);
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.btnSua);
@@ -289,10 +321,13 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnLuu;
         public System.Windows.Forms.TextBox txtMaSanPham;
+        public System.Windows.Forms.Label lblTenSanPham;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.RichTextBox rtxtMoTa;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaSanPham;
         private System.Windows.Forms.DataGridViewTextBoxColumn Gia;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MoTa;
         private System.Windows.Forms.DataGridViewTextBoxColumn MauSac;
-        public System.Windows.Forms.Label lblTenSanPham;
     }
 }

@@ -72,6 +72,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Data.dbml</DependentUpon>
     </Compile>
+    <Compile Include="AdminForm\frm_ChiTietSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForm\frm_ChiTietSanPham.Designer.cs">
+      <DependentUpon>frm_ChiTietSanPham.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_DangKy.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,11 +90,23 @@
     <Compile Include="frm_DangNhap.Designer.cs">
       <DependentUpon>frm_DangNhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_AdminDashboard.cs">
+    <Compile Include="AdminForm\frm_AdminDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_AdminDashboard.Designer.cs">
+    <Compile Include="AdminForm\frm_AdminDashboard.Designer.cs">
       <DependentUpon>frm_AdminDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForm\frm_LoaiSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForm\frm_LoaiSanPham.Designer.cs">
+      <DependentUpon>frm_LoaiSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForm\frm_SanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForm\frm_SanPham.Designer.cs">
+      <DependentUpon>frm_SanPham.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_UserDashboard.cs">
       <SubType>Form</SubType>
@@ -193,14 +211,23 @@
     <Compile Include="UserForm\frmUserMain.Designer.cs">
       <DependentUpon>frmUserMain.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AdminForm\frm_ChiTietSanPham.resx">
+      <DependentUpon>frm_ChiTietSanPham.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_DangKy.resx">
       <DependentUpon>frm_DangKy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_DangNhap.resx">
       <DependentUpon>frm_DangNhap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_AdminDashboard.resx">
+    <EmbeddedResource Include="AdminForm\frm_AdminDashboard.resx">
       <DependentUpon>frm_AdminDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForm\frm_LoaiSanPham.resx">
+      <DependentUpon>frm_LoaiSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForm\frm_SanPham.resx">
+      <DependentUpon>frm_SanPham.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_UserDashboard.resx">
       <DependentUpon>frm_UserDashboard.cs</DependentUpon>
@@ -305,9 +332,7 @@
   <ItemGroup>
     <None Include="Images\icon\xoa.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Images\imgUser\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Images\icon\Search.png" />
   </ItemGroup>
@@ -319,6 +344,69 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Images\icon\reset.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\icon\Accept.png" />
+    <Content Include="Images\icon\Add to basket.png" />
+    <Content Include="Images\icon\Add.png" />
+    <Content Include="Images\icon\Address book.png" />
+    <Content Include="Images\icon\Alarm.png" />
+    <Content Include="Images\icon\anhnen1.PNG" />
+    <Content Include="Images\icon\anpass.png" />
+    <Content Include="Images\icon\avatar.png" />
+    <Content Include="Images\icon\Bar chart.png" />
+    <Content Include="Images\icon\Best.png" />
+    <Content Include="Images\icon\Calendar.png" />
+    <Content Include="Images\icon\Call.png" />
+    <Content Include="Images\icon\chitiet.png" />
+    <Content Include="Images\icon\close.png" />
+    <Content Include="Images\icon\Closed door.png" />
+    <Content Include="Images\icon\Closed folder.png" />
+    <Content Include="Images\icon\Create.png" />
+    <Content Include="Images\icon\Date.png" />
+    <Content Include="Images\icon\Delete.png" />
+    <Content Include="Images\icon\Documents.png" />
+    <Content Include="Images\icon\Edit.png" />
+    <Content Include="Images\icon\Exit.png" />
+    <Content Include="Images\icon\Favourites.png" />
+    <Content Include="Images\icon\fpt.ico" />
+    <Content Include="Images\icon\fpt.png" />
+    <Content Include="Images\icon\Help.png" />
+    <Content Include="Images\icon\Home.png" />
+    <Content Include="Images\icon\iconSave.jpg" />
+    <Content Include="Images\icon\iconxtkm.jpg" />
+    <Content Include="Images\icon\List.png" />
+    <Content Include="Images\icon\Lock.png" />
+    <Content Include="Images\icon\Log out.png" />
+    <Content Include="Images\icon\login.jpg" />
+    <Content Include="Images\icon\login1.png" />
+    <Content Include="Images\icon\login2.jpg" />
+    <Content Include="Images\icon\Mail.png" />
+    <Content Include="Images\icon\menu.png" />
+    <Content Include="Images\icon\Notes.png" />
+    <Content Include="Images\icon\Numbered list.png" />
+    <Content Include="Images\icon\Open door.png" />
+    <Content Include="Images\icon\Open file.png" />
+    <Content Include="Images\icon\Open folder.png" />
+    <Content Include="Images\icon\Open letter.png" />
+    <Content Include="Images\icon\Open lock.png" />
+    <Content Include="Images\icon\Price list.png" />
+    <Content Include="Images\icon\Print preview.png" />
+    <Content Include="Images\icon\Refresh.png" />
+    <Content Include="Images\icon\Save as.png" />
+    <Content Include="Images\icon\Save.png" />
+    <Content Include="Images\icon\Secure.png" />
+    <Content Include="Images\icon\security.png" />
+    <Content Include="Images\icon\Statistics.png" />
+    <Content Include="Images\icon\Stop.png" />
+    <Content Include="Images\icon\Task list.png" />
+    <Content Include="Images\icon\Telephone.png" />
+    <Content Include="Images\icon\Tick.png" />
+    <Content Include="Images\icon\Trash.png" />
+    <Content Include="Images\icon\Unknown person.png" />
+    <Content Include="Images\icon\Unlock.png" />
+    <Content Include="Images\icon\User.png" />
+    <Content Include="Images\icon\Users.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

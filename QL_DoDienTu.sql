@@ -149,6 +149,20 @@ CREATE TABLE GioHang
 )
 GO
 
+CREATE TABLE ViewGioHang
+(
+	TenDN varchar(20) NOT NULL,
+	MaCTSanPham INT NOT NULL,
+	MaSanPham INT NOT NULL,
+	TenSanPham nvarchar(255),
+	Anh nvarchar(255),
+	SoLuong int,
+	ID int NOT NULL,
+	Gia float NOT NULL,
+	MauSac nvarchar(50) NOT NULL
+)
+GO
+
 set dateformat dmy
 insert into TaiKhoan values	('Admin',N'admin@gmail.com',N'Nhóm 15','26/07/2003',N'Nam','0378857407','Admin','admin123','a1.jpg',0);
 insert into TaiKhoan values	('User',N'khachhang1@gmail.com',N'Bùi Khánh Duy','13/08/2003',N'Nam','0585089691','buikhanhduy','123','a2.jpg',0);
@@ -305,6 +319,8 @@ select * from DonHang
 select * from ChiTietDonHang
 select * from ChiTietPhieuNhap
 select * from TaiKhoan
+
+delete from LoaiSanPham where MaLoai = 12
 
 ------ràng buộc------------
 

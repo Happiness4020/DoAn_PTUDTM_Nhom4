@@ -37,8 +37,8 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=TANDAT12DHTH07\\SQLEXPRESS;Initial Catalog=QL_CuaHangDoDienTu;Integrat" +
-            "ed Security=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=KD;Initial Catalog=QL_CuaHangDoDienTu;Integrated Security=True;User I" +
+            "D=sa;Password=kdk0lt_13082003")]
         public string QL_CuaHangDoDienTuConnectionString1 {
             get {
                 return ((string)(this["QL_CuaHangDoDienTuConnectionString1"]));

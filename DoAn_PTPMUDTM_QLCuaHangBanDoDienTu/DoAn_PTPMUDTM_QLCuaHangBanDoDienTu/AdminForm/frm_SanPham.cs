@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -45,33 +46,11 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu
             cbxNhaSanXuat.ValueMember = "MaNhaSanXuat";
         }
 
-        public string TaoMaSanPham()
-        {
-            const string letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-            const string numbers = "0123456789";
-            StringBuilder result = new StringBuilder();
-            Random random = new Random();
-
-            for (int i = 0; i < 4; i++)
-            {
-                int index = random.Next(letters.Length);
-                result.Append(letters[index]);
-            }
-
-            for (int i = 0; i < 6; i++)
-            {
-                int index = random.Next(numbers.Length);
-                result.Append(numbers[index]);
-            }
-
-            return result.ToString();
-        }
-
         private void btnThem_Click(object sender, EventArgs e)
         {
             try
             {
-                if (string.IsNullOrEmpty(txtTenSanPham.Text) || string.IsNullOrEmpty(txtAnh.Text) || string.IsNullOrEmpty(rtxtMoTa.Text))
+                if (string.IsNullOrEmpty(txtTenSanPham.Text) || string.IsNullOrEmpty(txtAnh.Text))
                 {
                     MessageBox.Show("Vui lòng nhập đầy đủ thông tin sản phẩm!!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
@@ -79,12 +58,11 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu
                 {
                     SanPham sp = new SanPham();
 
-                    sp.MaSanPham = TaoMaSanPham();
                     sp.TenSanPham = txtTenSanPham.Text;
-                    sp.MaLoai = cbxLoaiSanPham.SelectedValue.ToString();
-                    sp.MaNhaSanXuat = cbxNhaSanXuat.SelectedValue.ToString();
-                    sp.MoTa = rtxtMoTa.Text;
+                    sp.MaLoai = (int)cbxLoaiSanPham.SelectedValue;
+                    sp.MaNhaSanXuat = (int)cbxNhaSanXuat.SelectedValue;
                     sp.Anh = txtAnh.Text;
+                    sp.TrangThaiSP = cbxTrangThai.SelectedIndex;
 
                     // Thêm đối tượng nhưng đối tượng chỉ được thêm tạm thời vào DataDataContext và chưa được cập nhật vào database
                     db.SanPhams.InsertOnSubmit(sp);
@@ -115,6 +93,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu
             }
         }
 
+        int masanpham = -1;
         private void btnXoa_Click(object sender, EventArgs e)
         {
             try
@@ -123,7 +102,6 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu
 
                 if (result == DialogResult.Yes)
                 {
-                    string masanpham = txtMaSanPham.Text;
                     SanPham sp = db.SanPhams.Where(t => t.MaSanPham == masanpham).FirstOrDefault();
 
                     if (sp != null)
@@ -153,12 +131,12 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu
             try
             {
                 DataGridViewRow currentRow = dgvSanPham.CurrentRow;
-                txtMaSanPham.Text = currentRow.Cells[0].Value.ToString();
+                masanpham = (int)currentRow.Cells[0].Value;
                 txtTenSanPham.Text = currentRow.Cells[1].Value.ToString();
-                cbxLoaiSanPham.SelectedValue = currentRow.Cells[2].Value.ToString();
-                cbxNhaSanXuat.SelectedValue = currentRow.Cells[3].Value.ToString();
-                rtxtMoTa.Text = currentRow.Cells[4].Value.ToString();
-                txtAnh.Text = currentRow.Cells[5].Value.ToString();
+                cbxLoaiSanPham.SelectedValue = currentRow.Cells[2].Value;
+                cbxNhaSanXuat.SelectedValue = currentRow.Cells[3].Value;
+                txtAnh.Text = currentRow.Cells[4].Value.ToString();
+                cbxTrangThai.SelectedValue = currentRow.Cells[5].Value.ToString();
             }
             catch(Exception ex)
             {
@@ -170,27 +148,27 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
-                openFileDialog.InitialDirectory = "C:\\";
+                openFileDialog.InitialDirectory = "D:\\";
                 openFileDialog.Filter = "Image files (*.jpg, *.jpeg, *.png, *.bmp)|*.jpg;*.jpeg;*.png;*.bmp|All files (*.*)|*.*";
                 openFileDialog.FilterIndex = 1;
                 openFileDialog.RestoreDirectory = true;
 
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    string filePath = openFileDialog.FileName;
-                    txtAnh.Text = filePath;
+                    string fileName = Path.GetFileName(openFileDialog.FileName);
+                    txtAnh.Text = fileName;
                 }
             }
         }
 
         private void Reset()
         {
-            txtMaSanPham.Clear();
+            masanpham = -1;
             txtTenSanPham.Clear();
             cbxLoaiSanPham.SelectedIndex = 0;
             cbxNhaSanXuat.SelectedIndex = 0;
-            rtxtMoTa.Clear();
             txtAnh.Clear();
+            cbxTrangThai.SelectedIndex = 0;
             txtTenSanPham.Focus();
         }
 
@@ -203,22 +181,21 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu
         {
             try
             {
-                if (string.IsNullOrEmpty(txtMaSanPham.Text))
+                if (masanpham == -1)
                 {
                     MessageBox.Show("Vui lòng chọn mã sản phẩm cần cập nhật!!!");
                 }
                 else
                 {
-                    string masanpham = txtMaSanPham.Text;
                     SanPham sp = db.SanPhams.Where(t => t.MaSanPham == masanpham).FirstOrDefault();
 
                     if(sp != null)
                     {
                         sp.TenSanPham = txtTenSanPham.Text;
-                        sp.MaLoai = cbxLoaiSanPham.SelectedValue.ToString();
-                        sp.MaNhaSanXuat = cbxNhaSanXuat.SelectedValue.ToString();
-                        sp.MoTa = rtxtMoTa.Text;
+                        sp.MaLoai = (int)cbxLoaiSanPham.SelectedValue;
+                        sp.MaNhaSanXuat = (int)cbxNhaSanXuat.SelectedValue;
                         sp.Anh = txtAnh.Text;
+                        sp.TrangThaiSP = cbxTrangThai.SelectedIndex;
 
                         Load_DataGridView();
                         MessageBox.Show("Cập nhật thành công! Nhấn lưu để lưu sản phẩm.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -269,15 +246,15 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu
 
         private void chiTiếtSảnPhẩmToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if(string.IsNullOrEmpty(txtMaSanPham.Text))
+            if(masanpham == -1)
             {
                 MessageBox.Show("Hãy chọn sản phẩm cần xem!!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }  
             else
             {
-                frm_ChiTietSanPham frmCTSP = new frm_ChiTietSanPham(txtMaSanPham.Text);
-                frmCTSP.txtMaSanPham.Text = txtMaSanPham.Text;
-                frmCTSP.masp = txtMaSanPham.Text;
+                frm_ChiTietSanPham frmCTSP = new frm_ChiTietSanPham(masanpham);
+                frmCTSP.txtMaSanPham.Text = masanpham.ToString();
+                frmCTSP.masp = masanpham;
                 frmCTSP.lblTenSanPham.Text = txtTenSanPham.Text;
                 frmCTSP.Show();
             }    
