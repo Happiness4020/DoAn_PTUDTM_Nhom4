@@ -43,7 +43,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu
                 GioiTinh = cbxGioitinh.SelectedItem.ToString(),
                 AnhBiaUser = "user.jpg",
                 VaiTro = "User",
-                isDelete = 0
+                TrangThaiTK = 0
             };
             DangKyTaiKhoan(taikhoan);
         }

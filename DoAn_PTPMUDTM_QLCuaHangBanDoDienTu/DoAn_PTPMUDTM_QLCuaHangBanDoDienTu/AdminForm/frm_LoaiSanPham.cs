@@ -20,6 +20,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu
             dgvLoaiSanPham.AutoGenerateColumns = false;
             dgvLoaiSanPham.AllowUserToAddRows = false;
             Load_DataGridView();
+            cbxTrangThai.SelectedIndex = 0;
         }
         private void Load_DataGridView()
         {
@@ -58,10 +59,15 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu
         {
             try
             {
+                var tenloai = db.LoaiSanPhams.Where(t => t.TenLoai == txtTenLoai.Text).FirstOrDefault();
                 if (string.IsNullOrEmpty(txtTenLoai.Text))
                 {
                     MessageBox.Show("Vui lòng nhập tên loại sản phẩm!!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
+                else if(tenloai != null)
+                {
+                    MessageBox.Show("Loại sản phẩm đã tồn tại!!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }    
                 else
                 {
                     LoaiSanPham loaisp = new LoaiSanPham();
