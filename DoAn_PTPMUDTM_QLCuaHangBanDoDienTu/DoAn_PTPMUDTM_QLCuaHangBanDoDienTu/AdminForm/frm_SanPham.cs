@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu
+namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.AdminForm
 {
     public partial class frm_SanPham : Form
     {
@@ -50,10 +50,15 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu
         {
             try
             {
+                var tensp = db.SanPhams.Where(sp => sp.TenSanPham == txtTenSanPham.Text);
                 if (string.IsNullOrEmpty(txtTenSanPham.Text) || string.IsNullOrEmpty(txtAnh.Text))
                 {
                     MessageBox.Show("Vui lòng nhập đầy đủ thông tin sản phẩm!!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
+                else if(tensp != null)
+                {
+                    MessageBox.Show("Sản phẩm đã tồn tại!!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }    
                 else
                 {
                     SanPham sp = new SanPham();

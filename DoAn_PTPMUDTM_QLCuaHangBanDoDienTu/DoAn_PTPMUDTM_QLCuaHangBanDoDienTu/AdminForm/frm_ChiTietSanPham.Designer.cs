@@ -45,11 +45,13 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu
             this.lblTenSanPham = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.rtxtMoTa = new System.Windows.Forms.RichTextBox();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaSanPham = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Gia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MoTa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MauSac = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnReset = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numSoLuong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChiTietSP)).BeginInit();
             this.SuspendLayout();
@@ -129,6 +131,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu
             "Trắng",
             "Hồng",
             "Đen",
+            "Xám",
             "Bạc",
             "Xanh lá",
             "Xanh dương",
@@ -144,7 +147,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu
             this.btnThem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.ForeColor = System.Drawing.Color.White;
-            this.btnThem.Location = new System.Drawing.Point(42, 326);
+            this.btnThem.Location = new System.Drawing.Point(36, 326);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(75, 41);
             this.btnThem.TabIndex = 8;
@@ -156,6 +159,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu
             // 
             this.dgvChiTietSP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvChiTietSP.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
             this.MaSanPham,
             this.Gia,
             this.SoLuong,
@@ -173,7 +177,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu
             this.btnXoa.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.ForeColor = System.Drawing.Color.White;
-            this.btnXoa.Location = new System.Drawing.Point(142, 326);
+            this.btnXoa.Location = new System.Drawing.Point(117, 326);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(75, 41);
             this.btnXoa.TabIndex = 10;
@@ -187,7 +191,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu
             this.btnSua.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.ForeColor = System.Drawing.Color.White;
-            this.btnSua.Location = new System.Drawing.Point(242, 326);
+            this.btnSua.Location = new System.Drawing.Point(198, 326);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(75, 41);
             this.btnSua.TabIndex = 11;
@@ -201,7 +205,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu
             this.btnLuu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLuu.ForeColor = System.Drawing.Color.White;
-            this.btnLuu.Location = new System.Drawing.Point(342, 326);
+            this.btnLuu.Location = new System.Drawing.Point(279, 326);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(75, 41);
             this.btnLuu.TabIndex = 12;
@@ -238,6 +242,13 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu
             this.rtxtMoTa.TabIndex = 15;
             this.rtxtMoTa.Text = "";
             // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "ID";
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            // 
             // MaSanPham
             // 
             this.MaSanPham.DataPropertyName = "MaSanPham";
@@ -273,12 +284,27 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu
             this.MauSac.Name = "MauSac";
             this.MauSac.ReadOnly = true;
             // 
+            // btnReset
+            // 
+            this.btnReset.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnReset.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReset.ForeColor = System.Drawing.Color.White;
+            this.btnReset.Location = new System.Drawing.Point(360, 326);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(75, 41);
+            this.btnReset.TabIndex = 16;
+            this.btnReset.Text = "Reset";
+            this.btnReset.UseVisualStyleBackColor = false;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
             // frm_ChiTietSanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Wheat;
             this.ClientSize = new System.Drawing.Size(468, 619);
+            this.Controls.Add(this.btnReset);
             this.Controls.Add(this.rtxtMoTa);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.lblTenSanPham);
@@ -324,10 +350,12 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu
         public System.Windows.Forms.Label lblTenSanPham;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.RichTextBox rtxtMoTa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaSanPham;
         private System.Windows.Forms.DataGridViewTextBoxColumn Gia;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
         private System.Windows.Forms.DataGridViewTextBoxColumn MoTa;
         private System.Windows.Forms.DataGridViewTextBoxColumn MauSac;
+        private System.Windows.Forms.Button btnReset;
     }
 }

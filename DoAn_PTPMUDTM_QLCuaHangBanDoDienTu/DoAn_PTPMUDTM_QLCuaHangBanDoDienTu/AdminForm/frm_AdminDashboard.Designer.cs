@@ -1,4 +1,4 @@
-﻿namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu
+﻿namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.AdminForm
 {
     partial class frm_AdminDashboard
     {
@@ -29,22 +29,20 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnDonHang = new System.Windows.Forms.Button();
+            this.btnTaiKhoan = new System.Windows.Forms.Button();
             this.btnNSX = new System.Windows.Forms.Button();
             this.btnSanPham = new System.Windows.Forms.Button();
             this.btn_DangXuat = new System.Windows.Forms.Button();
             this.pnlControls = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.SeaGreen;
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnDonHang);
+            this.panel1.Controls.Add(this.btnTaiKhoan);
             this.panel1.Controls.Add(this.btnNSX);
             this.panel1.Controls.Add(this.btnSanPham);
             this.panel1.Controls.Add(this.btn_DangXuat);
@@ -53,6 +51,31 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 681);
             this.panel1.TabIndex = 0;
+            // 
+            // btnDonHang
+            // 
+            this.btnDonHang.BackColor = System.Drawing.Color.Wheat;
+            this.btnDonHang.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDonHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDonHang.Location = new System.Drawing.Point(3, 279);
+            this.btnDonHang.Name = "btnDonHang";
+            this.btnDonHang.Size = new System.Drawing.Size(194, 37);
+            this.btnDonHang.TabIndex = 5;
+            this.btnDonHang.Text = "Đơn hàng";
+            this.btnDonHang.UseVisualStyleBackColor = false;
+            // 
+            // btnTaiKhoan
+            // 
+            this.btnTaiKhoan.BackColor = System.Drawing.Color.Wheat;
+            this.btnTaiKhoan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTaiKhoan.Location = new System.Drawing.Point(3, 236);
+            this.btnTaiKhoan.Name = "btnTaiKhoan";
+            this.btnTaiKhoan.Size = new System.Drawing.Size(194, 37);
+            this.btnTaiKhoan.TabIndex = 3;
+            this.btnTaiKhoan.Text = "Tài khoản";
+            this.btnTaiKhoan.UseVisualStyleBackColor = false;
+            this.btnTaiKhoan.Click += new System.EventHandler(this.btnTaiKhoan_Click);
             // 
             // btnNSX
             // 
@@ -65,6 +88,7 @@
             this.btnNSX.TabIndex = 2;
             this.btnNSX.Text = "Nhà sản xuất";
             this.btnNSX.UseVisualStyleBackColor = false;
+            this.btnNSX.Click += new System.EventHandler(this.btnNSX_Click);
             // 
             // btnSanPham
             // 
@@ -100,42 +124,6 @@
             this.pnlControls.Size = new System.Drawing.Size(1064, 681);
             this.pnlControls.TabIndex = 1;
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Wheat;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(3, 236);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(194, 37);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Tài khoản";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Wheat;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(3, 279);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(194, 37);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Hóa Đơn";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Wheat;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(3, 322);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(194, 37);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Đơn hàng";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
             // frm_AdminDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -160,9 +148,8 @@
         private System.Windows.Forms.Button btnSanPham;
         private System.Windows.Forms.Button btnNSX;
         private System.Windows.Forms.Panel pnlControls;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnTaiKhoan;
+        private System.Windows.Forms.Button btnDonHang;
     }
 }
 

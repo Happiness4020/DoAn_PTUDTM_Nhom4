@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm;
+using DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.AdminForm;
 
 namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu
 {

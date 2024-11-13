@@ -149,20 +149,6 @@ CREATE TABLE GioHang
 )
 GO
 
-CREATE TABLE ViewGioHang
-(
-	TenDN varchar(20) NOT NULL,
-	MaCTSanPham INT NOT NULL,
-	MaSanPham INT NOT NULL,
-	TenSanPham nvarchar(255),
-	Anh nvarchar(255),
-	SoLuong int,
-	ID int NOT NULL,
-	Gia float NOT NULL,
-	MauSac nvarchar(50) NOT NULL
-)
-GO
-
 set dateformat dmy
 insert into TaiKhoan values	('Admin',N'admin@gmail.com',N'Nhóm 15','26/07/2003',N'Nam','0378857407','Admin','admin123','a1.jpg',0);
 insert into TaiKhoan values	('User',N'khachhang1@gmail.com',N'Bùi Khánh Duy','13/08/2003',N'Nam','0585089691','buikhanhduy','123','a2.jpg',0);
@@ -261,10 +247,10 @@ VALUES
     (12, 5000000, 30, N'Máy hút bụi Samsung công nghệ mới - Màu Xám', N'Xám'),
     (12, 5200000, 25, N'Máy hút bụi Samsung công nghệ mới - Màu Đen', N'Đen'),
 
-    (13, 900000, 60, N'Bàn ủi Philips - Màu Xanh', N'Xanh'),
+    (13, 900000, 60, N'Bàn ủi Philips - Màu Xanh', N'Xanh lá'),
     (13, 950000, 50, N'Bàn ủi Philips - Màu Đỏ', N'Đỏ'),
 
-    (14, 17000000, 15, N'Laptop Asus ZenBook - Màu Xanh', N'Xanh'),
+    (14, 17000000, 15, N'Laptop Asus ZenBook - Màu Xanh', N'Xanh lá'),
     (14, 16500000, 20, N'Laptop Asus ZenBook - Màu Bạc', N'Bạc'),
 
     (15, 4500000, 10, N'Máy pha cà phê Delonghi Espresso - Màu Bạc', N'Bạc'),
@@ -282,7 +268,7 @@ VALUES
     (19, 13000000, 20, N'Laptop HP Pavilion - Màu Đen', N'Đen'),
     (19, 13500000, 18, N'Laptop HP Pavilion - Màu Bạc', N'Bạc'),
 
-    (20, 3200000, 30, N'Loa Bluetooth JBL Flip 5 - Màu Xanh Dương', N'Xanh Dương'),
+    (20, 3200000, 30, N'Loa Bluetooth JBL Flip 5 - Màu Xanh Dương', N'Xanh dương'),
     (20, 3150000, 28, N'Loa Bluetooth JBL Flip 5 - Màu Đen', N'Đen')
 GO
 

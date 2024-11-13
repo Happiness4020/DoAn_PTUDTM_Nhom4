@@ -55,9 +55,9 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu
                 }
                 else
                 {
-                    // Kiểm tra xem màu sắc đã tồn tại chưa
+                    // Kiểm tra xem sản phẩm đã có màu cần thêm chưa?
                     var mauDaTonTai = db.ChiTietSanPhams
-                        .FirstOrDefault(t => t.MauSac.ToLower() == cbxMauSac.SelectedItem.ToString().ToLower());
+                        .FirstOrDefault(t => t.MauSac.ToLower() == cbxMauSac.SelectedItem.ToString().ToLower() && t.MauSac == txtMaSanPham.Text);
 
                     if (mauDaTonTai != null)
                     {
@@ -69,7 +69,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu
                     ctsp.MaSanPham = int.Parse(txtMaSanPham.Text);
                     ctsp.Gia = float.Parse(txtGia.Text);
                     ctsp.Soluong = int.Parse(numSoLuong.Value.ToString());
-                    ctsp.MoTa = 
+                    ctsp.MoTa = rtxtMoTa.Text;
                     ctsp.MauSac = cbxMauSac.SelectedItem.ToString();
 
                     // Thêm đối tượng nhưng đối tượng chỉ được thêm tạm thời vào DataDataContext và chưa được cập nhật vào database
@@ -101,38 +101,17 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu
             }
         }
 
-        public string TaoID()
-        {
-            const string letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyx";
-            const string numbers = "0123456789";
-            StringBuilder kq = new StringBuilder();
-            Random random = new Random();
-
-            for (int i = 0; i < 4; i++)
-            {
-                int index = random.Next(letters.Length);
-                kq.Append(letters[index]);
-            }
-
-            for (int i = 0; i < 6; i++)
-            {
-                int index = random.Next(numbers.Length);
-                kq.Append(numbers[index]);
-            }
-
-            return kq.ToString();
-        }
-
         private void dgvChiTietSP_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
                 DataGridViewRow currentRow = dgvChiTietSP.CurrentRow;
-                txtMaSanPham.Text = currentRow.Cells[0].Value.ToString();
-                txtGia.Text = currentRow.Cells[1].Value.ToString();
-                numSoLuong.Value = decimal.Parse(currentRow.Cells[2].Value.ToString());
-                rtxtMoTa.Text = currentRow.Cells[3].Value.ToString();
-                cbxMauSac.SelectedItem = currentRow.Cells[4].Value.ToString();
+                maid = (int)currentRow.Cells[0].Value;
+                txtMaSanPham.Text = currentRow.Cells[1].Value.ToString();
+                txtGia.Text = currentRow.Cells[2].Value.ToString();
+                numSoLuong.Value = decimal.Parse(currentRow.Cells[3].Value.ToString());
+                rtxtMoTa.Text = currentRow.Cells[4].Value.ToString();
+                cbxMauSac.SelectedItem = currentRow.Cells[5].Value.ToString();
             }
             catch (Exception ex)
             {
@@ -148,8 +127,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu
 
                 if (result == DialogResult.Yes)
                 {
-                    int masanpham = int.Parse(txtMaSanPham.Text);
-                    ChiTietSanPham ctsp = db.ChiTietSanPhams.Where(t => t.MaSanPham == masanpham).FirstOrDefault();
+                    ChiTietSanPham ctsp = db.ChiTietSanPhams.Where(t => t.ID == maid).FirstOrDefault();
 
                     if (ctsp != null)
                     {
@@ -180,20 +158,22 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu
             rtxtMoTa.Clear();
             cbxMauSac.SelectedIndex = 0;
             txtGia.Focus();
+            maid = -1;
         }
 
+        int maid = -1;
         private void btnSua_Click(object sender, EventArgs e)
         {
             try
             {
-                if (string.IsNullOrEmpty(txtMaSanPham.Text))
+                if (maid == -1)
                 {
                     MessageBox.Show("Vui lòng chọn mã chi tiết sản phẩm cần cập nhật!!!");
                 }
                 else
                 {
                     int masanpham = int.Parse(txtMaSanPham.Text);
-                    ChiTietSanPham ctsp = db.ChiTietSanPhams.Where(t => t.MaSanPham == masanpham).FirstOrDefault();
+                    ChiTietSanPham ctsp = db.ChiTietSanPhams.Where(t => t.ID == maid).FirstOrDefault();
 
                     if (ctsp != null)
                     {
@@ -215,6 +195,11 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu
             {
                 MessageBox.Show("Lỗi khi cập nhật sản phẩm: " + ex, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            Reset();
         }
     }
 }

@@ -56,5 +56,28 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.Properties {
                 this["tenDN"] = value;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=KD;Initial Catalog=QL_CuaHangDoDienTu;Persist Security Info=True;User" +
+            " ID=sa;MultipleActiveResultSets=True;Application Name=EntityFramework")]
+        public string QL_CuaHangDoDienTuConnectionString2 {
+            get {
+                return ((string)(this["QL_CuaHangDoDienTuConnectionString2"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=KD;Initial Catalog=QL_CuaHangDoDienTu;Persist Security Info=True;User" +
+            " ID=sa;Password=kdk0lt_13082003;MultipleActiveResultSets=True;Application Name=E" +
+            "ntityFramework")]
+        public string QL_CuaHangDoDienTuConnectionString3 {
+            get {
+                return ((string)(this["QL_CuaHangDoDienTuConnectionString3"]));
+            }
+        }
     }
 }
