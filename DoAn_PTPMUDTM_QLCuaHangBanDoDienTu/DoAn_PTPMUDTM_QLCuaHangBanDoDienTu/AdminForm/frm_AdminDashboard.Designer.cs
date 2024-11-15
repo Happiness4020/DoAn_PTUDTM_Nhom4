@@ -63,6 +63,7 @@
             this.btnDonHang.TabIndex = 5;
             this.btnDonHang.Text = "Đơn hàng";
             this.btnDonHang.UseVisualStyleBackColor = false;
+            this.btnDonHang.Click += new System.EventHandler(this.btnDonHang_Click);
             // 
             // btnTaiKhoan
             // 

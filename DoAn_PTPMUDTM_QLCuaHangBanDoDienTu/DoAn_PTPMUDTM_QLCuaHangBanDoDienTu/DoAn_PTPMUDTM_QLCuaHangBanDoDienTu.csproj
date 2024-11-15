@@ -67,6 +67,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminForm\frm_DonHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForm\frm_DonHang.Designer.cs">
+      <DependentUpon>frm_DonHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminForm\frm_NhaSanXuat.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -225,6 +231,9 @@
     </Compile>
     <EmbeddedResource Include="AdminForm\frm_ChiTietSanPham.resx">
       <DependentUpon>frm_ChiTietSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForm\frm_DonHang.resx">
+      <DependentUpon>frm_DonHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminForm\frm_NhaSanXuat.resx">
       <DependentUpon>frm_NhaSanXuat.cs</DependentUpon>
