@@ -33,10 +33,9 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu
                                .Where(ctsp => ctsp.MaSanPham == masp)
                                .ToList();
 
-                // Kiểm tra xem có chi tiết sản phẩm nào tìm thấy không
                 if (kq.Count > 0)
                 {
-                    dgvChiTietSP.DataSource = kq; // Gán dữ liệu cho DataGridView
+                    dgvChiTietSP.DataSource = kq;
                 }
             }
             catch (Exception ex)
@@ -72,7 +71,6 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu
                     ctsp.MoTa = rtxtMoTa.Text;
                     ctsp.MauSac = cbxMauSac.SelectedItem.ToString();
 
-                    // Thêm đối tượng nhưng đối tượng chỉ được thêm tạm thời vào DataDataContext và chưa được cập nhật vào database
                     db.ChiTietSanPhams.InsertOnSubmit(ctsp);
 
                     Load_DataGridView();
@@ -89,7 +87,6 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu
         {
             try
             {
-                // Đồng bộ dữ liệu của project vào database
                 db.SubmitChanges();
 
                 Load_DataGridView();

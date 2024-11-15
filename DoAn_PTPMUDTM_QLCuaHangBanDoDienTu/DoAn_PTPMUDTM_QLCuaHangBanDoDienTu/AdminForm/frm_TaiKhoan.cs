@@ -245,5 +245,40 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.AdminForm
                 MessageBox.Show("Lỗi: " + ex, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string tendn = txtTimKiem.Text.Trim();
+
+                if (string.IsNullOrEmpty(tendn))
+                {
+                    MessageBox.Show("Vui lòng nhập thông tin cần tìm!!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                var kq = db.TaiKhoans.Where(dh => dh.TenDN.Contains(tendn)).ToList();
+
+                if (kq.Count > 0)
+                {
+                    dgvTaiKhoan.DataSource = kq;
+                }
+                else
+                {
+                    MessageBox.Show("Không tìm thấy tài khoản cần tìm!!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    dgvTaiKhoan.DataSource = null;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi tìm kiếm tài khoản: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            Load_DataTK();
+        }
     }
 }

@@ -67,6 +67,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminForm\frm_ChiTietDonHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForm\frm_ChiTietDonHang.Designer.cs">
+      <DependentUpon>frm_ChiTietDonHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminForm\frm_DonHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -229,6 +235,9 @@
     <Compile Include="UserForm\frmUserMain.Designer.cs">
       <DependentUpon>frmUserMain.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AdminForm\frm_ChiTietDonHang.resx">
+      <DependentUpon>frm_ChiTietDonHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminForm\frm_ChiTietSanPham.resx">
       <DependentUpon>frm_ChiTietSanPham.cs</DependentUpon>
     </EmbeddedResource>
