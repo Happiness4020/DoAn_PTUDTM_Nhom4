@@ -67,6 +67,8 @@ CREATE TABLE TaiKhoan (
 	TrangThaiTK int,
 )
 GO
+select * from TaiKhoan
+
 --Bảng địa chỉ
 CREATE TABLE DiaChi 
 (
@@ -94,6 +96,7 @@ CREATE TABLE DonHang
 	CONSTRAINT FK_TENDN FOREIGN KEY (TenDN) REFERENCES TaiKhoan(TenDN),
 )
 GO
+select * from DonHang
 
 
 -- Bảng chi tiết đơn hàng

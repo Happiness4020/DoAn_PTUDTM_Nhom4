@@ -68,5 +68,14 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.AdminForm
             pnlControls.Controls.Add(frmTK);
             frmTK.Show();
         }
+
+        private void btnDonHang_Click(object sender, EventArgs e)
+        {
+            DongTatCaForm();
+            frm_DonHang frmDH = new frm_DonHang();
+            frmDH.TopLevel = false;
+            pnlControls.Controls.Add(frmDH);
+            frmDH.Show();
+        }
     }
 }
