@@ -210,5 +210,40 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.AdminForm
                 e.Handled = true;
             }
         }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string tennsx = txtTimKiem.Text.Trim();
+
+                if (string.IsNullOrEmpty(tennsx))
+                {
+                    MessageBox.Show("Vui lòng nhập thông tin cần tìm!!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                var kq = db.NhaSanXuats.Where(dh => dh.TenNhaSanXuat.Contains(tennsx)).ToList();
+
+                if (kq.Count > 0)
+                {
+                    dgvNSX.DataSource = kq;
+                }
+                else
+                {
+                    MessageBox.Show("Không tìm thấy nhà sản xuất cần tìm!!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    dgvNSX.DataSource = null;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi tìm kiếm nhà sản xuất: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            Load_DataNSX();
+        }
     }
 }

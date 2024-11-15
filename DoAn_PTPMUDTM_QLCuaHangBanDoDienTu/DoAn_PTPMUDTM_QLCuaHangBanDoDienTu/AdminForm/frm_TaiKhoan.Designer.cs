@@ -405,6 +405,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.AdminForm
             this.btnHuy.TabIndex = 67;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.UseVisualStyleBackColor = false;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnTimKiem
             // 
@@ -418,6 +419,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.AdminForm
             this.btnTimKiem.TabIndex = 66;
             this.btnTimKiem.Text = "Tìm kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = false;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // label12
             // 

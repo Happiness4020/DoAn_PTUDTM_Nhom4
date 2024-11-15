@@ -219,13 +219,17 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.AdminForm
 
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
-            string tensanpham = txtTenSanPham.Text.Trim();
-
             try
             {
-                var kq = db.SanPhams
-                               .Where(sp => sp.TenSanPham.Contains(tensanpham))
-                               .ToList();
+                string tensanpham = txtTimKiem.Text.Trim();
+
+                if (string.IsNullOrEmpty(tensanpham))
+                {
+                    MessageBox.Show("Vui lòng nhập thông tin cần tìm!!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                var kq = db.SanPhams.Where(dh => dh.TenSanPham.Contains(tensanpham)).ToList();
 
                 if (kq.Count > 0)
                 {
@@ -233,13 +237,13 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.AdminForm
                 }
                 else
                 {
-                    MessageBox.Show("Sản phẩm không tồn tại!!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Không tìm thấy sản phẩm cần tìm!!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     dgvSanPham.DataSource = null;
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Lỗi khi tìm kiếm: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Lỗi khi tìm kiếm sản phẩm: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
