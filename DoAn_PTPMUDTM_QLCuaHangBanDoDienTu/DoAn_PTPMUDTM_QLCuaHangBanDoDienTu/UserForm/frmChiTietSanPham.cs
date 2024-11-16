@@ -64,7 +64,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
                 if (gh==null)
                 {
                     gh = new GioHang();
-                    gh.TenDN = "nguyentandat";
+                    gh.TenDN = Properties.Settings.Default.tenDN;
                     gh.MaCTSanPham = ct.ID;
                     gh.SoLuong = (int)nbrSoLuong.Value;
                     db.GioHangs.InsertOnSubmit(gh);
@@ -99,7 +99,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
         public bool ValidateInputs()
         {
             string errorMessage = "";
-            if (nbrSoLuong.Value <= 1)
+            if (nbrSoLuong.Value < 1)
             {
                 errorMessage += "Giá trị số lượng phải là số lớn hơn 1.\n";
             }
