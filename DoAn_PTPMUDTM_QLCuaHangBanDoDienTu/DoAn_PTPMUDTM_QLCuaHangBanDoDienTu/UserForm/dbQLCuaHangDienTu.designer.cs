@@ -2933,11 +2933,17 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
 	public partial class ViewGioHang
 	{
 		
-		private int _ID;
-		
 		private int _MaSanPham;
 		
+		private string _TenSanPham;
+		
+		private string _Anh;
+		
+		private int _ID;
+		
 		private double _Gia;
+		
+		private string _MauSac;
 		
 		private string _TenDN;
 		
@@ -2945,32 +2951,8 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
 		
 		private System.Nullable<int> _SoLuong;
 		
-		private int _Expr1;
-		
-		private string _Anh;
-		
-		private string _TenSanPham;
-		
-		private string _MauSac;
-		
 		public ViewGioHang()
 		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", DbType="Int NOT NULL")]
-		public int ID
-		{
-			get
-			{
-				return this._ID;
-			}
-			set
-			{
-				if ((this._ID != value))
-				{
-					this._ID = value;
-				}
-			}
 		}
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaSanPham", DbType="Int NOT NULL")]
@@ -2989,6 +2971,54 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenSanPham", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string TenSanPham
+		{
+			get
+			{
+				return this._TenSanPham;
+			}
+			set
+			{
+				if ((this._TenSanPham != value))
+				{
+					this._TenSanPham = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Anh", DbType="NVarChar(255)")]
+		public string Anh
+		{
+			get
+			{
+				return this._Anh;
+			}
+			set
+			{
+				if ((this._Anh != value))
+				{
+					this._Anh = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", DbType="Int NOT NULL")]
+		public int ID
+		{
+			get
+			{
+				return this._ID;
+			}
+			set
+			{
+				if ((this._ID != value))
+				{
+					this._ID = value;
+				}
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Gia", DbType="Float NOT NULL")]
 		public double Gia
 		{
@@ -3001,6 +3031,22 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
 				if ((this._Gia != value))
 				{
 					this._Gia = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MauSac", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string MauSac
+		{
+			get
+			{
+				return this._MauSac;
+			}
+			set
+			{
+				if ((this._MauSac != value))
+				{
+					this._MauSac = value;
 				}
 			}
 		}
@@ -3049,70 +3095,6 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
 				if ((this._SoLuong != value))
 				{
 					this._SoLuong = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Expr1", DbType="Int NOT NULL")]
-		public int Expr1
-		{
-			get
-			{
-				return this._Expr1;
-			}
-			set
-			{
-				if ((this._Expr1 != value))
-				{
-					this._Expr1 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Anh", DbType="NVarChar(255)")]
-		public string Anh
-		{
-			get
-			{
-				return this._Anh;
-			}
-			set
-			{
-				if ((this._Anh != value))
-				{
-					this._Anh = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenSanPham", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
-		public string TenSanPham
-		{
-			get
-			{
-				return this._TenSanPham;
-			}
-			set
-			{
-				if ((this._TenSanPham != value))
-				{
-					this._TenSanPham = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MauSac", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
-		public string MauSac
-		{
-			get
-			{
-				return this._MauSac;
-			}
-			set
-			{
-				if ((this._MauSac != value))
-				{
-					this._MauSac = value;
 				}
 			}
 		}

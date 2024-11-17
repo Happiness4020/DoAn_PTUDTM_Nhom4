@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QL_CuaHangDoDienTu" Class="dbQLCuaHangDienTuDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=KD;Initial Catalog=QL_CuaHangDoDienTu;Persist Security Info=True;User ID=sa;MultipleActiveResultSets=True;Application Name=EntityFramework" SettingsObjectName="DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.Properties.Settings" SettingsPropertyName="QL_CuaHangDoDienTuConnectionString3" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-M4L4D40;Initial Catalog=QL_CuaHangDoDienTu;Persist Security Info=True;User ID=sa;MultipleActiveResultSets=True;Application Name=EntityFramework" SettingsObjectName="DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.Properties.Settings" SettingsPropertyName="QL_CuaHangDoDienTuConnectionString3" Provider="System.Data.SqlClient" />
   <Table Name="dbo.ChiTietDonHang" Member="ChiTietDonHangs">
     <Type Name="ChiTietDonHang">
       <Column Name="MaDonHang" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -133,16 +133,15 @@
   </Table>
   <Table Name="dbo.ViewGioHang" Member="ViewGioHangs">
     <Type Name="ViewGioHang">
-      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="MaSanPham" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TenSanPham" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Anh" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="Gia" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="MauSac" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="TenDN" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
       <Column Name="MaCTSanPham" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="SoLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="Expr1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="Anh" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="TenSanPham" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="MauSac" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
 </Database>

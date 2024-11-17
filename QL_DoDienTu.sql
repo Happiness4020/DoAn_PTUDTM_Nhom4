@@ -82,15 +82,15 @@ GO
 -- Bảng danh sách đơn hàng
 CREATE TABLE DonHang 
 (
-    MaDonHang INT IDENTITY(1,1),
-    TenDN VARCHAR(20),
-    NgayDat DATEtime,
-	Email nvarchar(100),
-	HoTen nvarchar(60),
-	SoDienThoai varchar(11),
-	ChiTietDiaChi  NVARCHAR(255),
-	TongGiaTri float,
-	HinhThucThanhToan NVARCHAR(255),
+    MaDonHang INT IDENTITY(1,1) NOT NULL,
+    TenDN VARCHAR(20) NOT NULL,
+    NgayDat DATEtime NOT NULL,
+	Email nvarchar(100) NOT NULL,
+	HoTen nvarchar(60) NOT NULL,
+	SoDienThoai varchar(11) NOT NULL,
+	ChiTietDiaChi  NVARCHAR(255) NOT NULL,
+	TongGiaTri float NOT NULL,
+	HinhThucThanhToan NVARCHAR(255) NOT NULL,
 	TrangThaiDonHang NVARCHAR(20),
 	CONSTRAINT PK_DonHang  PRIMARY KEY (MaDonHang),
 	CONSTRAINT FK_TENDN FOREIGN KEY (TenDN) REFERENCES TaiKhoan(TenDN),
@@ -170,8 +170,8 @@ VALUES	(N'Tivi',0),
 		(N'Máy lạnh', 0),
 		( N'Máy sấy', 0),
 		(N'Máy hút bụi', 0),
-		( N'Bàn ủi', 0),
-		( N'Máy pha cà phê', 0)
+		(N'Bàn ủi', 0),
+		(N'Máy pha cà phê', 0)
 GO
 
 INSERT INTO NhaSanXuat(TenNhaSanXuat,SoDienThoai,DiaChi,Email,TrangThaiNSX)
@@ -190,26 +190,26 @@ GO
 
 INSERT INTO SanPham (TenSanPham, MaLoai, MaNhaSanXuat, Anh, TrangThaiSP)
 VALUES
-    (N'Tivi Samsung OLED 4K Ultra', 1, 2, N'samsungoled4k.jpg', 0),
-    (N'Loa JBL GO 3', 6, 6, N'jblgo3.jpg', 0),
-    (N'Tủ lạnh Beko', 2, 5, N'tulanhbeko.jpg', 0),
-    (N'Laptop Dell', 5, 4, N'laptopdell.jpg', 0),
-    (N'Tivi Sony QLED 2K', 1, 3, N'sonyqled2k.jpg', 0),
-    (N'Tivi LG 8K', 1, 1, N'lg8k.jpg', 0),
-    (N'Tivi LG 4K UHD', 1, 1, N'lg4k.jpg', 0),
-    (N'PlayStation 5', 4, 9, N'ps5.jpg', 0),
-    (N'Loa Sony SRS-XB23', 6, 3, N'sonyxb23.jpg', 0),
-    (N'Máy lạnh Toshiba', 7, 7, N'toshibaac.jpg', 0),
-    (N'Máy sấy Panasonic', 8, 8, N'panasonicdryer.jpg', 0),
-    (N'Máy hút bụi Samsung', 9, 2, N'samsungvacuum.jpg', 0),
-    (N'Bàn ủi hơi nước Philips', 10, 7, N'philipsiron.jpg', 0),
-    (N'Laptop Asus ZenBook', 5, 10, N'asuszenbook.jpg', 0),
-    (N'Máy pha cà phê Delonghi', 11, 7, N'delonghicoffee.jpg', 0),
-    (N'Tủ lạnh Toshiba', 2, 7, N'toshibafridge.jpg', 0),
-    (N'Máy giặt Samsung 7kg', 3, 2, N'samsungwasher.jpg', 0),
-    (N'Tai nghe Apple AirPods', 4, 9, N'airpods.jpg', 0),
-    (N'Laptop HP Pavilion', 5, 11, N'hppavilion.jpg', 0),
-    (N'Loa Bluetooth JBL Flip 5', 6, 6, N'jblflip5.jpg', 0)
+    (N'Tivi Samsung OLED 4K Ultra', 1, 2, N'a1.jpg', 0),
+    (N'Loa JBL GO 3', 6, 6, N'a2.jpg', 0),
+    (N'Tủ lạnh Beko', 2, 5, N'a3.jpg', 0),
+    (N'Laptop Dell', 5, 4, N'a4.jpg', 0),
+    (N'Tivi Sony QLED 2K', 1, 3, N'a5.jpg', 0),
+    (N'Tivi LG 8K', 1, 1, N'a6.jpg', 0),
+    (N'Tivi LG 4K UHD', 1, 1, N'a7.jpg', 0),
+    (N'PlayStation 5', 4, 9, N'a8.jpg', 0),
+    (N'Loa Sony SRS-XB23', 6, 3, N'a9.jpg', 0),
+    (N'Máy lạnh Toshiba', 7, 7, N'a10.jpg', 0),
+    (N'Máy sấy Panasonic', 8, 8, N'a11.jpg', 0),
+    (N'Máy hút bụi Samsung', 9, 2, N'a12.jpg', 0),
+    (N'Bàn ủi hơi nước Philips', 10, 7, N'a13.jpg', 0),
+    (N'Laptop Asus ZenBook', 5, 10, N'a14.jpg', 0),
+    (N'Máy pha cà phê Delonghi', 11, 7, N'a15.jpg', 0),
+    (N'Tủ lạnh Toshiba', 2, 7, N'a16.jpg', 0),
+    (N'Máy giặt Samsung 7kg', 3, 2, N'a17.jpg', 0),
+    (N'Tai nghe Apple AirPods', 4, 9, N'a18.jpg', 0),
+    (N'Laptop HP Pavilion', 5, 11, N'a19.jpg', 0),
+    (N'Loa Bluetooth JBL Flip 5', 6, 6, N'a20.jpg', 0)
 GO
 
 INSERT INTO ChiTietSanPham (MaSanPham, Gia, Soluong, MoTa, MauSac)
