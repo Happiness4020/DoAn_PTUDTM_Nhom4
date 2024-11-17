@@ -13,6 +13,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
 {
     public partial class CardSanPham : UserControl
     {
+        dbQLCuaHangDienTuDataContext db = new dbQLCuaHangDienTuDataContext();
         public CardSanPham()
         {
             InitializeComponent();
@@ -50,6 +51,12 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
         }
         private void btnXemChiTiet_Click(object sender, EventArgs e)
         {
+            ChiTietSanPham ctsp = db.ChiTietSanPhams.Where(ct => ct.MaSanPham == sp.MaSanPham).FirstOrDefault();
+            if (ctsp == null)
+            {
+                MessageBox.Show("Sản phẩm chưa được kinh doanh");
+                return;
+            }
             frmChiTietSanPham frm = new frmChiTietSanPham();
             frm.setData(sp);
             frm.Show();

@@ -126,7 +126,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
             {
                 Properties.Settings.Default.tenDN = "";
                 Properties.Settings.Default.Save();
-                frm_DangNhap frm = new frm_DangNhap();
+                frmDangNhap frm = new frmDangNhap();
                 frm.Show(); 
                 this.Dispose();
             }

@@ -38,15 +38,6 @@
     <Reference Include="Newtonsoft.Json.Bson, Version=1.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.Bson.1.0.2\lib\net45\Newtonsoft.Json.Bson.dll</HintPath>
     </Reference>
-    <Reference Include="Syncfusion.Compression.Base">
-      <HintPath>..\..\..\..\tài liệu đại học\Nam 2024 - 2025\Phat Trien Ung Dung\50_TranVan_Tuan10\09_TranVan_Tuan5\09_TranVan_Tuan5\09_TranVan_Tuan5\bin\Debug\Syncfusion.Compression.Base.dll</HintPath>
-    </Reference>
-    <Reference Include="Syncfusion.DocIO.Base">
-      <HintPath>..\..\..\..\tài liệu đại học\Nam 2024 - 2025\Phat Trien Ung Dung\50_TranVan_Tuan10\09_TranVan_Tuan5\09_TranVan_Tuan5\09_TranVan_Tuan5\bin\Debug\Syncfusion.DocIO.Base.dll</HintPath>
-    </Reference>
-    <Reference Include="Syncfusion.XlsIO.Base">
-      <HintPath>..\..\..\..\tài liệu đại học\Nam 2024 - 2025\Phat Trien Ung Dung\50_TranVan_Tuan10\09_TranVan_Tuan5\09_TranVan_Tuan5\09_TranVan_Tuan5\bin\Debug\Syncfusion.XlsIO.Base.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Buffers.4.5.1\lib\netstandard1.1\System.Buffers.dll</HintPath>
@@ -100,10 +91,6 @@
     <Compile Include="AdminForm\frm_TaiKhoan.Designer.cs">
       <DependentUpon>frm_TaiKhoan.cs</DependentUpon>
     </Compile>
-    <Compile Include="DTO\ChiTietDonHangDTO.cs" />
-    <Compile Include="Data.cs">
-      <DependentUpon>Data.dbml</DependentUpon>
-    </Compile>
     <Compile Include="Data.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -115,19 +102,17 @@
     <Compile Include="AdminForm\frm_ChiTietSanPham.Designer.cs">
       <DependentUpon>frm_ChiTietSanPham.cs</DependentUpon>
     </Compile>
-    <Compile Include="DTO\DonHangDTO.cs" />
-    <Compile Include="Export\ExcelExport.cs" />
-    <Compile Include="frm_DangKy.cs">
+    <Compile Include="frmDangKy.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_DangKy.Designer.cs">
-      <DependentUpon>frm_DangKy.cs</DependentUpon>
+    <Compile Include="frmDangKy.Designer.cs">
+      <DependentUpon>frmDangKy.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_DangNhap.cs">
+    <Compile Include="frmDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_DangNhap.Designer.cs">
-      <DependentUpon>frm_DangNhap.cs</DependentUpon>
+    <Compile Include="frmDangNhap.Designer.cs">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
     </Compile>
     <Compile Include="AdminForm\frm_AdminDashboard.cs">
       <SubType>Form</SubType>
@@ -250,7 +235,6 @@
     <Compile Include="UserForm\frmUserMain.Designer.cs">
       <DependentUpon>frmUserMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Export\WordExport.cs" />
     <EmbeddedResource Include="AdminForm\frm_ChiTietDonHang.resx">
       <DependentUpon>frm_ChiTietDonHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -266,11 +250,11 @@
     <EmbeddedResource Include="AdminForm\frm_TaiKhoan.resx">
       <DependentUpon>frm_TaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_DangKy.resx">
-      <DependentUpon>frm_DangKy.cs</DependentUpon>
+    <EmbeddedResource Include="frmDangKy.resx">
+      <DependentUpon>frmDangKy.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_DangNhap.resx">
-      <DependentUpon>frm_DangNhap.cs</DependentUpon>
+    <EmbeddedResource Include="frmDangNhap.resx">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminForm\frm_AdminDashboard.resx">
       <DependentUpon>frm_AdminDashboard.cs</DependentUpon>
@@ -384,35 +368,7 @@
   <ItemGroup>
     <None Include="Images\icon\xoa.png" />
   </ItemGroup>
-  <ItemGroup>
-    <COMReference Include="Microsoft.Office.Core">
-      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
-      <VersionMajor>2</VersionMajor>
-      <VersionMinor>8</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>primary</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
-    <COMReference Include="Microsoft.Office.Interop.Word">
-      <Guid>{00020905-0000-0000-C000-000000000046}</Guid>
-      <VersionMajor>8</VersionMajor>
-      <VersionMinor>7</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>primary</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
-    <COMReference Include="VBIDE">
-      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
-      <VersionMajor>5</VersionMajor>
-      <VersionMinor>3</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>primary</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Images\icon\Search.png" />
   </ItemGroup>

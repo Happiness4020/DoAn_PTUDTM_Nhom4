@@ -43,7 +43,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.AdminForm
 
         private void btn_DangXuat_Click(object sender, EventArgs e)
         {
-            frm_DangNhap frmDN = new frm_DangNhap();
+            frmDangNhap frmDN = new frmDangNhap();
             frmDN.Show();
             this.Hide();
         }
