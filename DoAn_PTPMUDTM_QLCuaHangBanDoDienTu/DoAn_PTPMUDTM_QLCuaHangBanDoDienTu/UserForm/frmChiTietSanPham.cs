@@ -64,7 +64,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
                 if (gh==null)
                 {
                     gh = new GioHang();
-                    gh.TenDN = "nguyentandat";
+                    gh.TenDN = Properties.Settings.Default.tenDN;
                     gh.MaCTSanPham = ct.ID;
                     gh.SoLuong = (int)nbrSoLuong.Value;
                     db.GioHangs.InsertOnSubmit(gh);

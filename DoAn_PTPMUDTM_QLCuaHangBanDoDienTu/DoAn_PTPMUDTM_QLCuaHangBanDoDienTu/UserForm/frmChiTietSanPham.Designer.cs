@@ -43,15 +43,15 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
             this.label4 = new System.Windows.Forms.Label();
             this.lblTonKho = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nbrSoLuong)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlImgSanPham
             // 
-            this.pnlImgSanPham.BackColor = System.Drawing.Color.White;
+            this.pnlImgSanPham.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pnlImgSanPham.Location = new System.Drawing.Point(41, 120);
             this.pnlImgSanPham.Name = "pnlImgSanPham";
             this.pnlImgSanPham.Size = new System.Drawing.Size(267, 347);
@@ -204,6 +204,16 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
             this.panel2.Size = new System.Drawing.Size(1179, 63);
             this.panel2.TabIndex = 13;
             // 
+            // panel3
+            // 
+            this.panel3.BackgroundImage = global::DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.Properties.Resources.thoat;
+            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel3.Location = new System.Drawing.Point(1107, 10);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(59, 37);
+            this.panel3.TabIndex = 14;
+            this.panel3.Click += new System.EventHandler(this.panel3_Click);
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -214,16 +224,6 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
             this.label5.Size = new System.Drawing.Size(293, 32);
             this.label5.TabIndex = 14;
             this.label5.Text = "CHI TIẾT SẢN PHẨM";
-            // 
-            // panel3
-            // 
-            this.panel3.BackgroundImage = global::DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.Properties.Resources.thoat;
-            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel3.Location = new System.Drawing.Point(1107, 10);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(59, 37);
-            this.panel3.TabIndex = 14;
-            this.panel3.Click += new System.EventHandler(this.panel3_Click);
             // 
             // frmChiTietSanPham
             // 
