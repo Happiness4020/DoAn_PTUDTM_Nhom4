@@ -20,6 +20,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu
             dgvLoaiSanPham.AutoGenerateColumns = false;
             dgvLoaiSanPham.AllowUserToAddRows = false;
             Load_DataGridView();
+            LoadCombobox();
             cbxTrangThai.SelectedIndex = 0;
         }
         private void Load_DataGridView()
@@ -32,7 +33,17 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu
         {
 
         }
-
+        private void LoadCombobox()
+        {
+            var items = new Dictionary<string, int>
+            {
+                { "Tồn tại", 0 },
+                { "Đã bị xóa", 1 }
+            };
+            cbxTrangThai.DataSource = new BindingSource(items, null);
+            cbxTrangThai.DisplayMember = "Key";
+            cbxTrangThai.ValueMember = "Value";
+        }
         private string TaoMaLoai()
         {
             const string letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyx";
@@ -113,11 +124,15 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu
                 if (result == DialogResult.Yes)
                 {
                     LoaiSanPham loaisp = db.LoaiSanPhams.Where(t => t.MaLoai == maloai).FirstOrDefault();
-
+                    SanPham sp = db.SanPhams.Where(t => t.MaLoai == loaisp.MaLoai).FirstOrDefault();
+                    if (sp != null)
+                    {
+                        MessageBox.Show("Xóa không thành công do có sản phẩm thuộc loại sản phẩm " + loaisp.TenLoai + "!!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return;
+                    }
                     if (loaisp != null)
                     {
-                        db.LoaiSanPhams.DeleteOnSubmit(loaisp);
-
+                        loaisp.TrangThaiLoaiSP = 1;
                         db.SubmitChanges();
                         Load_DataGridView();
                         MessageBox.Show("Đã xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);

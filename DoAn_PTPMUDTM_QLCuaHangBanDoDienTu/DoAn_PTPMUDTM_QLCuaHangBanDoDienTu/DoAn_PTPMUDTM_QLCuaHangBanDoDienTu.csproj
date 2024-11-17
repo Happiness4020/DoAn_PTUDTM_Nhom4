@@ -102,17 +102,17 @@
     <Compile Include="AdminForm\frm_ChiTietSanPham.Designer.cs">
       <DependentUpon>frm_ChiTietSanPham.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_DangKy.cs">
+    <Compile Include="frmDangKy.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_DangKy.Designer.cs">
-      <DependentUpon>frm_DangKy.cs</DependentUpon>
+    <Compile Include="frmDangKy.Designer.cs">
+      <DependentUpon>frmDangKy.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_DangNhap.cs">
+    <Compile Include="frmDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_DangNhap.Designer.cs">
-      <DependentUpon>frm_DangNhap.cs</DependentUpon>
+    <Compile Include="frmDangNhap.Designer.cs">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
     </Compile>
     <Compile Include="AdminForm\frm_AdminDashboard.cs">
       <SubType>Form</SubType>
@@ -250,11 +250,11 @@
     <EmbeddedResource Include="AdminForm\frm_TaiKhoan.resx">
       <DependentUpon>frm_TaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_DangKy.resx">
-      <DependentUpon>frm_DangKy.cs</DependentUpon>
+    <EmbeddedResource Include="frmDangKy.resx">
+      <DependentUpon>frmDangKy.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_DangNhap.resx">
-      <DependentUpon>frm_DangNhap.cs</DependentUpon>
+    <EmbeddedResource Include="frmDangNhap.resx">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminForm\frm_AdminDashboard.resx">
       <DependentUpon>frm_AdminDashboard.cs</DependentUpon>
