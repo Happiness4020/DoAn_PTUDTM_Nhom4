@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="78ce39ca48fe4c9da691f2e32433d98e" Name="Diagram1">
+        <EntityTypeShape EntityType="QL_CuaHangDoDienTuModel.ChiTietDonHang" Width="1.5" PointX="7.5" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_CuaHangDoDienTuModel.ChiTietPhieuNhap" Width="1.5" PointX="10.5" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_CuaHangDoDienTuModel.ChiTietSanPham" Width="1.5" PointX="5.25" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_CuaHangDoDienTuModel.DonHang" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_CuaHangDoDienTuModel.GioHang" Width="1.5" PointX="7.5" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_CuaHangDoDienTuModel.LoaiSanPham" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_CuaHangDoDienTuModel.NhaSanXuat" Width="1.5" PointX="0.75" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_CuaHangDoDienTuModel.PhieuNhap" Width="1.5" PointX="8.25" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_CuaHangDoDienTuModel.SanPham" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_CuaHangDoDienTuModel.TaiKhoan" Width="1.5" PointX="5.25" PointY="9.5" IsExpanded="true" />
+        <AssociationConnector Association="QL_CuaHangDoDienTuModel.FK_ChiTietDonHang" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_CuaHangDoDienTuModel.FK_SanPham" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_CuaHangDoDienTuModel.FK_MaPhieuNhap" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_CuaHangDoDienTuModel.FK_MaSanPham" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_CuaHangDoDienTuModel.FK_GioHang_MaSanPham" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_CuaHangDoDienTuModel.FK_MASP" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_CuaHangDoDienTuModel.FK_TENDN" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_CuaHangDoDienTuModel.FK_GioHang_TenDN" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_CuaHangDoDienTuModel.FK_MALOAI" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_CuaHangDoDienTuModel.FK_MANSX" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

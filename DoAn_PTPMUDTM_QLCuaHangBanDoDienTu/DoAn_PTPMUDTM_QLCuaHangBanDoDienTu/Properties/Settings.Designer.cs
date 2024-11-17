@@ -33,5 +33,51 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.Properties {
                 return ((string)(this["QL_CuaHangDoDienTuConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=KD;Initial Catalog=QL_CuaHangDoDienTu;Integrated Security=True;User I" +
+            "D=sa;Password=kdk0lt_13082003")]
+        public string QL_CuaHangDoDienTuConnectionString1 {
+            get {
+                return ((string)(this["QL_CuaHangDoDienTuConnectionString1"]));
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string tenDN {
+            get {
+                return ((string)(this["tenDN"]));
+            }
+            set {
+                this["tenDN"] = value;
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=KD;Initial Catalog=QL_CuaHangDoDienTu;Persist Security Info=True;User" +
+            " ID=sa;MultipleActiveResultSets=True;Application Name=EntityFramework")]
+        public string QL_CuaHangDoDienTuConnectionString2 {
+            get {
+                return ((string)(this["QL_CuaHangDoDienTuConnectionString2"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=KD;Initial Catalog=QL_CuaHangDoDienTu;Persist Security Info=True;User" +
+            " ID=sa;Password=kdk0lt_13082003;MultipleActiveResultSets=True;Application Name=E" +
+            "ntityFramework")]
+        public string QL_CuaHangDoDienTuConnectionString3 {
+            get {
+                return ((string)(this["QL_CuaHangDoDienTuConnectionString3"]));
+            }
+        }
     }
 }

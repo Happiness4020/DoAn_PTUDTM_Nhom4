@@ -7,12 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm;
+using DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.AdminForm;
 
 namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu
 {
     public partial class frm_DangNhap : Form
     {
-        DataDataContext db = new DataDataContext();
+        //DataDataContext db = new DataDataContext();
+        dbQLCuaHangDienTuDataContext db = new dbQLCuaHangDienTuDataContext();
         public frm_DangNhap()
         {
             InitializeComponent();
@@ -47,8 +50,9 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu
                     this.Visible = false;
                 }
                 else if (isUser != null) {
-                    frm_UserDashboard frm_udb = new frm_UserDashboard();
-                    frm_udb.Show();
+                     frmUserMain frm = new frmUserMain();
+                    frm.setData(txtTenDangNhap.Text);
+                    frm.Show();
                     this.Visible = false;
                 }
                 else
