@@ -171,13 +171,14 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
 
             // Tính điểm tương đồng cho từng chi tiết sản phẩm chưa mua và lưu vào danh sách
             var dsChiTietSanPhamDeXuatVoiDiem = dsChiTietSanPhamChuaMua
-                .Select(ctsp => new
+                .GroupBy(ctsp => ctsp.MaSanPham) 
+                .Select(group => new
                 {
-                    ChiTietSanPham = ctsp,
-                    DiemTuongDong = TinhDiemTuongDong(ctsp, dsMaChiTietSanPhamDaMua)
+                    ChiTietSanPham = group.FirstOrDefault(),
+                    DiemTuongDong = TinhDiemTuongDong(group.FirstOrDefault(), dsMaChiTietSanPhamDaMua)
                 })
                 .OrderByDescending(ctsp => ctsp.DiemTuongDong)
-                .Take(5)
+                .Take(5) 
                 .Select(ctsp => ctsp.ChiTietSanPham)
                 .ToList();
 
@@ -186,19 +187,16 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
 
         private double TinhDiemTuongDong(ChiTietSanPham chiTietSanPham, List<int> dsMaChiTietSanPhamDaMua)
         {
-            // Lấy danh sách các chi tiết sản phẩm đã mua từ cơ sở dữ liệu
             var dsChiTietSanPhamDaMua = db.ChiTietSanPhams
                 .Where(p => dsMaChiTietSanPhamDaMua.Contains(p.ID))
                 .ToList();
 
             double diemTuongDong = 0;
 
-            // Lấy thông tin sản phẩm từ chi tiết sản phẩm
             var sanPham = db.SanPhams.FirstOrDefault(c => c.MaSanPham == chiTietSanPham.MaSanPham);
 
             if (sanPham != null)
             {
-                // Duyệt qua danh sách các chi tiết sản phẩm đã mua để tính điểm tương đồng
                 foreach (var chiTietSanPhamDaMua in dsChiTietSanPhamDaMua)
                 {
                     var sanPhamDaMua = db.SanPhams.FirstOrDefault(c => c.MaSanPham == chiTietSanPhamDaMua.MaSanPham);
