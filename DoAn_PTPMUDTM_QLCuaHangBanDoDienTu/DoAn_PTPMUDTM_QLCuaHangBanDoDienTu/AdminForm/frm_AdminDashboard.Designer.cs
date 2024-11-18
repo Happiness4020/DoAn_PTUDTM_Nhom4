@@ -159,7 +159,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "frm_AdminDashboard";
-            this.Text = "Dashboard";
+            this.Text = "Quản lý cửa hàng đồ điện tử";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frm_AdminDashboard_FormClosing);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);

@@ -50,15 +50,15 @@
     var colorSelect = document.getElementById("colorSelect");
     chiTietSanPham.forEach(function(item) {
         var option = document.createElement("option");
-        option.value = item.Mausac;
-        option.textContent = item.Mausac;
+        option.value = item.MauSac;
+        option.textContent = item.MauSac;
         colorSelect.appendChild(option);
     });
 
     // Hàm cập nhật thông tin sản phẩm khi người dùng chọn màu sắc
     function updateProductDetails(color) {
         // Tìm chi tiết sản phẩm dựa trên màu sắc được chọn
-        var productDetail = chiTietSanPham.find(item => item.Mausac === color);
+        var productDetail = chiTietSanPham.find(item => item.MauSac === color);
         if (productDetail) {
             // Định dạng giá thành dạng 1.000.000 VNĐ
             var formattedPrice = parseInt(productDetail.Gia).toLocaleString('vi-VN');
@@ -76,5 +76,4 @@
             updateProductDetails(selectedColor);
         }
     });
-
 </script>

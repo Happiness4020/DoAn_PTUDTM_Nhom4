@@ -28,7 +28,7 @@ namespace DoAn_QLDoDienTu_Web.Models
         public double Gia { get; set; }
         public int Soluong { get; set; }
         public string MoTa { get; set; }
-        public string Mausac { get; set; }
+        public string MauSac { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ChiTietDonHang> ChiTietDonHang { get; set; }

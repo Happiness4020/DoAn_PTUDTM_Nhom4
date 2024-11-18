@@ -81,9 +81,9 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
             // txtDiaChi
             // 
             this.txtDiaChi.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDiaChi.Location = new System.Drawing.Point(559, 622);
+            this.txtDiaChi.Location = new System.Drawing.Point(368, 622);
             this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(389, 34);
+            this.txtDiaChi.Size = new System.Drawing.Size(580, 34);
             this.txtDiaChi.TabIndex = 1;
             // 
             // pnlDiaChi

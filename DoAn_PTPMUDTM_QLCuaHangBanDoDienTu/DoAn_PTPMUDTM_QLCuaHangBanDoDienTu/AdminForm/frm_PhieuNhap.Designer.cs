@@ -37,6 +37,11 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.AdminForm
             this.DateTime_Tu = new System.Windows.Forms.DateTimePicker();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dgrv_ChiTietPN = new System.Windows.Forms.DataGridView();
+            this.ID_CTPN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaCTSanPham_CTPN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DonGiaNhap_CTPN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SOLUONG_CTPN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.THANHTIEN_CTPN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_LuuCTPN = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.cbx_SanPham = new System.Windows.Forms.ComboBox();
@@ -45,6 +50,13 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.AdminForm
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btn_Chuyen = new System.Windows.Forms.Button();
             this.dgrv_DanhSachSP = new System.Windows.Forms.DataGridView();
+            this.SelectColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TENSANPHAM_SP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DONGIA_SP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SOLUONGTON_SP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MALOAISANPHAM_SP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MoTa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.cbxThanhToan = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -58,20 +70,8 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.AdminForm
             this.dgrv_MaPN = new System.Windows.Forms.DataGridView();
             this.MAPHIEUNHAP_PN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NGAYNHAP_PN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.thanhtien_PN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TongGiaTri = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HinhThucThanhToan_PN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ID_CTPN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaCTSanPham_CTPN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DonGiaNhap_CTPN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SOLUONG_CTPN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.THANHTIEN_CTPN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SelectColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TENSANPHAM_SP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DONGIA_SP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SOLUONGTON_SP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MALOAISANPHAM_SP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MoTa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgrv_ChiTietPN)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -135,7 +135,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.AdminForm
             this.groupBox3.Controls.Add(this.dgrv_ChiTietPN);
             this.groupBox3.Controls.Add(this.btn_LuuCTPN);
             this.groupBox3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(620, 490);
+            this.groupBox3.Location = new System.Drawing.Point(598, 490);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
@@ -163,6 +163,51 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.AdminForm
             this.dgrv_ChiTietPN.Size = new System.Drawing.Size(738, 150);
             this.dgrv_ChiTietPN.TabIndex = 2;
             this.dgrv_ChiTietPN.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgrv_ChiTietPN_CellMouseClick);
+            // 
+            // ID_CTPN
+            // 
+            this.ID_CTPN.DataPropertyName = "ID";
+            this.ID_CTPN.HeaderText = "Mã phiếu nhập";
+            this.ID_CTPN.MinimumWidth = 6;
+            this.ID_CTPN.Name = "ID_CTPN";
+            this.ID_CTPN.ReadOnly = true;
+            this.ID_CTPN.Width = 125;
+            // 
+            // MaCTSanPham_CTPN
+            // 
+            this.MaCTSanPham_CTPN.DataPropertyName = "MaCTSanPham";
+            this.MaCTSanPham_CTPN.HeaderText = "Mã chi tiết sản phẩm";
+            this.MaCTSanPham_CTPN.MinimumWidth = 6;
+            this.MaCTSanPham_CTPN.Name = "MaCTSanPham_CTPN";
+            this.MaCTSanPham_CTPN.ReadOnly = true;
+            this.MaCTSanPham_CTPN.Width = 125;
+            // 
+            // DonGiaNhap_CTPN
+            // 
+            this.DonGiaNhap_CTPN.DataPropertyName = "DonGiaNhap";
+            this.DonGiaNhap_CTPN.HeaderText = "Đơn giá nhập";
+            this.DonGiaNhap_CTPN.MinimumWidth = 6;
+            this.DonGiaNhap_CTPN.Name = "DonGiaNhap_CTPN";
+            this.DonGiaNhap_CTPN.ReadOnly = true;
+            this.DonGiaNhap_CTPN.Width = 125;
+            // 
+            // SOLUONG_CTPN
+            // 
+            this.SOLUONG_CTPN.DataPropertyName = "SoLuong";
+            this.SOLUONG_CTPN.HeaderText = "Số lượng";
+            this.SOLUONG_CTPN.MinimumWidth = 6;
+            this.SOLUONG_CTPN.Name = "SOLUONG_CTPN";
+            this.SOLUONG_CTPN.ReadOnly = true;
+            this.SOLUONG_CTPN.Width = 125;
+            // 
+            // THANHTIEN_CTPN
+            // 
+            this.THANHTIEN_CTPN.DataPropertyName = "ThanhTien";
+            this.THANHTIEN_CTPN.HeaderText = "Thành tiền";
+            this.THANHTIEN_CTPN.MinimumWidth = 6;
+            this.THANHTIEN_CTPN.Name = "THANHTIEN_CTPN";
+            this.THANHTIEN_CTPN.ReadOnly = true;
+            this.THANHTIEN_CTPN.Width = 125;
             // 
             // btn_LuuCTPN
             // 
@@ -216,7 +261,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.AdminForm
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(599, 653);
+            this.groupBox1.Size = new System.Drawing.Size(579, 653);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách sản phẩm";
@@ -225,7 +270,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.AdminForm
             // 
             this.btn_Chuyen.BackColor = System.Drawing.Color.SeaGreen;
             this.btn_Chuyen.ForeColor = System.Drawing.Color.White;
-            this.btn_Chuyen.Location = new System.Drawing.Point(291, 596);
+            this.btn_Chuyen.Location = new System.Drawing.Point(274, 596);
             this.btn_Chuyen.Name = "btn_Chuyen";
             this.btn_Chuyen.Size = new System.Drawing.Size(283, 50);
             this.btn_Chuyen.TabIndex = 1;
@@ -249,8 +294,72 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.AdminForm
             this.dgrv_DanhSachSP.Name = "dgrv_DanhSachSP";
             this.dgrv_DanhSachSP.RowHeadersWidth = 51;
             this.dgrv_DanhSachSP.RowTemplate.Height = 24;
-            this.dgrv_DanhSachSP.Size = new System.Drawing.Size(592, 551);
+            this.dgrv_DanhSachSP.Size = new System.Drawing.Size(550, 551);
             this.dgrv_DanhSachSP.TabIndex = 0;
+            // 
+            // SelectColumn
+            // 
+            this.SelectColumn.DataPropertyName = "SelectColumn";
+            this.SelectColumn.HeaderText = "Thêm";
+            this.SelectColumn.MinimumWidth = 6;
+            this.SelectColumn.Name = "SelectColumn";
+            this.SelectColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.SelectColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.SelectColumn.Width = 60;
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "ID";
+            this.ID.HeaderText = "Mã sản phẩm";
+            this.ID.MinimumWidth = 6;
+            this.ID.Name = "ID";
+            this.ID.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.ID.Width = 125;
+            // 
+            // TENSANPHAM_SP
+            // 
+            this.TENSANPHAM_SP.DataPropertyName = "TenSanPham";
+            this.TENSANPHAM_SP.HeaderText = "Tên sản phẩm";
+            this.TENSANPHAM_SP.MinimumWidth = 6;
+            this.TENSANPHAM_SP.Name = "TENSANPHAM_SP";
+            this.TENSANPHAM_SP.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.TENSANPHAM_SP.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.TENSANPHAM_SP.Width = 125;
+            // 
+            // DONGIA_SP
+            // 
+            this.DONGIA_SP.DataPropertyName = "Gia";
+            this.DONGIA_SP.HeaderText = "Đơn giá";
+            this.DONGIA_SP.MinimumWidth = 6;
+            this.DONGIA_SP.Name = "DONGIA_SP";
+            this.DONGIA_SP.Width = 125;
+            // 
+            // SOLUONGTON_SP
+            // 
+            this.SOLUONGTON_SP.DataPropertyName = "Soluong";
+            this.SOLUONGTON_SP.HeaderText = "Số lượng";
+            this.SOLUONGTON_SP.MinimumWidth = 6;
+            this.SOLUONGTON_SP.Name = "SOLUONGTON_SP";
+            this.SOLUONGTON_SP.Width = 125;
+            // 
+            // MALOAISANPHAM_SP
+            // 
+            this.MALOAISANPHAM_SP.DataPropertyName = "MauSac";
+            this.MALOAISANPHAM_SP.HeaderText = "Màu sắc";
+            this.MALOAISANPHAM_SP.MinimumWidth = 6;
+            this.MALOAISANPHAM_SP.Name = "MALOAISANPHAM_SP";
+            this.MALOAISANPHAM_SP.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.MALOAISANPHAM_SP.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.MALOAISANPHAM_SP.Width = 125;
+            // 
+            // MoTa
+            // 
+            this.MoTa.DataPropertyName = "MoTa";
+            this.MoTa.HeaderText = "Mô tả";
+            this.MoTa.MinimumWidth = 6;
+            this.MoTa.Name = "MoTa";
+            this.MoTa.Width = 125;
             // 
             // groupBox2
             // 
@@ -272,7 +381,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.AdminForm
             this.groupBox2.Controls.Add(this.btn_TaoMoi);
             this.groupBox2.Controls.Add(this.dgrv_MaPN);
             this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(623, 57);
+            this.groupBox2.Location = new System.Drawing.Point(601, 57);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
@@ -315,9 +424,9 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.AdminForm
             // 
             this.btn_Loc.BackColor = System.Drawing.Color.SeaGreen;
             this.btn_Loc.ForeColor = System.Drawing.Color.White;
-            this.btn_Loc.Location = new System.Drawing.Point(522, 32);
+            this.btn_Loc.Location = new System.Drawing.Point(521, 24);
             this.btn_Loc.Name = "btn_Loc";
-            this.btn_Loc.Size = new System.Drawing.Size(75, 30);
+            this.btn_Loc.Size = new System.Drawing.Size(81, 38);
             this.btn_Loc.TabIndex = 6;
             this.btn_Loc.Text = "Lọc";
             this.btn_Loc.UseVisualStyleBackColor = false;
@@ -385,7 +494,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.AdminForm
             this.dgrv_MaPN.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MAPHIEUNHAP_PN,
             this.NGAYNHAP_PN,
-            this.thanhtien_PN,
+            this.TongGiaTri,
             this.HinhThucThanhToan_PN});
             this.dgrv_MaPN.Location = new System.Drawing.Point(20, 182);
             this.dgrv_MaPN.Name = "dgrv_MaPN";
@@ -413,14 +522,14 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.AdminForm
             this.NGAYNHAP_PN.ReadOnly = true;
             this.NGAYNHAP_PN.Width = 150;
             // 
-            // thanhtien_PN
+            // TongGiaTri
             // 
-            this.thanhtien_PN.DataPropertyName = "THANHTIEN";
-            this.thanhtien_PN.HeaderText = "Thành tiền";
-            this.thanhtien_PN.MinimumWidth = 6;
-            this.thanhtien_PN.Name = "thanhtien_PN";
-            this.thanhtien_PN.ReadOnly = true;
-            this.thanhtien_PN.Width = 150;
+            this.TongGiaTri.DataPropertyName = "TongGiaTri";
+            this.TongGiaTri.HeaderText = "Thành tiền";
+            this.TongGiaTri.MinimumWidth = 6;
+            this.TongGiaTri.Name = "TongGiaTri";
+            this.TongGiaTri.ReadOnly = true;
+            this.TongGiaTri.Width = 150;
             // 
             // HinhThucThanhToan_PN
             // 
@@ -430,115 +539,6 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.AdminForm
             this.HinhThucThanhToan_PN.Name = "HinhThucThanhToan_PN";
             this.HinhThucThanhToan_PN.ReadOnly = true;
             this.HinhThucThanhToan_PN.Width = 125;
-            // 
-            // ID_CTPN
-            // 
-            this.ID_CTPN.DataPropertyName = "ID";
-            this.ID_CTPN.HeaderText = "Mã phiếu nhập";
-            this.ID_CTPN.MinimumWidth = 6;
-            this.ID_CTPN.Name = "ID_CTPN";
-            this.ID_CTPN.ReadOnly = true;
-            this.ID_CTPN.Width = 125;
-            // 
-            // MaCTSanPham_CTPN
-            // 
-            this.MaCTSanPham_CTPN.DataPropertyName = "MaCTSanPham";
-            this.MaCTSanPham_CTPN.HeaderText = "Mã chi tiết sản phẩm";
-            this.MaCTSanPham_CTPN.MinimumWidth = 6;
-            this.MaCTSanPham_CTPN.Name = "MaCTSanPham_CTPN";
-            this.MaCTSanPham_CTPN.ReadOnly = true;
-            this.MaCTSanPham_CTPN.Width = 125;
-            // 
-            // DonGiaNhap_CTPN
-            // 
-            this.DonGiaNhap_CTPN.DataPropertyName = "DonGiaNhap";
-            this.DonGiaNhap_CTPN.HeaderText = "Đơn giá nhập";
-            this.DonGiaNhap_CTPN.MinimumWidth = 6;
-            this.DonGiaNhap_CTPN.Name = "DonGiaNhap_CTPN";
-            this.DonGiaNhap_CTPN.ReadOnly = true;
-            this.DonGiaNhap_CTPN.Width = 125;
-            // 
-            // SOLUONG_CTPN
-            // 
-            this.SOLUONG_CTPN.DataPropertyName = "SoLuong";
-            this.SOLUONG_CTPN.HeaderText = "Số lượng";
-            this.SOLUONG_CTPN.MinimumWidth = 6;
-            this.SOLUONG_CTPN.Name = "SOLUONG_CTPN";
-            this.SOLUONG_CTPN.ReadOnly = true;
-            this.SOLUONG_CTPN.Width = 125;
-            // 
-            // THANHTIEN_CTPN
-            // 
-            this.THANHTIEN_CTPN.DataPropertyName = "ThanhTien";
-            this.THANHTIEN_CTPN.HeaderText = "Thành tiền";
-            this.THANHTIEN_CTPN.MinimumWidth = 6;
-            this.THANHTIEN_CTPN.Name = "THANHTIEN_CTPN";
-            this.THANHTIEN_CTPN.ReadOnly = true;
-            this.THANHTIEN_CTPN.Width = 125;
-            // 
-            // SelectColumn
-            // 
-            this.SelectColumn.DataPropertyName = "SelectColumn";
-            this.SelectColumn.HeaderText = "Thêm";
-            this.SelectColumn.MinimumWidth = 6;
-            this.SelectColumn.Name = "SelectColumn";
-            this.SelectColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.SelectColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.SelectColumn.Width = 60;
-            // 
-            // ID
-            // 
-            this.ID.DataPropertyName = "ID";
-            this.ID.HeaderText = "Mã sản phẩm";
-            this.ID.MinimumWidth = 6;
-            this.ID.Name = "ID";
-            this.ID.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.ID.Width = 125;
-            // 
-            // TENSANPHAM_SP
-            // 
-            this.TENSANPHAM_SP.DataPropertyName = "TenSanPham";
-            this.TENSANPHAM_SP.HeaderText = "Tên sản phẩm";
-            this.TENSANPHAM_SP.MinimumWidth = 6;
-            this.TENSANPHAM_SP.Name = "TENSANPHAM_SP";
-            this.TENSANPHAM_SP.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.TENSANPHAM_SP.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.TENSANPHAM_SP.Width = 125;
-            // 
-            // DONGIA_SP
-            // 
-            this.DONGIA_SP.DataPropertyName = "Gia";
-            this.DONGIA_SP.HeaderText = "Đơn giá";
-            this.DONGIA_SP.MinimumWidth = 6;
-            this.DONGIA_SP.Name = "DONGIA_SP";
-            this.DONGIA_SP.Width = 125;
-            // 
-            // SOLUONGTON_SP
-            // 
-            this.SOLUONGTON_SP.DataPropertyName = "Soluong";
-            this.SOLUONGTON_SP.HeaderText = "Số lượng";
-            this.SOLUONGTON_SP.MinimumWidth = 6;
-            this.SOLUONGTON_SP.Name = "SOLUONGTON_SP";
-            this.SOLUONGTON_SP.Width = 125;
-            // 
-            // MALOAISANPHAM_SP
-            // 
-            this.MALOAISANPHAM_SP.DataPropertyName = "MauSac";
-            this.MALOAISANPHAM_SP.HeaderText = "Màu sắc";
-            this.MALOAISANPHAM_SP.MinimumWidth = 6;
-            this.MALOAISANPHAM_SP.Name = "MALOAISANPHAM_SP";
-            this.MALOAISANPHAM_SP.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.MALOAISANPHAM_SP.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.MALOAISANPHAM_SP.Width = 125;
-            // 
-            // MoTa
-            // 
-            this.MoTa.DataPropertyName = "MoTa";
-            this.MoTa.HeaderText = "Mô tả";
-            this.MoTa.MinimumWidth = 6;
-            this.MoTa.Name = "MoTa";
-            this.MoTa.Width = 125;
             // 
             // frm_PhieuNhap
             // 
@@ -551,7 +551,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.AdminForm
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_PhieuNhap";
             this.Text = "frm_PhieuNhap";
             this.groupBox3.ResumeLayout(false);
@@ -595,10 +595,6 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.AdminForm
         private System.Windows.Forms.DataGridView dgrv_MaPN;
         private System.Windows.Forms.ComboBox cbxThanhToan;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MAPHIEUNHAP_PN;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NGAYNHAP_PN;
-        private System.Windows.Forms.DataGridViewTextBoxColumn thanhtien_PN;
-        private System.Windows.Forms.DataGridViewTextBoxColumn HinhThucThanhToan_PN;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_CTPN;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaCTSanPham_CTPN;
         private System.Windows.Forms.DataGridViewTextBoxColumn DonGiaNhap_CTPN;
@@ -611,5 +607,9 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.AdminForm
         private System.Windows.Forms.DataGridViewTextBoxColumn SOLUONGTON_SP;
         private System.Windows.Forms.DataGridViewTextBoxColumn MALOAISANPHAM_SP;
         private System.Windows.Forms.DataGridViewTextBoxColumn MoTa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MAPHIEUNHAP_PN;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NGAYNHAP_PN;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TongGiaTri;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HinhThucThanhToan_PN;
     }
 }

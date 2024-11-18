@@ -20,9 +20,9 @@ namespace DoAn_QLDoDienTu_Web.Models
             this.ChiTietPhieuNhap = new HashSet<ChiTietPhieuNhap>();
         }
     
-        public int MaPhieuNhap { get; set; }
-        public Nullable<System.DateTime> NgayNhap { get; set; }
-        public Nullable<double> TongGiaTri { get; set; }
+        public string MaPhieuNhap { get; set; }
+        public System.DateTime NgayNhap { get; set; }
+        public double TongGiaTri { get; set; }
         public string HinhThucThanhToan { get; set; }
         public string GhiChu { get; set; }
         public Nullable<int> TrangThaiPN { get; set; }

@@ -173,7 +173,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.AdminForm
             this.btnXacNhan.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnXacNhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXacNhan.ForeColor = System.Drawing.Color.White;
-            this.btnXacNhan.Location = new System.Drawing.Point(1071, 263);
+            this.btnXacNhan.Location = new System.Drawing.Point(925, 260);
             this.btnXacNhan.Margin = new System.Windows.Forms.Padding(4);
             this.btnXacNhan.Name = "btnXacNhan";
             this.btnXacNhan.Size = new System.Drawing.Size(215, 42);
@@ -188,7 +188,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.AdminForm
             this.btnChiTiet.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnChiTiet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChiTiet.ForeColor = System.Drawing.Color.White;
-            this.btnChiTiet.Location = new System.Drawing.Point(848, 263);
+            this.btnChiTiet.Location = new System.Drawing.Point(702, 260);
             this.btnChiTiet.Margin = new System.Windows.Forms.Padding(4);
             this.btnChiTiet.Name = "btnChiTiet";
             this.btnChiTiet.Size = new System.Drawing.Size(215, 42);
@@ -265,7 +265,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.AdminForm
             this.btnLuu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLuu.ForeColor = System.Drawing.Color.White;
-            this.btnLuu.Location = new System.Drawing.Point(1293, 263);
+            this.btnLuu.Location = new System.Drawing.Point(1147, 260);
             this.btnLuu.Margin = new System.Windows.Forms.Padding(4);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(109, 43);
@@ -280,7 +280,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.AdminForm
             this.btn_XuatDonHang.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_XuatDonHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_XuatDonHang.ForeColor = System.Drawing.Color.White;
-            this.btn_XuatDonHang.Location = new System.Drawing.Point(848, 212);
+            this.btn_XuatDonHang.Location = new System.Drawing.Point(702, 209);
             this.btn_XuatDonHang.Margin = new System.Windows.Forms.Padding(4);
             this.btn_XuatDonHang.Name = "btn_XuatDonHang";
             this.btn_XuatDonHang.Size = new System.Drawing.Size(215, 43);
@@ -295,7 +295,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.AdminForm
             this.btn_XuatChiTietDH.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_XuatChiTietDH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_XuatChiTietDH.ForeColor = System.Drawing.Color.White;
-            this.btn_XuatChiTietDH.Location = new System.Drawing.Point(848, 161);
+            this.btn_XuatChiTietDH.Location = new System.Drawing.Point(702, 158);
             this.btn_XuatChiTietDH.Margin = new System.Windows.Forms.Padding(4);
             this.btn_XuatChiTietDH.Name = "btn_XuatChiTietDH";
             this.btn_XuatChiTietDH.Size = new System.Drawing.Size(215, 43);
@@ -310,7 +310,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.AdminForm
             this.btn_XuatExcel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_XuatExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_XuatExcel.ForeColor = System.Drawing.Color.White;
-            this.btn_XuatExcel.Location = new System.Drawing.Point(1071, 212);
+            this.btn_XuatExcel.Location = new System.Drawing.Point(925, 209);
             this.btn_XuatExcel.Margin = new System.Windows.Forms.Padding(4);
             this.btn_XuatExcel.Name = "btn_XuatExcel";
             this.btn_XuatExcel.Size = new System.Drawing.Size(274, 43);
@@ -325,7 +325,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.AdminForm
             this.btn_XuatCTDHExcel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_XuatCTDHExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_XuatCTDHExcel.ForeColor = System.Drawing.Color.White;
-            this.btn_XuatCTDHExcel.Location = new System.Drawing.Point(1071, 161);
+            this.btn_XuatCTDHExcel.Location = new System.Drawing.Point(925, 158);
             this.btn_XuatCTDHExcel.Margin = new System.Windows.Forms.Padding(4);
             this.btn_XuatCTDHExcel.Name = "btn_XuatCTDHExcel";
             this.btn_XuatCTDHExcel.Size = new System.Drawing.Size(274, 43);

@@ -22,12 +22,12 @@ namespace DoAn_QLDoDienTu_Web.Models
     
         public int MaDonHang { get; set; }
         public string TenDN { get; set; }
-        public Nullable<System.DateTime> NgayDat { get; set; }
+        public System.DateTime NgayDat { get; set; }
         public string Email { get; set; }
         public string HoTen { get; set; }
         public string SoDienThoai { get; set; }
-        public string DiaChi { get; set; }
-        public Nullable<double> TongGiaTri { get; set; }
+        public string ChiTietDiaChi { get; set; }
+        public double TongGiaTri { get; set; }
         public string HinhThucThanhToan { get; set; }
         public string TrangThaiDonHang { get; set; }
     
