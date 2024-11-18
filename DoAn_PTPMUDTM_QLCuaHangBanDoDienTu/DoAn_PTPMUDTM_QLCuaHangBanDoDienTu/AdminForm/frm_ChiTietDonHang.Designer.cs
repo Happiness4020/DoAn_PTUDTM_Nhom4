@@ -47,57 +47,70 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.AdminForm
             this.SoLuong,
             this.ThanhTien,
             this.TrangThaiCTDH});
-            this.dgvCTDH.Location = new System.Drawing.Point(12, 12);
+            this.dgvCTDH.Location = new System.Drawing.Point(16, 15);
+            this.dgvCTDH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvCTDH.Name = "dgvCTDH";
-            this.dgvCTDH.Size = new System.Drawing.Size(548, 440);
+            this.dgvCTDH.RowHeadersWidth = 51;
+            this.dgvCTDH.Size = new System.Drawing.Size(731, 542);
             this.dgvCTDH.TabIndex = 0;
             // 
             // MaDonHang
             // 
             this.MaDonHang.DataPropertyName = "MaDonHang";
             this.MaDonHang.HeaderText = "Mã đơn hàng";
+            this.MaDonHang.MinimumWidth = 6;
             this.MaDonHang.Name = "MaDonHang";
             this.MaDonHang.ReadOnly = true;
+            this.MaDonHang.Width = 125;
             // 
             // MaCTSanPham
             // 
             this.MaCTSanPham.DataPropertyName = "MaCTSanPham";
             this.MaCTSanPham.HeaderText = "Mã chi tiết sản phẩm";
+            this.MaCTSanPham.MinimumWidth = 6;
             this.MaCTSanPham.Name = "MaCTSanPham";
             this.MaCTSanPham.ReadOnly = true;
+            this.MaCTSanPham.Width = 125;
             // 
             // SoLuong
             // 
             this.SoLuong.DataPropertyName = "SoLuong";
             this.SoLuong.HeaderText = "Số lượng";
+            this.SoLuong.MinimumWidth = 6;
             this.SoLuong.Name = "SoLuong";
             this.SoLuong.ReadOnly = true;
+            this.SoLuong.Width = 125;
             // 
             // ThanhTien
             // 
             this.ThanhTien.DataPropertyName = "ThanhTien";
             this.ThanhTien.HeaderText = "Thành tiền";
+            this.ThanhTien.MinimumWidth = 6;
             this.ThanhTien.Name = "ThanhTien";
             this.ThanhTien.ReadOnly = true;
+            this.ThanhTien.Width = 125;
             // 
             // TrangThaiCTDH
             // 
             this.TrangThaiCTDH.DataPropertyName = "TrangThaiCTDH";
             this.TrangThaiCTDH.HeaderText = "Trạng thái";
+            this.TrangThaiCTDH.MinimumWidth = 6;
             this.TrangThaiCTDH.Name = "TrangThaiCTDH";
             this.TrangThaiCTDH.ReadOnly = true;
+            this.TrangThaiCTDH.Width = 125;
             // 
             // frm_ChiTietDonHang
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Wheat;
-            this.ClientSize = new System.Drawing.Size(572, 462);
+            this.ClientSize = new System.Drawing.Size(763, 569);
             this.Controls.Add(this.dgvCTDH);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "frm_ChiTietDonHang";
-            this.Text = "frm_ChiTietDonHang";
+            this.Text = "Chi tiết đơn hàng";
             this.Load += new System.EventHandler(this.frm_ChiTietDonHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCTDH)).EndInit();
             this.ResumeLayout(false);

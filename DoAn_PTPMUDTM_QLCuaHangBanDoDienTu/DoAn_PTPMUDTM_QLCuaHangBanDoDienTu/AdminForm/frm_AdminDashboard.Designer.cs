@@ -48,8 +48,9 @@
             this.panel1.Controls.Add(this.btn_DangXuat);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 681);
+            this.panel1.Size = new System.Drawing.Size(267, 838);
             this.panel1.TabIndex = 0;
             // 
             // btnDonHang
@@ -57,9 +58,10 @@
             this.btnDonHang.BackColor = System.Drawing.Color.Wheat;
             this.btnDonHang.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDonHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDonHang.Location = new System.Drawing.Point(3, 279);
+            this.btnDonHang.Location = new System.Drawing.Point(4, 343);
+            this.btnDonHang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDonHang.Name = "btnDonHang";
-            this.btnDonHang.Size = new System.Drawing.Size(194, 37);
+            this.btnDonHang.Size = new System.Drawing.Size(259, 46);
             this.btnDonHang.TabIndex = 5;
             this.btnDonHang.Text = "Đơn hàng";
             this.btnDonHang.UseVisualStyleBackColor = false;
@@ -70,9 +72,10 @@
             this.btnTaiKhoan.BackColor = System.Drawing.Color.Wheat;
             this.btnTaiKhoan.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTaiKhoan.Location = new System.Drawing.Point(3, 236);
+            this.btnTaiKhoan.Location = new System.Drawing.Point(4, 290);
+            this.btnTaiKhoan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnTaiKhoan.Name = "btnTaiKhoan";
-            this.btnTaiKhoan.Size = new System.Drawing.Size(194, 37);
+            this.btnTaiKhoan.Size = new System.Drawing.Size(259, 46);
             this.btnTaiKhoan.TabIndex = 3;
             this.btnTaiKhoan.Text = "Tài khoản";
             this.btnTaiKhoan.UseVisualStyleBackColor = false;
@@ -83,9 +86,10 @@
             this.btnNSX.BackColor = System.Drawing.Color.Wheat;
             this.btnNSX.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNSX.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNSX.Location = new System.Drawing.Point(3, 193);
+            this.btnNSX.Location = new System.Drawing.Point(4, 238);
+            this.btnNSX.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnNSX.Name = "btnNSX";
-            this.btnNSX.Size = new System.Drawing.Size(194, 37);
+            this.btnNSX.Size = new System.Drawing.Size(259, 46);
             this.btnNSX.TabIndex = 2;
             this.btnNSX.Text = "Nhà sản xuất";
             this.btnNSX.UseVisualStyleBackColor = false;
@@ -96,9 +100,10 @@
             this.btnSanPham.BackColor = System.Drawing.Color.Wheat;
             this.btnSanPham.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSanPham.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSanPham.Location = new System.Drawing.Point(3, 150);
+            this.btnSanPham.Location = new System.Drawing.Point(4, 185);
+            this.btnSanPham.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSanPham.Name = "btnSanPham";
-            this.btnSanPham.Size = new System.Drawing.Size(194, 37);
+            this.btnSanPham.Size = new System.Drawing.Size(259, 46);
             this.btnSanPham.TabIndex = 1;
             this.btnSanPham.Text = "Sản phẩm";
             this.btnSanPham.UseVisualStyleBackColor = false;
@@ -109,9 +114,10 @@
             this.btn_DangXuat.BackColor = System.Drawing.Color.Wheat;
             this.btn_DangXuat.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_DangXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_DangXuat.Location = new System.Drawing.Point(3, 632);
+            this.btn_DangXuat.Location = new System.Drawing.Point(4, 778);
+            this.btn_DangXuat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_DangXuat.Name = "btn_DangXuat";
-            this.btn_DangXuat.Size = new System.Drawing.Size(194, 37);
+            this.btn_DangXuat.Size = new System.Drawing.Size(259, 46);
             this.btn_DangXuat.TabIndex = 0;
             this.btn_DangXuat.Text = "Đăng xuất";
             this.btn_DangXuat.UseVisualStyleBackColor = false;
@@ -120,22 +126,24 @@
             // pnlControls
             // 
             this.pnlControls.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlControls.Location = new System.Drawing.Point(200, 0);
+            this.pnlControls.Location = new System.Drawing.Point(267, 0);
+            this.pnlControls.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlControls.Name = "pnlControls";
-            this.pnlControls.Size = new System.Drawing.Size(1064, 681);
+            this.pnlControls.Size = new System.Drawing.Size(1418, 838);
             this.pnlControls.TabIndex = 1;
             // 
             // frm_AdminDashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.ClientSize = new System.Drawing.Size(1685, 838);
             this.Controls.Add(this.pnlControls);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "frm_AdminDashboard";
-            this.Text = "Dashboard";
+            this.Text = "Quản lý cửa hàng đồ điện tử";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frm_AdminDashboard_FormClosing);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
