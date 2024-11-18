@@ -26,6 +26,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
             // Tính số lượng sản phẩm cần bỏ qua
             int skip = (pageNumber - 1) * pageSize;
             List<SanPham> lst = db.SanPhams
+                .Where(sp=>sp.TrangThaiSP==0)
                 .OrderBy(sp => sp.MaSanPham) // Sắp xếp theo một tiêu chí (ví dụ: MaSanPham)
                 .Skip(skip) // Bỏ qua các sản phẩm trước đó
                 .Take(pageSize) // Lấy số lượng sản phẩm tương ứng với pageSize
@@ -36,7 +37,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
         }
         public void LayLoaiSanPham()
         {
-            List<LoaiSanPham> lst = db.LoaiSanPhams.ToList();
+            List<LoaiSanPham> lst = db.LoaiSanPhams.Where(t => t.TrangThaiLoaiSP == 0).ToList();
             LoaiSanPham emptyItem = new LoaiSanPham
             {
                 MaLoai = 0,  // Hoặc null, tùy thuộc vào kiểu dữ liệu của MaLoai
@@ -55,7 +56,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
                 int MaLoai = (int)cboLoaiSP.SelectedValue;
                 pageNumber = 1;
                 int skip = (pageNumber - 1) * pageSize;
-                List<SanPham> lst = db.SanPhams.Where(s => s.MaLoai == MaLoai)
+                List<SanPham> lst = db.SanPhams.Where(s => s.MaLoai == MaLoai && s.TrangThaiSP == 0)
                     .Skip(skip) // Bỏ qua các sản phẩm trước đó
                     .Take(pageSize) // Lấy số lượng sản phẩm tương ứng với pageSize
                     .ToList();
@@ -75,7 +76,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
                 int MaLoai = (int)cboLoaiSP.SelectedValue;
                 pageNumber = 1;
                 int skip = (pageNumber - 1) * pageSize;
-                List<SanPham> lst = db.SanPhams.Where(s => s.TenSanPham.ToLower().Contains(TenSP.ToLower()))
+                List<SanPham> lst = db.SanPhams.Where(s => s.TenSanPham.ToLower().Contains(TenSP.ToLower()) && s.TrangThaiSP == 0)
                     .Skip(skip) // Bỏ qua các sản phẩm trước đó
                     .Take(pageSize) // Lấy số lượng sản phẩm tương ứng với pageSize
                     .ToList();

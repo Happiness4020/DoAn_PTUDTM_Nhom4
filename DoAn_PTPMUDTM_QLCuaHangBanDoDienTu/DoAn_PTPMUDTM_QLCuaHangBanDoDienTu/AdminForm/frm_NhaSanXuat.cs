@@ -17,8 +17,19 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.AdminForm
         public frm_NhaSanXuat()
         {
             InitializeComponent();
+            LoadCombobox();
         }
-
+        private void LoadCombobox()
+        {
+            var items = new Dictionary<string, int>
+            {
+                { "Tồn tại", 0 },
+                { "Đã bị xóa", 1 }
+            };
+            cbxTrangThai.DataSource = new BindingSource(items, null);
+            cbxTrangThai.DisplayMember = "Key";
+            cbxTrangThai.ValueMember = "Value";
+        }
         private void frm_NhaSanXuat_Load(object sender, EventArgs e)
         {
             dgvNSX.AutoGenerateColumns = false;
@@ -30,7 +41,12 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.AdminForm
 
         private void Load_DataNSX()
         {
-            var nsxs = from nsx in db.NhaSanXuats select nsx;
+            var nsxs = from nsx in db.NhaSanXuats where nsx.TrangThaiNSX == 0  select nsx;
+            dgvNSX.DataSource = nsxs;   
+        }
+        private void Load_DataNSX_BiXoa()
+        {
+            var nsxs = from nsx in db.NhaSanXuats where nsx.TrangThaiNSX == 1 select nsx;
             dgvNSX.DataSource = nsxs;
         }
 
@@ -79,11 +95,15 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.AdminForm
                 if (result == DialogResult.Yes)
                 {
                     NhaSanXuat nsx = db.NhaSanXuats.Where(t => t.MaNhaSanXuat == mansx).FirstOrDefault();
-
+                    SanPham sp = db.SanPhams.Where(a => a.MaNhaSanXuat == nsx.MaNhaSanXuat).FirstOrDefault();
+                    if(sp!=null)
+                    {
+                        MessageBox.Show("Xóa nhà sản xuất không thành công do cửa hàng đang kinh doanh sản phẩm thuộc nhà sản xuất "+nsx.TenNhaSanXuat+" !!!\n", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return;
+                    }
                     if (nsx != null)
                     {
-                        db.NhaSanXuats.DeleteOnSubmit(nsx);
-
+                        nsx.TrangThaiNSX = 1;
                         db.SubmitChanges();
                         Load_DataNSX();
                         MessageBox.Show("Đã xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -130,6 +150,8 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.AdminForm
             txtEmail.Clear();
             cbxTrangThai.SelectedIndex = 0;
             txtTenNSX.Focus();
+            cbxTrangThai.Enabled = false;
+            ckcSanPhamBiXoa.Checked = false;
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -151,9 +173,11 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.AdminForm
                         nsx.DiaChi = txtDiaChi.Text;
                         nsx.Email = txtEmail.Text;
                         nsx.TrangThaiNSX = cbxTrangThai.SelectedIndex;
-
-                        Load_DataNSX();
+                        ckcSanPhamBiXoa.Checked = false;
+                        cbxTrangThai.Enabled = false;
+                        Reset();
                         MessageBox.Show("Cập nhật thành công! Nhấn lưu để lưu nhà sản xuất.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                     }
                     else
                     {
@@ -172,7 +196,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.AdminForm
             try
             {
                 db.SubmitChanges();
-
+                cbxTrangThai.Enabled = false;
                 Load_DataNSX();
                 MessageBox.Show("Đã lưu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -244,6 +268,22 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.AdminForm
         private void btnHuy_Click(object sender, EventArgs e)
         {
             Load_DataNSX();
+        }
+
+        private void ckcSanPhamBiXoa_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ckcSanPhamBiXoa.Checked)
+            {
+                Load_DataNSX_BiXoa();
+                cbxTrangThai.SelectedIndex = 1;
+                cbxTrangThai.Enabled = true;
+            }
+            else
+            {
+                Load_DataNSX();
+                cbxTrangThai.SelectedIndex = 0;
+                cbxTrangThai.Enabled = false;
+            }
         }
     }
 }

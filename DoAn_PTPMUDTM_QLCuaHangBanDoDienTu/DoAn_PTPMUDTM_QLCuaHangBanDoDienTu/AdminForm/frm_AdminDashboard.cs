@@ -43,7 +43,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.AdminForm
 
         private void btn_DangXuat_Click(object sender, EventArgs e)
         {
-            frm_DangNhap frmDN = new frm_DangNhap();
+            frmDangNhap frmDN = new frmDangNhap();
             frmDN.Show();
             this.Hide();
         }
@@ -76,6 +76,15 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.AdminForm
             frmDH.TopLevel = false;
             pnlControls.Controls.Add(frmDH);
             frmDH.Show();
+        }
+
+        private void btn_PhieuNhap_Click(object sender, EventArgs e)
+        {
+            DongTatCaForm();
+            frm_PhieuNhap frmPN = new frm_PhieuNhap();
+            frmPN.TopLevel = false;
+            pnlControls.Controls.Add(frmPN);
+            frmPN.Show();
         }
     }
 }

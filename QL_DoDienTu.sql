@@ -115,10 +115,10 @@ GO
 -- Bảng danh sách phiếu nhập
 CREATE TABLE PhieuNhap 
 (
-    MaPhieuNhap int IDENTITY(1,1),
-    NgayNhap DATEtime,
-	TongGiaTri float,
-	HinhThucThanhToan NVARCHAR(255),
+    MaPhieuNhap  VARCHAR(50) not null,
+    NgayNhap DATEtime not null,
+	TongGiaTri float not null,
+	HinhThucThanhToan NVARCHAR(255) not null,
 	GhiChu NVARCHAR(50),
 	TrangThaiPN int,
 	CONSTRAINT PK_PhieuNhap  PRIMARY KEY (MaPhieuNhap)
@@ -127,12 +127,11 @@ GO
 
 -- Bảng chi tiết đơn hàng
 CREATE TABLE ChiTietPhieuNhap (
-    MaPhieuNhap int IDENTITY(1,1),
-    MaCTSanPham INT,
-	DonViTinh nchar(10),
-    SoLuong INT,
-	DonGiaNhap float,
-	ThanhTien float,
+    MaPhieuNhap VARCHAR(50) not null,
+    MaCTSanPham INT not null,
+    SoLuong INT not null,
+	DonGiaNhap float not null,
+	ThanhTien float not null,
 	TrangThaiCTPN int,
     CONSTRAINT PK_ChiTietPhieuNhap PRIMARY KEY (MaPhieuNhap, MaCTSanPham),
 	CONSTRAINT FK_MaSanPham FOREIGN KEY (MaCTSanPham) REFERENCES ChiTietSanPham(ID),
@@ -276,27 +275,26 @@ VALUES
 GO
 
 
+--set dateformat dmy
+--INSERT INTO PhieuNhap(NgayNhap, TongGiaTri, HinhThucThanhToan, GhiChu, TrangThaiPN)
+--VALUES
+--  ('24/05/2024', 14000000, N'Tiền mặt', N'Phiếu nhập hàng ngày 24/05/2024',0),
+--  ('25/05/2024', 20000000, N'Chuyển khoản', N'Phiếu nhập hàng ngày 25/05/2024',0);
+--go
 
---INSERT INTO PhieuNhap
---VALUES
---  ('24/05/2024', 12345678.90, N'Tiền mặt', N'Phiếu nhập hàng ngày 24/09/2024',0),
---  ('25/05/2024', 98765432.10, N'Chuyển khoản', N'Phiếu nhập hàng ngày 25/09/2024',0);
---go
---select * From PhieuNhap
+---- Bật IDENTITY_INSERT cho bảng ChiTietPhieuNhap
 --SET IDENTITY_INSERT ChiTietPhieuNhap ON;
---INSERT INTO ChiTietPhieuNhap (MaPhieuNhap,MaSanPham,DonViTinh,SoLuong,DonGiaNhap,ThanhTien,isDelete)
+
+---- Chèn dữ liệu với giá trị cột IDENTITY
+--INSERT INTO ChiTietPhieuNhap (MaPhieuNhap, MaCTSanPham, DonViTinh, SoLuong, DonGiaNhap, ThanhTien, TrangThaiCTPN)
 --VALUES
---  (1, 'SP001', N'Cái', 10, 1000000, 1000000,0),
---  (1, 'SP002', N'Cái', 8, 950000, 760000,0),
---  (1, 'SP003', N'Cái', 12, 950000, 1140000,0),
---  (1, 'SP004', N'Cái', 15, 584000, 876000,0),
---  (1, 'SP005', N'Cái', 14, 614000, 869600,0),
---  (2, 'SP010', N'Cái', 20, 1200000, 2400000,0),
---  (2, 'SP013', N'Cái', 15, 990000, 1485000,0),
---  (2, 'SP014', N'Cái', 12, 1300000, 1560000,0),
---  (2, 'SP016', N'Cái', 18, 1200000, 2160000,0),
---  (2, 'SP019', N'Cái', 15, 600000, 900000,0);
---go
+--(2, 2, N'Cái', 10, 150000, 1500000, 0),
+--(3, 4, N'Cái', 5, 460000, 2300000, 0);
+
+---- Tắt IDENTITY_INSERT sau khi chèn dữ liệu
+--SET IDENTITY_INSERT ChiTietPhieuNhap OFF;
+
+select * From PhieuNhap
 
 ---------
 use QL_CuaHangDoDienTu

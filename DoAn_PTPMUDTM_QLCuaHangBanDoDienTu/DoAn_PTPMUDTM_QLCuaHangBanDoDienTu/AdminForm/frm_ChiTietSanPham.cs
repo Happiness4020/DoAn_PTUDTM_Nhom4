@@ -18,7 +18,6 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu
         {
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
-            cbxMauSac.SelectedIndex = 0;
             dgvChiTietSP.AutoGenerateColumns = false;
             dgvChiTietSP.AllowUserToAddRows = false;
             masp = masanpham;
@@ -48,7 +47,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu
         {
             try
             {
-                if (string.IsNullOrEmpty(txtGia.Text) || cbxMauSac.SelectedIndex == 0)
+                if (string.IsNullOrEmpty(txtGia.Text) || string.IsNullOrEmpty(txtMauSac.Text))
                 {
                     MessageBox.Show("Vui lòng nhập đầy đủ thông tin sản phẩm!!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
@@ -56,11 +55,11 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu
                 {
                     // Kiểm tra xem sản phẩm đã có màu cần thêm chưa?
                     var mauDaTonTai = db.ChiTietSanPhams
-                        .FirstOrDefault(t => t.MauSac.ToLower() == cbxMauSac.SelectedItem.ToString().ToLower() && t.MauSac == txtMaSanPham.Text);
+                        .FirstOrDefault(t => t.MauSac.ToLower() == txtMauSac.Text.ToLower() && t.MauSac == txtMaSanPham.Text);
 
                     if (mauDaTonTai != null)
                     {
-                        MessageBox.Show("Sản phẩm đã có màu " + cbxMauSac.SelectedItem.ToString(), "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("Sản phẩm đã có màu " + txtMauSac.Text, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
                     ChiTietSanPham ctsp = new ChiTietSanPham();
@@ -69,7 +68,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu
                     ctsp.Gia = float.Parse(txtGia.Text);
                     ctsp.Soluong = int.Parse(numSoLuong.Value.ToString());
                     ctsp.MoTa = rtxtMoTa.Text;
-                    ctsp.MauSac = cbxMauSac.SelectedItem.ToString();
+                    ctsp.MauSac = txtMauSac.Text;
 
                     db.ChiTietSanPhams.InsertOnSubmit(ctsp);
 
@@ -108,7 +107,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu
                 txtGia.Text = currentRow.Cells[2].Value.ToString();
                 numSoLuong.Value = decimal.Parse(currentRow.Cells[3].Value.ToString());
                 rtxtMoTa.Text = currentRow.Cells[4].Value.ToString();
-                cbxMauSac.SelectedItem = currentRow.Cells[5].Value.ToString();
+                txtMauSac.Text = currentRow.Cells[5].Value.ToString();
             }
             catch (Exception ex)
             {
@@ -125,7 +124,20 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu
                 if (result == DialogResult.Yes)
                 {
                     ChiTietSanPham ctsp = db.ChiTietSanPhams.Where(t => t.ID == maid).FirstOrDefault();
-
+                    var donHang = (from ctdh in db.ChiTietDonHangs
+                                   join dh in db.DonHangs on ctdh.MaDonHang equals dh.MaDonHang
+                                   where ctdh.MaCTSanPham == ctsp.ID && dh.TrangThaiDonHang == "Chờ xác nhận"
+                                   select dh).FirstOrDefault();
+                    if (donHang != null)
+                    {
+                        MessageBox.Show("Xóa không thành công do sản phẩm đang được đặt", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return;
+                    }
+                    var gioHangs = db.GioHangs.Where(t => t.MaCTSanPham == ctsp.ID).ToList();
+                    foreach (var gioHang in gioHangs)
+                    {
+                        db.GioHangs.DeleteOnSubmit(gioHang);
+                    }
                     if (ctsp != null)
                     {
                         db.ChiTietSanPhams.DeleteOnSubmit(ctsp);
@@ -153,7 +165,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu
             txtGia.Clear();
             numSoLuong.Value = 0;
             rtxtMoTa.Clear();
-            cbxMauSac.SelectedIndex = 0;
+            txtMauSac.Clear();
             txtGia.Focus();
             maid = -1;
         }
@@ -177,7 +189,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu
                         ctsp.Gia = float.Parse(txtGia.Text);
                         ctsp.Soluong = int.Parse(numSoLuong.Value.ToString());
                         ctsp.MoTa = rtxtMoTa.Text;
-                        ctsp.MauSac = cbxMauSac.SelectedItem.ToString();
+                        ctsp.MauSac = txtMauSac.Text;
 
                         Load_DataGridView();
                         MessageBox.Show("Cập nhật thành công! Nhấn lưu để lưu chi tiết sản phẩm.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);

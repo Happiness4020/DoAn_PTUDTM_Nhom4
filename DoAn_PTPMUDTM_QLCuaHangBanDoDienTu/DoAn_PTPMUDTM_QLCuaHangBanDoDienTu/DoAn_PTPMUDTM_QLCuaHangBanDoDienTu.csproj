@@ -38,13 +38,16 @@
     <Reference Include="Newtonsoft.Json.Bson, Version=1.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.Bson.1.0.2\lib\net45\Newtonsoft.Json.Bson.dll</HintPath>
     </Reference>
-    <Reference Include="Syncfusion.Compression.Base">
+    <Reference Include="Syncfusion.Compression.Base, Version=16.1450.0.37, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\tài liệu đại học\Nam 2024 - 2025\Phat Trien Ung Dung\50_TranVan_Tuan10\09_TranVan_Tuan5\09_TranVan_Tuan5\09_TranVan_Tuan5\bin\Debug\Syncfusion.Compression.Base.dll</HintPath>
     </Reference>
-    <Reference Include="Syncfusion.DocIO.Base">
+    <Reference Include="Syncfusion.DocIO.Base, Version=16.1450.0.37, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\tài liệu đại học\Nam 2024 - 2025\Phat Trien Ung Dung\50_TranVan_Tuan10\09_TranVan_Tuan5\09_TranVan_Tuan5\09_TranVan_Tuan5\bin\Debug\Syncfusion.DocIO.Base.dll</HintPath>
     </Reference>
-    <Reference Include="Syncfusion.XlsIO.Base">
+    <Reference Include="Syncfusion.XlsIO.Base, Version=16.1450.0.37, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\tài liệu đại học\Nam 2024 - 2025\Phat Trien Ung Dung\50_TranVan_Tuan10\09_TranVan_Tuan5\09_TranVan_Tuan5\09_TranVan_Tuan5\bin\Debug\Syncfusion.XlsIO.Base.dll</HintPath>
     </Reference>
     <Reference Include="System" />
@@ -94,15 +97,17 @@
     <Compile Include="AdminForm\frm_NhaSanXuat.Designer.cs">
       <DependentUpon>frm_NhaSanXuat.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminForm\frm_PhieuNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForm\frm_PhieuNhap.Designer.cs">
+      <DependentUpon>frm_PhieuNhap.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminForm\frm_TaiKhoan.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AdminForm\frm_TaiKhoan.Designer.cs">
       <DependentUpon>frm_TaiKhoan.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DTO\ChiTietDonHangDTO.cs" />
-    <Compile Include="Data.cs">
-      <DependentUpon>Data.dbml</DependentUpon>
     </Compile>
     <Compile Include="Data.designer.cs">
       <AutoGen>True</AutoGen>
@@ -115,19 +120,22 @@
     <Compile Include="AdminForm\frm_ChiTietSanPham.Designer.cs">
       <DependentUpon>frm_ChiTietSanPham.cs</DependentUpon>
     </Compile>
+    <Compile Include="DTO\ChiTietDonHangDTO.cs" />
     <Compile Include="DTO\DonHangDTO.cs" />
+    <Compile Include="DTO\PhieuNhapDTO.cs" />
     <Compile Include="Export\ExcelExport.cs" />
-    <Compile Include="frm_DangKy.cs">
+    <Compile Include="Export\WordExport.cs" />
+    <Compile Include="frmDangKy.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_DangKy.Designer.cs">
-      <DependentUpon>frm_DangKy.cs</DependentUpon>
+    <Compile Include="frmDangKy.Designer.cs">
+      <DependentUpon>frmDangKy.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_DangNhap.cs">
+    <Compile Include="frmDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_DangNhap.Designer.cs">
-      <DependentUpon>frm_DangNhap.cs</DependentUpon>
+    <Compile Include="frmDangNhap.Designer.cs">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
     </Compile>
     <Compile Include="AdminForm\frm_AdminDashboard.cs">
       <SubType>Form</SubType>
@@ -250,7 +258,6 @@
     <Compile Include="UserForm\frmUserMain.Designer.cs">
       <DependentUpon>frmUserMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Export\WordExport.cs" />
     <EmbeddedResource Include="AdminForm\frm_ChiTietDonHang.resx">
       <DependentUpon>frm_ChiTietDonHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -263,14 +270,17 @@
     <EmbeddedResource Include="AdminForm\frm_NhaSanXuat.resx">
       <DependentUpon>frm_NhaSanXuat.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AdminForm\frm_PhieuNhap.resx">
+      <DependentUpon>frm_PhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminForm\frm_TaiKhoan.resx">
       <DependentUpon>frm_TaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_DangKy.resx">
-      <DependentUpon>frm_DangKy.cs</DependentUpon>
+    <EmbeddedResource Include="frmDangKy.resx">
+      <DependentUpon>frmDangKy.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_DangNhap.resx">
-      <DependentUpon>frm_DangNhap.cs</DependentUpon>
+    <EmbeddedResource Include="frmDangNhap.resx">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminForm\frm_AdminDashboard.resx">
       <DependentUpon>frm_AdminDashboard.cs</DependentUpon>
