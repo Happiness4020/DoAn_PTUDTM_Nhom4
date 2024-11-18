@@ -11,14 +11,14 @@ using System.Windows.Forms;
 
 namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
 {
-    public partial class CardSanPham : UserControl
+    public partial class CardSanPhamDeXuat : UserControl
     {
-        dbQLCuaHangDienTuDataContext db = new dbQLCuaHangDienTuDataContext();
-        public CardSanPham()
+        public CardSanPhamDeXuat()
         {
             InitializeComponent();
         }
 
+        dbQLCuaHangDienTuDataContext db = new dbQLCuaHangDienTuDataContext();
         SanPham sp;
         public void setData(SanPham s)
         {
@@ -50,13 +50,23 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
                 MessageBox.Show("Hình ảnh không tồn tại.");
             }
         }
-        private void btnXemChiTiet_Click(object sender, EventArgs e)
+
+
+        private void panel1_Click(object sender, EventArgs e)
         {
             ChiTietSanPham ctsp = db.ChiTietSanPhams.Where(ct => ct.MaSanPham == sp.MaSanPham).FirstOrDefault();
             if (ctsp == null)
             {
                 MessageBox.Show("Sản phẩm chưa được kinh doanh");
                 return;
+            }
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form is frmChiTietSanPham)
+                {
+                    form.Close();  // Đóng form đã mở
+                    break;  // Dừng vòng lặp sau khi tìm thấy và đóng form
+                }
             }
             frmChiTietSanPham frm = new frmChiTietSanPham();
             frm.setData(sp);

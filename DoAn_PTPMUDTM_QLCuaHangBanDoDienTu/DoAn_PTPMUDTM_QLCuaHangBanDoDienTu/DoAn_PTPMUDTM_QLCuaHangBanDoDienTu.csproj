@@ -170,6 +170,12 @@
     <Compile Include="UserForm\CardSanPham.Designer.cs">
       <DependentUpon>CardSanPham.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserForm\CardSanPhamDeXuat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserForm\CardSanPhamDeXuat.Designer.cs">
+      <DependentUpon>CardSanPhamDeXuat.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserForm\dbQLCuaHangDienTu.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -292,6 +298,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserForm\CardSanPham.resx">
       <DependentUpon>CardSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserForm\CardSanPhamDeXuat.resx">
+      <DependentUpon>CardSanPhamDeXuat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserForm\frmCapNhatMatKhau.resx">
       <DependentUpon>frmCapNhatMatKhau.cs</DependentUpon>

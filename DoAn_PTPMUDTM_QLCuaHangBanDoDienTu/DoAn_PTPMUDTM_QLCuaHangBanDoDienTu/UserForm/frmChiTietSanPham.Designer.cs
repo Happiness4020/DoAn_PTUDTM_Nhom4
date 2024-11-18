@@ -43,8 +43,10 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
             this.label4 = new System.Windows.Forms.Label();
             this.lblTonKho = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.pnlSanPhamDeXuat = new System.Windows.Forms.FlowLayoutPanel();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nbrSoLuong)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -204,6 +206,16 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
             this.panel2.Size = new System.Drawing.Size(1179, 63);
             this.panel2.TabIndex = 13;
             // 
+            // panel3
+            // 
+            this.panel3.BackgroundImage = global::DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.Properties.Resources.thoat;
+            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel3.Location = new System.Drawing.Point(1107, 10);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(59, 37);
+            this.panel3.TabIndex = 14;
+            this.panel3.Click += new System.EventHandler(this.panel3_Click);
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -215,22 +227,33 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
             this.label5.TabIndex = 14;
             this.label5.Text = "CHI TIẾT SẢN PHẨM";
             // 
-            // panel3
+            // pnlSanPhamDeXuat
             // 
-            this.panel3.BackgroundImage = global::DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.Properties.Resources.thoat;
-            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel3.Location = new System.Drawing.Point(1107, 10);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(59, 37);
-            this.panel3.TabIndex = 14;
-            this.panel3.Click += new System.EventHandler(this.panel3_Click);
+            this.pnlSanPhamDeXuat.Location = new System.Drawing.Point(156, 590);
+            this.pnlSanPhamDeXuat.Name = "pnlSanPhamDeXuat";
+            this.pnlSanPhamDeXuat.Size = new System.Drawing.Size(854, 147);
+            this.pnlSanPhamDeXuat.TabIndex = 14;
+            this.pnlSanPhamDeXuat.Click += new System.EventHandler(this.pnlSanPhamDeXuat_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(50)))));
+            this.label6.Location = new System.Drawing.Point(152, 557);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(188, 19);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "Một số sản phẩm đề xuất";
             // 
             // frmChiTietSanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(1177, 638);
+            this.ClientSize = new System.Drawing.Size(1177, 780);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.pnlSanPhamDeXuat);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.lblTonKho);
             this.Controls.Add(this.label4);
@@ -274,5 +297,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.FlowLayoutPanel pnlSanPhamDeXuat;
+        private System.Windows.Forms.Label label6;
     }
 }

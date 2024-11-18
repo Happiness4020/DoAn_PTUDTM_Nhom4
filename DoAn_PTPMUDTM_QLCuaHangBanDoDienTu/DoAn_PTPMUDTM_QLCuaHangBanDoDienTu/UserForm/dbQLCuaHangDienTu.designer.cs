@@ -66,7 +66,7 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
     #endregion
 		
 		public dbQLCuaHangDienTuDataContext() : 
-				base(global::DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.Properties.Settings.Default.QL_CuaHangDoDienTuConnectionString3, mappingSource)
+				base(global::DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.Properties.Settings.Default.QL_CuaHangDoDienTuConnectionString4, mappingSource)
 		{
 			OnCreated();
 		}
@@ -2933,76 +2933,26 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
 	public partial class ViewGioHang
 	{
 		
-		private int _ID;
-		
-		private int _MaSanPham;
-		
-		private double _Gia;
-		
 		private string _TenDN;
 		
 		private int _MaCTSanPham;
 		
-		private System.Nullable<int> _SoLuong;
+		private int _MaSanPham;
 		
-		private int _Expr1;
+		private string _TenSanPham;
 		
 		private string _Anh;
 		
-		private string _TenSanPham;
+		private System.Nullable<int> _SoLuong;
+		
+		private int _ID;
+		
+		private double _Gia;
 		
 		private string _MauSac;
 		
 		public ViewGioHang()
 		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", DbType="Int NOT NULL")]
-		public int ID
-		{
-			get
-			{
-				return this._ID;
-			}
-			set
-			{
-				if ((this._ID != value))
-				{
-					this._ID = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaSanPham", DbType="Int NOT NULL")]
-		public int MaSanPham
-		{
-			get
-			{
-				return this._MaSanPham;
-			}
-			set
-			{
-				if ((this._MaSanPham != value))
-				{
-					this._MaSanPham = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Gia", DbType="Float NOT NULL")]
-		public double Gia
-		{
-			get
-			{
-				return this._Gia;
-			}
-			set
-			{
-				if ((this._Gia != value))
-				{
-					this._Gia = value;
-				}
-			}
 		}
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenDN", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
@@ -3037,34 +2987,34 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SoLuong", DbType="Int")]
-		public System.Nullable<int> SoLuong
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaSanPham", DbType="Int NOT NULL")]
+		public int MaSanPham
 		{
 			get
 			{
-				return this._SoLuong;
+				return this._MaSanPham;
 			}
 			set
 			{
-				if ((this._SoLuong != value))
+				if ((this._MaSanPham != value))
 				{
-					this._SoLuong = value;
+					this._MaSanPham = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Expr1", DbType="Int NOT NULL")]
-		public int Expr1
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenSanPham", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string TenSanPham
 		{
 			get
 			{
-				return this._Expr1;
+				return this._TenSanPham;
 			}
 			set
 			{
-				if ((this._Expr1 != value))
+				if ((this._TenSanPham != value))
 				{
-					this._Expr1 = value;
+					this._TenSanPham = value;
 				}
 			}
 		}
@@ -3085,18 +3035,50 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.UserForm
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenSanPham", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
-		public string TenSanPham
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SoLuong", DbType="Int")]
+		public System.Nullable<int> SoLuong
 		{
 			get
 			{
-				return this._TenSanPham;
+				return this._SoLuong;
 			}
 			set
 			{
-				if ((this._TenSanPham != value))
+				if ((this._SoLuong != value))
 				{
-					this._TenSanPham = value;
+					this._SoLuong = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", DbType="Int NOT NULL")]
+		public int ID
+		{
+			get
+			{
+				return this._ID;
+			}
+			set
+			{
+				if ((this._ID != value))
+				{
+					this._ID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Gia", DbType="Float NOT NULL")]
+		public double Gia
+		{
+			get
+			{
+				return this._Gia;
+			}
+			set
+			{
+				if ((this._Gia != value))
+				{
+					this._Gia = value;
 				}
 			}
 		}
