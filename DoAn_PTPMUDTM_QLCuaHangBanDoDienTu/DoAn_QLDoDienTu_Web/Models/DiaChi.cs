@@ -12,16 +12,12 @@ namespace DoAn_QLDoDienTu_Web.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class ChiTietPhieuNhap
+    public partial class DiaChi
     {
-        public string MaPhieuNhap { get; set; }
-        public int MaCTSanPham { get; set; }
-        public int SoLuong { get; set; }
-        public double DonGiaNhap { get; set; }
-        public double ThanhTien { get; set; }
-        public Nullable<int> TrangThaiCTPN { get; set; }
+        public int MaDiaChi { get; set; }
+        public string TenDN { get; set; }
+        public string DiaChi1 { get; set; }
     
-        public virtual PhieuNhap PhieuNhap { get; set; }
-        public virtual ChiTietSanPham ChiTietSanPham { get; set; }
+        public virtual TaiKhoan TaiKhoan { get; set; }
     }
 }

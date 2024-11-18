@@ -59,44 +59,53 @@ namespace DoAn_PTPMUDTM_QLCuaHangBanDoDienTu.AdminForm
 
         private void btn_Loc_Click(object sender, EventArgs e)
         {
-            if (cbx_SanPham.SelectedValue != null)
+            if (cbx_SanPham.SelectedValue == null)
             {
-                string maNCC = cbx_SanPham.SelectedValue.ToString();
-                DateTime ngayBatDau = DateTime_Tu.Value.Date; // Lấy ngày bắt đầu
-                DateTime ngayKetThuc = DateTime_Den.Value.Date; // Lấy ngày kết thúc
-                LoadPhieuNhapTheoKhoangThoiGian(maNCC, ngayBatDau, ngayKetThuc);
-
+                MessageBox.Show("Vui lòng chọn sản phẩm.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
-            else
-            { MessageBox.Show("Vui lòng chọn nhà cung cấp."); }
+
+            // Kiểm tra ngày bắt đầu và ngày kết thúc
+            if (DateTime_Tu.Value.Date > DateTime_Den.Value.Date)
+            {
+                MessageBox.Show("Ngày bắt đầu không được lớn hơn ngày kết thúc.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            string masp = cbx_SanPham.SelectedValue.ToString();
+            DateTime ngayBatDau = DateTime_Tu.Value.Date;
+            DateTime ngayKetThuc = DateTime_Den.Value.Date;
+
+            // Gọi hàm lọc phiếu nhập
+            LoadPhieuNhapTheoKhoangThoiGian(masp, ngayBatDau, ngayKetThuc);
         }
 
-        private void LoadPhieuNhapTheoKhoangThoiGian(string mapn, DateTime ngayBatDau, DateTime ngayKetThuc)
+        private void LoadPhieuNhapTheoKhoangThoiGian(string masp, DateTime ngayBatDau, DateTime ngayKetThuc)
         {
 
+            // Lấy dữ liệu phiếu nhập dựa trên điều kiện lọc
             var phieuNhaps = (from pn in db.PhieuNhaps
                               join ctpn in db.ChiTietPhieuNhaps on pn.MaPhieuNhap equals ctpn.MaPhieuNhap
                               join cts in db.ChiTietSanPhams on ctpn.MaCTSanPham equals cts.ID
-                              where pn.MaPhieuNhap == mapn
+                              where cts.MaSanPham.ToString() == masp
                                     && pn.NgayNhap >= ngayBatDau
                                     && pn.NgayNhap <= ngayKetThuc
                               select new
                               {
-                                  pn.MaPhieuNhap,
-                                  pn.NgayNhap,
-                                  pn.TongGiaTri,
-                                  ctpn.SoLuong,
-                                  ctpn.ThanhTien
+                                  MaPhieuNhap = pn.MaPhieuNhap,
+                                  NgayNhap = pn.NgayNhap,
+                                  TongGiaTri = pn.TongGiaTri,
+                                  HinhThucThanhToan = pn.HinhThucThanhToan
                               }).ToList();
 
             // Hiển thị kết quả vào DataGridView
             dgrv_MaPN.DataSource = phieuNhaps;
 
+            // Thông báo nếu không tìm thấy dữ liệu
             if (phieuNhaps.Count == 0)
             {
-                MessageBox.Show("Không tìm thấy phiếu nhập nào trong khoảng thời gian đã chọn.");
+                MessageBox.Show("Không tìm thấy phiếu nhập nào trong khoảng thời gian đã chọn.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-
         }
 
 

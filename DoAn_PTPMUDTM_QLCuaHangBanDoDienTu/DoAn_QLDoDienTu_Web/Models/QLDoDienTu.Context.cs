@@ -28,6 +28,7 @@ namespace DoAn_QLDoDienTu_Web.Models
         public virtual DbSet<ChiTietDonHang> ChiTietDonHang { get; set; }
         public virtual DbSet<ChiTietPhieuNhap> ChiTietPhieuNhap { get; set; }
         public virtual DbSet<ChiTietSanPham> ChiTietSanPham { get; set; }
+        public virtual DbSet<DiaChi> DiaChi { get; set; }
         public virtual DbSet<DonHang> DonHang { get; set; }
         public virtual DbSet<GioHang> GioHang { get; set; }
         public virtual DbSet<LoaiSanPham> LoaiSanPham { get; set; }

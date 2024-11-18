@@ -18,7 +18,6 @@ namespace DoAn_QLDoDienTu_Web.Models
         public int MaCTSanPham { get; set; }
         public Nullable<int> SoLuong { get; set; }
         public Nullable<double> ThanhTien { get; set; }
-        public string KichThuoc { get; set; }
         public Nullable<int> TrangThaiCTDH { get; set; }
     
         public virtual DonHang DonHang { get; set; }

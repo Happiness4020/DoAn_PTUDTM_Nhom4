@@ -51,6 +51,7 @@ namespace DoAn_QLDoDienTu_Web.Controllers
         }
         public ActionResult ChiTietSanPham(int id)
         {
+            // Lấy danh sách chi tiết sản phẩm dựa trên MaSanPham
             var chiTietSanPham = db.ChiTietSanPham.Where(x => x.MaSanPham == id).ToList();
 
             if (chiTietSanPham == null || chiTietSanPham.Count == 0)
@@ -58,10 +59,17 @@ namespace DoAn_QLDoDienTu_Web.Controllers
                 return HttpNotFound("Không tìm thấy sản phẩm.");
             }
 
+            // Chọn chi tiết sản phẩm mặc định (dòng đầu tiên)
+            var chiTietMacDinh = chiTietSanPham.FirstOrDefault();
+
+            // Chuyển danh sách chi tiết sản phẩm sang JSON
             var chiTietSanPhamJson = JsonConvert.SerializeObject(chiTietSanPham);
 
+            // Truyền dữ liệu qua ViewBag
             ViewBag.ChiTietSanPhamJson = chiTietSanPhamJson;
-            return View(chiTietSanPham.FirstOrDefault());
+
+            // Trả về View cùng với chi tiết sản phẩm mặc định
+            return View(chiTietMacDinh);
         }
 
 
