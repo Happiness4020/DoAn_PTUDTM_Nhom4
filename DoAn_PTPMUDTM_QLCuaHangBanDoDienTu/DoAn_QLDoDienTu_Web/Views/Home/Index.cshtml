@@ -26,6 +26,11 @@
         font-weight: 600;
         margin-bottom: 15px;
     }
+
+    .card-img-top {
+        object-fit: cover;
+        height: 200px;
+    }
 </style>
 
 <div class="container-fluid border p-2" style="background-color: lightgray">
@@ -38,7 +43,7 @@
                         @if (item.Anh != "")
                         {
                             <a href="/Home/ChiTietSanPham/@item.MaSanPham">
-                                <img src="~/images/@item.Anh" alt="Sản phẩm" class="card-img-top" />
+                                <img src="~/images/@item.Anh" alt="Sản phẩm" class="card-img-top img" />
                             </a>
                         }
                         else
