@@ -68,6 +68,9 @@ namespace DoAn_QLDoDienTu_Web.Controllers
             // Truyền dữ liệu qua ViewBag
             ViewBag.ChiTietSanPhamJson = chiTietSanPhamJson;
 
+            List<LoaiSanPham> lsp = db.LoaiSanPham.ToList();
+            ViewBag.LoaiSanPham = lsp;
+
             // Trả về View cùng với chi tiết sản phẩm mặc định
             return View(chiTietMacDinh);
         }
